@@ -1,0 +1,21 @@
+{
+  "name": "vinyamo",
+  "owner": {
+    "name": "Vinyamo",
+    "url": "https://github.com/Vinyamo"
+  },
+  "metadata": {
+    "description": "WhatWorked plugin",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "whatworked",
+      "source": "./",
+      "description": "Research what actually worked for people with your issue — community experience at scale, cross-checked against the scientific literature, delivered as an action-oriented PDF study.",
+      "author": {
+        "name": "Vinyamo"
+      }
+    }
+  ]
+}

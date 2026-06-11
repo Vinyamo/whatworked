@@ -1,0 +1,24 @@
+# Study outputs are personal — never commit them
+*_study_*/
+study_*.md
+study_*.pdf
+discovery_*.json
+diagnostics_*.json
+passing_records.json
+transcripts/
+notes/
+
+# Credentials / env — never commit
+.env
+.env.*
+!.env.example
+.studyd_credentials
+*credentials*
+
+# OS / editor / python noise
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
