@@ -62,6 +62,43 @@ Then say **"Run a whatworked study"**.
 2. Start Codex in that folder — it picks up `AGENTS.md` automatically. Say **"Run a whatworked study"**.
 3. Update later with `git pull`.
 
+## What can I research?
+
+Almost any personal health or lifestyle issue where people share what they tried. The best
+prompts say three things: **the issue, who you are, and the goal** — and mention what you've
+already tried. A few realistic examples to spark ideas:
+
+**Sleep**
+> "38F, for six months I've woken around 3am almost every night and lie awake an hour or two before drifting off again. Falling asleep initially is fine — it's the middle-of-the-night waking. Melatonin did nothing; cutting afternoon caffeine helped a little. I'd rather avoid prescription sleeping pills. Goal: sleep through to my 6:30 alarm most nights. What's worked for people with this pattern?"
+
+**Gut & digestion**
+> "34M, IBS-D for two years — daily bloating, cramping, urgency within an hour of eating. Strict low-FODMAP calmed it ~60% but it's miserable to maintain and I relapse on reintroduction; one round of rifaximin helped briefly. I want the full landscape of what people have tried — diet, supplements, gut-directed therapies, meds — ranked by what worked, not just the popular stuff. Goal: predictable digestion so I can eat out without planning my exit."
+
+**Hormonal & women's health**
+> "47 and hitting perimenopause hard — hot flashes several times a day, night sweats, sleep completely shot. Periods still happening but irregular. I'm torn on HRT (my mum had breast cancer so I'm nervous), but the non-hormonal stuff I've half-heartedly tried isn't cutting it. I want an honest comparison of HRT vs the serious non-hormonal options — what worked for women in my spot, and what the risks really look like. Goal: get the flashes and sleep under control."
+
+**Mental health & focus**
+> "31M, just diagnosed with adult ADHD. Vyvanse genuinely helps my focus, but it crushes my appetite, spikes my anxiety in the afternoon, and I'm barely sleeping. I don't necessarily want to quit it — I want to know how people manage these exact side effects, or which non-stimulant/lifestyle approaches held up. Goal: keep the focus benefit without feeling wired and underfed."
+
+**Skin**
+> "28F with stubborn acne along my jawline and chin that flares about a week before my period — pretty clearly hormonal. I've cycled through benzoyl peroxide, salicylic acid, and a few serums with no lasting change, and I'd like to understand the real options (topical, hormonal, dietary) before going to a derm for Accutane. What worked for people with this cyclical, lower-face pattern? Goal: clear skin that doesn't come back every month."
+
+**Energy & fatigue**
+> "33F, exhausted for the better part of a year — dragging through afternoons, foggy, no energy to exercise — even though I sleep eight hours. Bloodwork was 'normal' except ferritin at 18, which my GP shrugged off. I suspect iron but hear oral supplements are hit or miss. I want to know what actually fixed this kind of low-ferritin fatigue, including how people got iron up and whether something else was the real culprit. Goal: get through a day without needing to lie down."
+
+**Chronic pain & migraines**
+> "35F with chronic migraines — about 10 days a month, often triggered by stress and my period. Sumatriptan reliably aborts an attack, so acute relief isn't the problem; the frequency is. I've tried magnesium on and off and kept a trigger diary. I want the realistic menu of preventives people have used — supplements, prescription preventives, lifestyle, devices — with a sense of what's worth trying first. Goal: cut my migraine days at least in half."
+
+**Habits & addiction**
+> "24, quitting vaping after four years — up to a pod a day, reaching for it the second I'm stressed or bored. I've quit cold turkey twice and caved within a week both times. I want to know what genuinely helped people quit nicotine for good (not just the first few days) — replacement, tapering, apps, the mental side — and which approaches had real staying power. Goal: off nicotine entirely and actually staying off."
+
+**Metabolic health**
+> "45M, just told I'm prediabetic with an A1c of 6.0, plus belly weight I've carried for years. I want to avoid metformin if a serious lifestyle effort can do it, but my past attempts to 'eat better' had no structure. I want to see what actually brought A1c back to normal for people in my situation — specific diets, exercise patterns, what order they did things — ranked by what worked. Goal: A1c under 5.7 at my next test in six months, no medication."
+
+You don't have to be this complete — say a rough version and the agent asks follow-ups. You can
+also steer the *shape*: **"what should I try next?"** gives one recommended step plus alternatives;
+**"map all my options / don't miss anything"** gives the full ranked landscape.
+
 ## Running a study
 
 Work in (or tell Claude to use) a folder where you want the results, then say **"Run a whatworked study"**
