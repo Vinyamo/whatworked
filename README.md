@@ -62,6 +62,26 @@ Then say **"Run a whatworked study"**.
 2. Start Codex in that folder — it picks up `AGENTS.md` automatically. Say **"Run a whatworked study"**.
 3. Update later with `git pull`.
 
+## Running a study
+
+Work in (or tell Claude to use) a folder where you want the results, then say **"Run a whatworked study"**
+— the agent drives the whole process and asks for what it needs:
+
+1. **First time only:** it asks for your username + password and stores them locally.
+2. **Your situation:** the issue (where you are now), who it's for (age/sex/context), and the
+   goal (where you want to get). The more specific, the better the study.
+3. **Choices along the way:** a report format (it suggests one), three clarifying questions,
+   and a confirmation of the data sources and cost before anything is run. A typical study
+   costs cents and takes ~15–40 minutes; "map ALL my options" breadth studies cost more —
+   it quotes the estimate first.
+4. **Optional:** drop supplemental files into the study folder when invited — lab results,
+   doctor letters (PDF/photo), even voice memos — they're folded into the research.
+
+You get a **PDF study** in a dated folder: one recommended next step, ranked alternatives
+with real quotes and science notes, what to stop doing, open questions, and honest caveats.
+Answering its "missing information" questions afterwards gets you a sharper revision — the
+expensive data work is reused, so iterating is fast and nearly free.
+
 ## What can I research?
 
 Almost any personal health or lifestyle issue where people share what they tried. The best
@@ -98,26 +118,6 @@ already tried. A few realistic examples to spark ideas:
 You don't have to be this complete — say a rough version and the agent asks follow-ups. You can
 also steer the *shape*: **"what should I try next?"** gives one recommended step plus alternatives;
 **"map all my options / don't miss anything"** gives the full ranked landscape.
-
-## Running a study
-
-Work in (or tell Claude to use) a folder where you want the results, then say **"Run a whatworked study"**
-— the agent drives the whole process and asks for what it needs:
-
-1. **First time only:** it asks for your username + password and stores them locally.
-2. **Your situation:** the issue (where you are now), who it's for (age/sex/context), and the
-   goal (where you want to get). The more specific, the better the study.
-3. **Choices along the way:** a report format (it suggests one), three clarifying questions,
-   and a confirmation of the data sources and cost before anything is run. A typical study
-   costs cents and takes ~15–40 minutes; "map ALL my options" breadth studies cost more —
-   it quotes the estimate first.
-4. **Optional:** drop supplemental files into the study folder when invited — lab results,
-   doctor letters (PDF/photo), even voice memos — they're folded into the research.
-
-You get a **PDF study** in a dated folder: one recommended next step, ranked alternatives
-with real quotes and science notes, what to stop doing, open questions, and honest caveats.
-Answering its "missing information" questions afterwards gets you a sharper revision — the
-expensive data work is reused, so iterating is fast and nearly free.
 
 ## Feedback
 
