@@ -66,6 +66,15 @@ Every request needs the user's personal credentials.
       every update. User customizations live in `~/.whatworked/formats/`.
 - [ ] Never commit credentials or study outputs to any repository (the `.gitignore` covers them —
       leave it intact).
+- [ ] For user-uploaded content (audio sent to `/transcribe`), log only **file format, size,
+      duration, and status — NOT the filename** (a filename can itself be PII, like
+      `bloodwork_2024.pdf`), and never send the user's original filename to a third party (send it
+      under a generic name).
+- [ ] Minimize personal data leaving the user's machine: strip PII (name, exact address, employer,
+      contact info, unique IDs) from everything sent to the API (topic, audience, scan params,
+      render markdown) and send only the minimal demographic/clinical context the research needs.
+      Supplemental documents/images are read locally and never uploaded; only audio is sent (to
+      `/transcribe`) — tell the user before sending audio, and keep the transcript local.
 
 ---
 

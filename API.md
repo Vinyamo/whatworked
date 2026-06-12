@@ -51,6 +51,22 @@ curl -sS "https://whatworked.vinyamo.com/jobs" -u "$STUDYD_USER:$STUDYD_PASS"
 | POST   | `/render_pdf` | render study Markdown → PDF server-side (returns `application/pdf`) |
 | GET    | `/usage` | per-key token + $ totals |
 
+## Logging & data handling
+
+What the WhatWorked API records when you use it — and what it doesn't.
+
+- **Per-account usage log (kept).** Every request appends one line: your username, the action (`scan` / `score` / `rate` / `discover` / `transcribe` / `render_pdf`), a timestamp, the job id, token counts, cost, and duration. It exists so the maintainer can monitor cost and abuse. **It contains no study content** — not your issue description, not the corpus, not the report text.
+- **Uploaded audio: format & size only.** Only the **file format** (e.g. `m4a`), byte size, duration, and status are recorded — **never the filename** (a filename can itself be personal, like `bloodwork_2024.pdf`), and never the audio bytes or the transcript text. The file is sent to the transcription service under a generic name, not your original filename.
+- **PDF rendering: transient.** The markdown you send to render a PDF is used only to produce the PDF and is not stored as content; only its size and diagram count are noted.
+- **Job data (to run your research).** Your job parameters (subreddits, search terms, topic, audience) and the fetched public corpus are stored as files scoped to your account so the study can run and you can fetch results. Other accounts cannot see your jobs.
+- **What is sent to third parties, and their policies in a nutshell:**
+  - **Google (Gemini API)** — receives the **public Reddit/Erowid post text** to classify, rate, and extract options from, plus your short topic/audience description. Under the Gemini API terms, paid-API content is **not used to train Google's models** and is retained only briefly for abuse monitoring. → https://ai.google.dev/gemini-api/terms
+  - **OpenAI (Whisper)** — receives the **audio you choose to transcribe** (under a generic filename). Under the OpenAI API terms, API inputs are **not used to train OpenAI's models** and are retained ~30 days for abuse monitoring, then deleted. → https://openai.com/enterprise-privacy/
+  - **Brave Search** — receives the **search queries** only (not your identity). Brave is privacy-focused and does not build user profiles. → https://brave.com/privacy/
+- **What stays with you.** Transcripts and finished reports are written to your local study folder, not kept on the server.
+- **Minimized before it is sent.** The assistant strips personally-identifying information (your name, exact location, employer, contact details, unique IDs) from what it sends to the API — only the minimal demographic/clinical context the research needs (e.g. "38F, 6-month 3am waking"). Your **supplemental documents and images are read locally and never uploaded**; only audio is sent (to transcribe it), and the assistant tells you before doing so.
+- **Credentials & usage.** Usage is logged per account, and accounts may be rate-limited or revoked if costs run away — treat your credentials like a payment method and don't share them.
+
 ## GET /subreddits
 
 ```

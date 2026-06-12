@@ -148,7 +148,9 @@ mistakes: relevant stories get missed, irrelevant ones slip through, and two run
 study won't pass identical records. The pipeline is built to surface rather than hide this
 (confidence labels, sample sizes, diagnostics), but treat every number as approximate.
 
-**Privacy.** Your issue description and study parameters are processed by the maintainer's
+**Privacy.** **We don't save anything personal.** Studies run on the maintainer's server, but the server logs only per-account usage (which actions, when, cost) — never your issue description, your corpus, or your report. Your supplemental documents and images are read locally and never uploaded, the assistant strips identifying details from what it sends, and only audio is sent (to transcribe it). Full detail: [Logging & data handling](API.md#logging--data-handling).
+
+Your issue description and study parameters are processed by the maintainer's
 server and third-party LLM providers, and basic usage (jobs run, cost) is logged per account.
 Supplemental files you add are processed for the study (audio is transcribed via a third-party
 API); transcripts and reports stay in your local study folder. Don't include things you
