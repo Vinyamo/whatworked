@@ -35,10 +35,14 @@ curl -sS "https://whatworked.vinyamo.com/jobs" -u "$STUDYD_USER:$STUDYD_PASS"
 | GET    | `/erowid/substances?q=&limit=` | list Erowid substances + per-class counts |
 | POST   | `/scans` | start a scan job (single or multi-source via `sources: [...]`) |
 | POST   | `/scores` | start a scoring job (references a scan_id) |
+| POST   | `/discover` | server-side map-reduce treatment discovery over a scan's candidates |
+| POST   | `/rate` | start an attribution-first rate-the-stories job (references a scan_id) — the breadth-mode rating primitive |
 | GET    | `/jobs?kind=&status=&limit=` | list jobs |
 | GET    | `/jobs/{id}` | job status + summary |
 | GET    | `/jobs/{id}/log` | structured NDJSON log |
-| GET    | `/jobs/{id}/results?passed_only=&limit=` | NDJSON of scored records |
+| GET    | `/jobs/{id}/results?passed_only=&limit=` | NDJSON of scored / rated records |
+| GET    | `/jobs/{id}/discovered` | discovered treatment names (discover jobs) |
+| GET    | `/jobs/{id}/profiles` | per-treatment rating profiles (rate jobs) |
 | GET    | `/jobs/{id}/excluded?n=20&seed=0` | random sample of failed records (false-negative audit) |
 | GET    | `/jobs/{id}/diagnostics` | supply / share / ease metrics per sentiment, category, subreddit |
 | POST   | `/consolidate_labels` | LLM-merge free-form discovery labels into a canonical closed list |
@@ -136,6 +140,78 @@ See `CONFIG_RECOMMENDED.md` for the full recommended body and what every knob me
 - All thresholds are **fractions** of `target_n` or `dim.scale` — change `target_n` and everything scales.
 - `model` defaults to `gpt-4o-mini`. `gemini-2.5-flash-lite` is an equal-quality drop-in.
 - The scorer streams results as they come; you can poll the job for partial progress.
+
+## POST /discover
+
+Server-side **treatment discovery** over a finished scan's candidates — a gemini map-reduce that
+extracts every distinct treatment / intervention people mention, including the long tail mentioned
+once. Replaces the old agent-side discovery sweep (which is now only a fallback). Async job, same
+lifecycle as `/scores` (`{job_id}` → poll `GET /jobs/{id}` → `GET /jobs/{id}/discovered`).
+
+The map chunks the candidates (`chunk_posts` per chunk, each post truncated to `max_post_chars`),
+asks a cheap model to extract every distinct treatment per chunk, runs the map `passes` times, and
+**unions** the results so the tail isn't under-sampled (single-pass discovery drops rare names
+unpredictably). All discovered names are carried forward — no silent reduce-side dropping.
+
+```jsonc
+// Request
+{
+  "scan_id": "scan_…",
+  "topic": "trauma sleep-maintenance insomnia",
+  "audience": "35M with hyperarousal",       // optional — sharpens relevance
+  "passes": 2,                                // map runs (≥2 recommended; union)
+  "chunk_posts": 1000,                        // posts per map chunk
+  "max_post_chars": 500,                      // truncate each post before the map
+  "workers": 24,                              // concurrency
+  "seed": 1
+}
+// Response: {"job_id": "discover_…", "status": "queued"}
+```
+
+`GET /jobs/{id}/discovered` → the unioned list of distinct discovered names (with per-name mention
+counts). Normalize them agent-side before tallying (split `a/b` and `X (Y)` into name + aliases,
+recover list-bucket members, drop bare class words, merge substring variants) — see AGENTS.md PHASE 3.
+
+## POST /rate
+
+Attribution-first **rate-the-stories** (the S5 model), server-side — the breadth-mode rating
+primitive. Default model `gemini-2.5-flash-lite` (a bounded classification task whose accuracy
+ceiling a cheap model with chain-of-thought already reaches; a top-tier model adds ~0 accuracy here).
+Async job, same lifecycle as `/scores` (`{job_id}` → poll `GET /jobs/{id}` → `GET /jobs/{id}/profiles`).
+
+Per treatment: match mentioning posts in the scan's candidates → **sample** to a story target
+(`sample_n`) → rate each post with a five-facet CoT call. **Sampling is the point: the rate is a
+proportion, so a sample + Wilson CI suffices.** Target ~30–50 attributable (first-hand) stories per
+option; treatments with fewer mentions than the target are **rated in full (census)**; an option with
+**<10 attributable stories is shown but NOT ranked** (no precise %). Prevalence (the corpus count)
+comes from `/tally`, not from this sample — never conflate the two.
+
+**Batches are single-treatment** (the cheap model collapses to ~all-skip on mixed-treatment batches),
+and each profile carries reliability flags: `low_n` (< `min_attributable` first-hand stories) and
+`high_skip` (> `skip_rate_warn` skipped — a degenerate-rater signature). Consumers must not show
+precise %s when `rateable` is false.
+
+```jsonc
+// Request
+{
+  "scan_id": "scan_…",
+  "treatments": [{"name": "prazosin", "aliases": ["prazosin","minipress"]}, ...],
+  "topic": "trauma sleep-maintenance insomnia", "audience": "35M with hyperarousal",
+  "model": "gemini-2.5-flash-lite",          // gpt-* also dispatch (for cross-model checks)
+  "facets": ["magnitude","sub","harm","durability"],   // subset to go cheaper/faster
+  "sub_labels": ["onset","maintenance"],     // sub-problem axis ([] disables 'sub')
+  "sample_n": 50,                            // story target per treatment (0 = census)
+  "batch_size": 8, "workers": 24, "seed": 1,
+  "min_attributable": 8, "skip_rate_warn": 0.9
+}
+// Response: {"job_id": "rate_…", "status": "queued"}
+```
+
+`GET /jobs/{id}/profiles` → one profile per treatment: `helped/noeffect/worse` counts + `_pct`,
+`helped_ci` (Wilson 95%), `size` (m1–m5), `mag_mean`/`mag_bucket`, `sub`/`worse_type`/`dur` splits,
+`evidence` (1–5), `contested`, and `low_n`/`high_skip`/`skip_pct`/`rateable`. `GET /jobs/{id}/results`
+streams the per-post rated NDJSON. Cost / tokens land in the job `summary` and `/usage` (kind `rate`).
+Rating is cheap (~$0.13/topic) — depth is near-free, so sample to a generous story target.
 
 ## GET /jobs/{id}/diagnostics
 

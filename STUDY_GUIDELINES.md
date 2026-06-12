@@ -11,11 +11,16 @@ The corpus tells you what people actually do; the literature tells you whether t
 
 ## Use diagrams where they help
 
-**Every diagram must be a real, rendered graphic — NEVER ASCII art or a preformatted/code-block
-"diagram".** Use **Mermaid** fenced blocks (```` ```mermaid ````); the PDF renderer turns them into
-images automatically. Do not draw boxes/arrows/trees out of `-`, `|`, `+`,
-`└`, etc. in a code block — that is the failure mode to avoid (e.g. the unreadable "THE THREE
-MECHANISMS AT A GLANCE" ASCII block). Markdown tables are fine for tabular data; *diagrams* must be Mermaid.
+**⛔ Every diagram must be a real, rendered graphic — NEVER ASCII art, and the delivered PDF must
+NEVER contain raw diagram SOURCE (this rule must never be dropped in a refactor).** Use **Mermaid**
+fenced blocks (```` ```mermaid ````); the PDF renderer turns them into images automatically. The
+reader must see a *picture*, never a "Diagram N (Mermaid source):" code dump. **If a diagram fails to
+render** (renderer unreachable, syntax error) → fix the syntax and re-render, or OMIT the diagram
+entirely — never ship the raw source as a fallback. After building, spot-check the PDF: any visible
+`graph TD` / `flowchart` / mermaid keywords in the body = a rendering failure to fix before delivery.
+Do not draw boxes/arrows/trees out of `-`, `|`, `+`, `└`, etc. in a code block — that is the failure
+mode to avoid (e.g. the unreadable "THE THREE MECHANISMS AT A GLANCE" ASCII block). Markdown tables
+are fine for tabular data; *diagrams* must be rendered Mermaid images.
 
 **Keep diagrams compact and legible.** A wide tree renders as an unreadable sliver once scaled to the
 page, so: prefer `graph TD` (vertical), **≤ ~10–12 nodes**, short node labels, and branch only the
@@ -396,8 +401,8 @@ first-hand result for THIS treatment (incidental/list-only mention, question, re
 else, venting — usually the majority of a grep corpus), else `helped` / `noeffect` / `worse`
 (worse-before-better-net-positive = helped) **plus** a magnitude size 1–5. This fixed the failure mode
 where rating a post's sentiment without attribution **inflated Worse%** (incidental mentions +
-"didn't work" + "hard process" miscoded as harm): in a 10-method bake-off vs an Opus gold, false-worse
-fell from ~8% to ~0% and S5 hit ~0.9 accuracy at Haiku cost (see the sleep study `notes/`). Prevalence
+"didn't work" + "hard process" miscoded as harm): in a 10-method bake-off vs a strong-model gold
+standard, false-worse fell from ~8% to ~0% and S5 hit ~0.9 accuracy at the cheap model's cost. Prevalence
 = the count of **attributable** outcome posts; Confidence is tied to that count, not guessed. (Cap
 ~150/treatment; disclose any extrapolation.)
 
@@ -480,3 +485,29 @@ The one-page summary (when requested) covers §3 (goal restatement) + §4
 **Scannable card layout (per option):** `###` title → **metrics block directly under the title** (one thin %-segmented outcome bar + a ≤2-line caption with the facet %s, magnitude sparkline, Evidence, n) → 1-line *what-it-is* description → **Best for** → **How / ✅ Get right / ⚠️ Avoid** each its own short paragraph → 1–2 quotes. Reader skims the top, drills in only for relevant options.
 
 **Charts stay tiny** — one thin segmented bar + caption + inline sparkline; never bulky bordered tables.
+
+---
+
+### ⛔ CANONICAL per-option card — the graphical-bar format (REQUIRED; must NEVER be dropped in a refactor)
+
+This is the preferred, user-loved rendering: a **colored %-segmented outcome bar directly under the
+title** (green helped · grey no-effect · red worse), then a facet line, then a magnitude+sub-problem+Evidence
+line. Emit this exact inline-HTML shape per option (the PDF inherits the colors from the inline styles,
+so it works even without extra CSS). Keep the green `#4a9`, grey `#ccc`, red `#d66` bar segments and the
+widths = the three %s.
+
+```html
+### <Option name>
+<table style="width:100%;border-collapse:collapse;table-layout:fixed;margin:2px 0;"><tr><td style="background:#4a9;color:#fff;width:59%;font-size:7.5pt;text-align:center;padding:1px 0;">59%</td><td style="background:#ccc;color:#555;width:31%;font-size:7.5pt;text-align:center;padding:1px 0;">31%</td><td style="background:#d66;color:#fff;width:10%;font-size:7.5pt;text-align:center;padding:1px 0;">10%</td></tr></table>
+<div style="font-size:8pt;color:#555;margin:0;"><b style="color:#3a9a77">helped 59%</b> (sustained 41% / <span style="color:#c66">fades 0%</span>) &nbsp;·&nbsp; no effect 31% &nbsp;·&nbsp; <b style="color:#c44">worse 10%</b> (acute 5% / lasting 4%)</div>
+<div style="font-size:8pt;color:#777;margin:0 0 5px;">magnitude when it helps: <b>nudge</b> <sparkline of 1–5 distribution> &nbsp;·&nbsp; helps <i>staying&nbsp;asleep</i> specifically: 6% &nbsp;·&nbsp; Evidence ●●●●● (n≈169) <b style="color:#b8860b">⚖️ contested</b></div>
+*<one-line what-it-is description>*
+```
+- Bar widths = Helped% / No-effect% / Worse% (sum 100). The magnitude sparkline = five 4px-wide bars whose
+  heights encode the 1–5 magnitude distribution (template: `<span style="display:inline-block;width:4px;height:Hpx;background:#7a9bbf;vertical-align:bottom;margin-right:1px;"></span>` ×5).
+- Drop the `⚖️ contested` span unless worse ≈ half-or-more of helped. Keep facet sub-splits (sustained/fades,
+  acute/lasting) only when rated; omit a sub-split rather than invent it.
+
+**Plain-text fallback** (only if inline HTML can't be used) — the labeled one-liner statbar:
+`Helped: 90% | Worse: 3% | Magnitude: game-changer (4.0, n=29) | Reports: 29 | Evidence: ●●●○○`.
+Prefer the graphical bar above; this is the fallback, not the default.
