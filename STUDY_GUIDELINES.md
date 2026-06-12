@@ -28,6 +28,19 @@ main choices — push detail into the prose, not the diagram. **After building t
 rendered diagram**: if the text isn't comfortably readable, simplify it (fewer nodes / shorter
 labels) and rebuild — do not ship an illegible graphic.
 
+**⛔ Diagram font must ≈ the body font in the delivered PDF — this rule must never be dropped in a
+refactor.** A rendered diagram's text must come out at roughly the **body size (~11pt)**, never a
+downscaled sliver. The sliver happens because the renderer scales every diagram image to the page
+content width (~620px); a too-wide image is shrunk hard and its text with it. **Do NOT chase this with
+a render→measure→re-render loop** — the on-page font is *linear* in the scale
+(`on-page-font = authored-font × content-width ⁄ image-width`), so it's solved deterministically: **(1)
+author the diagram structurally narrow** (`graph TD`, ≤10–12 nodes, ≤3–4 per rank, short or
+`<br/>`-wrapped labels, never a wide `graph LR`) so its natural width ≤ the content width and it's
+scaled by ~1.0; and **(2) the renderer renders at the content width** (≈680px, with an explicit
+`%%{init:{"themeVariables":{"fontSize":"16px"}}}%%` font directive) so little rescaling occurs — never a
+giant image crushed into the page. If the text still isn't ≈ body size after building, the diagram is too
+wide — **simplify it, don't crank the scale.**
+
 Use a diagram whenever it's clearer than prose:
 - A **decision tree** (`graph TD`) at the start of §6 / the mechanism-map shape, and in §4 when the recommendation is conditional.
 - A **timeline** (`graph LR`) for "week 0 → week 4 → goal" sequencing.
