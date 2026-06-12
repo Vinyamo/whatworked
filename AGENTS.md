@@ -165,9 +165,22 @@ Every request needs the user's personal credentials.
 
 ## PHASE 5 — Adaptive depth check (replaces the mode question)
 
-- [ ] Read the measured numbers. **Thin total supply OR a contested top option → auto-deepen
-      ONCE**: widen to more on-topic subs + census all options (this is what makes niche topics
-      work). Dense + uncontested → proceed lean. The user never pre-picks a fidelity mode.
+- [ ] **Thin-but-promising rescue (the long-tail fix) — auto-run ONCE when it applies.** From the
+      rated numbers, select options that are **thin (<~30 attributable stories) AND promising
+      (Helped% point estimate ≥ ~50%)** — these would otherwise be buried, unrankable, in the tail.
+      Fire **one** batched re-scan over the SAME subs (submissions + comments in a single
+      multi-source scan) with **all** those option names (+aliases) as `grep_patterns` and the
+      condition terms as `context_keywords` (keeps it on-topic), then re-rate just those options
+      (`/rate sample_n=0`) and fold the new counts in. They're usually *grep-missed*, not rare — the
+      baseline greps the condition, so posts that name only the option never entered the corpus; a
+      name-grep recovers them (one batched scan roughly doubled treatment coverage on heavy-tail
+      topics in testing). One scan + one rate on existing endpoints, ~cents and ~a minute. **Anything
+      still <~30 after the re-grep is genuinely rare → label it "rare (confirmed by targeted
+      search)"**, not merely thin. (Batched, not per-option: the global cap does not starve options,
+      so one scan matches per-option thoroughness at a fraction of the cost.)
+- [ ] **Thin total supply OR a contested top option → also widen** to more on-topic subs + census
+      all options (this is what makes niche topics work). Dense + uncontested + nothing
+      thin-but-promising → proceed lean. The user never pre-picks a fidelity mode.
 
 ## PHASE 6 — Diagnostics → caveats
 
@@ -202,8 +215,9 @@ evidence dots · ⚖ if contested; group members; How line; Science line; 2 arc-
 `— r/<sub>`) → **What to stop doing** anti-patterns → successful paths + timelines (rendered Mermaid
 if ≥3 clear paths) → **Missing information** (3–6 questions + why each shifts the recommendation) →
 **Caveats** (structural biases + diagnostic-derived) → ≤5 key takeaways leading with the next step.
-Long tail → compact end table with REAL ratings (never a uniform "3"), never silently dropped. The
-canonical per-option card + the nine required sections are defined in STUDY_GUIDELINES.md.
+Long tail → compact end table with REAL ratings (never a uniform "3"), never silently dropped;
+options the Phase-5 targeted re-search confirmed rare are labeled "rare (confirmed)", distinct from
+un-checked thin. The canonical per-option card + the nine required sections are defined in STUDY_GUIDELINES.md.
 
 **Four writing-level musts** (commonly missed): (a) access / logistics — how to obtain or afford
 the top option, and what to do if none is local; (b) answer EVERY symptom the persona named;
@@ -295,6 +309,7 @@ their consequences:
 | One sub dominates / skip% ≫ median | Contamination — drop its posts from prevalence, disclose in §8 |
 | "441 mentions but 6 rated" | Prevalence = the exhaustive tally; rate = a sampled % ± CI. Don't conflate; disclose the sample |
 | Thin corpus / many options <10 stories | Auto-deepen once (Phase 5); then write honest-thin — show unrankable options, don't pad |
+| A promising option is thin (<~30 stories, Helped% ≥~50%) | Phase-5 rescue: ONE batched re-grep of all such option names over the same subs (+comments), condition as `context_keywords`, re-rate. Still <~30 → "rare (confirmed)" |
 | A % looks too clean (worse% ≈ 0) | Small-sample artifact — census that option, show the CI (Verification Guard) |
 | Tempted to cite a specific stat/trial | Verify it this run or mark `[unverified]`; never invent (Verification Guard) |
 | No science found for an option | "no peer-reviewed evidence located" — don't handwave |
