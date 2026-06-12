@@ -1,4 +1,13 @@
-# Recommended `POST /scores` config
+# `POST /scores` config — the OPTIONAL filter-first path
+
+> **Pipeline role:** the default pipeline is `discover → rate → tally` (AGENTS.md) — prevalence
+> from the exhaustive `/tally`, rates from `/rate` sampled to a **story target** (~30–50
+> attributable stories/option; <10 → don't rank). The `POST /scores` filter below is **no longer
+> the primary path**; use it only when you specifically want a curated, sentiment-balanced set of
+> quotable records. The mode question (Cheap/Mod/High), the `target_n`/sample tiers, the
+> skip-pre-filter step, and the robustness/cross-model second run are **deleted** (they add
+> cost/length/error, not value). The numbers below remain valid *for the filter path*;
+> `target_n ≈ 80` is plenty.
 
 Empirically tuned across 75 scoring runs and a 20-run threshold sweep. All thresholds and caps are **fractions** — change only `target_n` and everything scales.
 
@@ -79,8 +88,8 @@ The number of records you want in the final report. Default 60 is the bucket swe
 
 ### `model`
 - **`gemini-2.5-flash-lite`** (default, as of 2026-05-07) — $0.10/M in, $0.40/M out, ~63s/study, 0% error rate. Empirically lower weakness rate than gpt-4o-mini in a 10-topic comparison: avg 1.25 weakness flags vs 3.50, and lower cost. Hits target_n exactly more often.
-- **`gpt-4o-mini`** — $0.15/M in, $0.60/M out, ~93s/study, 0% error rate. Battle-tested. Slightly worse on bucket-fill metrics. Use as the second half of the robustness recipe (intersection with gemini = high-confidence subset).
-- **`claude-haiku-4-5`** — works but **11× more expensive** ($1.77/study) at no quality gain. Use only for cross-model robustness checks on high-stakes findings.
+- **`gpt-4o-mini`** — $0.15/M in, $0.60/M out, ~93s/study, 0% error rate. Slightly worse on bucket-fill metrics, and systematically more pessimistic on rating — **not** a tiebreaker. Don't default to it.
+- Other models cost more at no quality gain on this bounded-classification task; a cheap model is at the ceiling. Don't pay a frontier model to filter or rate.
 - **`gemini-2.5-flash`**, **`gpt-4.1-mini`** — empirically worse: high error rates and category sprawl. Don't use.
 
 ### Dimensions: `rel.min_pct`, `qual.min_pct`
@@ -176,18 +185,13 @@ Don't use if the topic is naturally expressed across many vocabularies — you'l
 
 The earlier recommendation of `rel.min_pct: 0.8, qual.min_pct: 0.7, min_sum_pct: 0.53` for "high-stakes" studies underperformed default thresholds in the 2026-05-07 10-topic comparison: more `W1_underfilled` weaknesses, no detectable quality improvement. **Don't use stricter thresholds without also reducing target_n** — the math is that strict thresholds cut the pass rate, so the same target_n stays unfilled. If you want the rigor of stricter thresholds, halve target_n at the same time. For most studies, default thresholds are fine.
 
-## Robustness recipe (for high-stakes studies)
+## Robustness recipe — DELETED (do not reintroduce)
 
-Run scoring twice on the same scan, with different models:
-
-1. Score with `model: "gemini-2.5-flash-lite"` → get `score_id_a` (the new default)
-2. Score with `model: "gpt-4o-mini"` → get `score_id_b`
-3. In the report:
-   - **High-confidence findings**: assertions supported by posts in BOTH passing sets (intersection)
-   - **Broad picture**: union of both passing sets
-   - **Model-dependent**: anything supported only by one — flag explicitly
-
-Cost: ~2× a single run. Empirical Jaccard between the two model runs in the 2026-05-07 experiment was 0.20–0.35 across 10 topics, so the intersection is ~30% the size of either run — that's the price of confidence. Use only when conclusions matter.
+The old "run scoring twice with two models and take the intersection" recipe is **removed**. A
+same-config re-run already churns ~⅓ of records while the *aggregate* report is identical, and a
+second (weaker) model is systematically more pessimistic — so a 2-model intersection adds cost and
+noise, not confidence, and changed no conclusion in live reports. Honest uncertainty is the Wilson
+CI on the sampled rate (`/rate`), not a second run.
 
 ## Sentiment-quota math (don't break this)
 
@@ -423,7 +427,6 @@ topics). The Pareto-optimal default is **5 persona-anchored queries with
 | Default (gemini-flash-lite, target_n=120) | ~$0.13 | ~80s |
 | Default (gpt-4o-mini, target_n=60) | ~$0.16 | ~90s |
 | Default (gpt-4o-mini, target_n=120) | ~$0.30 | ~120s |
-| Robustness recipe (gemini + gpt, target_n=120) | ~$0.45 | ~150s parallel |
 | target_n=300 with default config (gemini) | ~$0.40 | ~300s |
 
 ## Breadth mode — discovery sweep + tally params

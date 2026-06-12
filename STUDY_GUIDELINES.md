@@ -36,9 +36,12 @@ a render→measure→re-render loop** — the on-page font is *linear* in the sc
 (`on-page-font = authored-font × content-width ⁄ image-width`), so it's solved deterministically: **(1)
 author the diagram structurally narrow** (`graph TD`, ≤10–12 nodes, ≤3–4 per rank, short or
 `<br/>`-wrapped labels, never a wide `graph LR`) so its natural width ≤ the content width and it's
-scaled by ~1.0; and **(2) the renderer renders at the content width** (≈680px, with an explicit
-`%%{init:{"themeVariables":{"fontSize":"16px"}}}%%` font directive) so little rescaling occurs — never a
-giant image crushed into the page. If the text still isn't ≈ body size after building, the diagram is too
+scaled by ~1.0; and **(2) the renderer renders to SVG, sized once** — diagrams are rendered as **SVG**
+(crisp vector text at any scale), capped to the content width from the viewBox, so weasyprint barely
+rescales → text ≈ body size. The renderer injects an explicit `fontSize:16px` **and `htmlLabels:false`**
+— the latter is mandatory because the PDF engine cannot render Mermaid's default `<foreignObject>` HTML
+labels (they'd vanish). **If you author your own `%%{init}%%` block you MUST include `"htmlLabels":false`**
+or the node labels disappear. If the text still isn't ≈ body size after building, the diagram is too
 wide — **simplify it, don't crank the scale.**
 
 Use a diagram whenever it's clearer than prose:
