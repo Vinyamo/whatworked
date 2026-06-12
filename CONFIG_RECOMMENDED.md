@@ -474,12 +474,11 @@ attributable count), **Reports** = attributable count = prevalence numerator. Ca
 disclose extrapolation; **≤3 treatments per CoT subagent** so it reads each.
 
 - **Why CoT + attribution:** rating sentiment without attribution inflates Worse% (incidental
-  mentions + "didn't work" + "hard/worse-before-better process" miscoded as harm). 10-method bake-off
-  vs an Opus gold (sleep study `notes/`): the plain 1–5 baseline scored acc 0.61 / worse-F1 0.20 with
-  8% false-worse; the **Haiku+CoT attribution** method ("S5" in that bake-off — distinct from the S5
-  *sampler* above) scored **acc 0.88–0.91, self-agreement 0.90, false-worse ~0–1.7% at Haiku cost**,
-  matching Sonnet at ¼ the price. Cheaper/faster fallback: plain Haiku 3-way + attribution (acc ~0.81,
-  0% false-worse). Max reliability: 3× CoT majority-vote (acc ~0.89).
+  mentions + "didn't work" + "hard/worse-before-better process" miscoded as harm). In a 10-method
+  bake-off against a strong-model gold, the plain 1–5 baseline scored acc 0.61 / worse-F1 0.20 with
+  8% false-worse; the **CoT attribution** method scored **acc 0.88–0.91, self-agreement 0.90,
+  false-worse ~0–1.7%** at a cheap-model cost. A cheap classification model is at the task ceiling,
+  so rating runs server-side (`POST /rate`); paying a frontier model to rate is wasted spend.
 - **Synthesis:** sort groups by **expected improvement = Helped% × Magnitude × min(1, Confidence/3)**
   (NOT harm-aware — do **not** subtract Worse% from the rank; show harms as a per-option **risk note** /
   ⚠ flag instead, so high-ceiling options still surface with the risk stated).
@@ -501,10 +500,17 @@ tally is ~free (Go, seconds); synthesis is one strong-model pass. Benchmarked ou
 
 The attribution-first CoT pass now emits, per attributable post: **direction** (helped/noeffect/worse), **sub-problem** helped (the reader's facet; credit indirect-mechanism with a flag), **magnitude** 1–5, **harm type** (acute vs lasting) for worse posts, and **durability** (sustained vs fades) for helped posts. Aggregate to % of rated.
 
-**Model & coverage (the cost defaults — see AGENT.md PHASE 6B):**
-- **Rate on `claude-haiku-4-5` + CoT, in every mode.** The S5 bake-off hit ~0.9 acc at Haiku cost (≈Sonnet quality at ¼ the price) — rating is a bounded classification task and a cheap model is already at the ceiling. **Never rate on Fable** (10× spend, ~0 gain); Fable's only payoff is *discovery* tail recall, and only in High mode.
-- **Skip pre-filter first:** run the cheap gemini outcome filter to drop the ~64% incidental/skip posts before the CoT rater reads them — the single biggest spend cut. (Keep the rater itself separate from the filter — folding loses ~0.14 acc.)
-- **Sample, don't census.** Prevalence (the count) = the exhaustive `corpusmatch` **tally** (free). The rate + splits are **proportions** → sample N posts/treatment, report **% ± Wilson CI** (N≈40→±15pt · 60→±12pt · 100→±8pt; half-width tracks N, not corpus size). Treatments with < N mentions are rated in full. Sample sizes per mode: Cheap ~30 · Moderate ~50–60 · High ~100 (census if ⚖️ contested). **Disclose the sample** ("rated 50 of ~180 attributable") — never imply a census.
+**Model & coverage (the cost defaults):**
+- **Rate server-side via `POST /rate`** (a cheap classification model + CoT attribution). Rating is
+  a bounded classification task at which a cheap model is already at the quality ceiling, so paying a
+  frontier model to rate is wasted spend. Discovery likewise runs server-side (`POST /discover`).
+- **Sample to a STORY TARGET, not a fixed count.** Prevalence (the count) = the exhaustive `tally`
+  (free). The rate + splits are **proportions** → sample posts/treatment until **~30–50 attributable
+  first-hand stories** (census treatments with fewer mentions); report **% ± Wilson CI** (half-width
+  tracks the number of stories, not corpus size). **Options with <10 attributable stories are shown
+  but not ranked and get no precise %** ("too few stories to rate"). **Disclose the sample** ("rated
+  50 of ~180 attributable") — never imply a census. Rating is ~cents/topic, so depth is near-free;
+  the real cost is discovery + writing, not sample size.
 - **Evidence** (replaces saturated Confidence): un-saturated volume bands ●●●●● ≥80 / ●●●●○ 40–79 / ●●●○○ 20–39 / ●●○○○ 10–19 / ●○○○○ <10, plus a **⚖️ contested** flag (worse ≥ ½·helped). Base the dot on the number actually rated, not the tally.
 - **Uncertainty:** show **Helped% ± Wilson CI** standard whenever sampling (it's the honest readout of the sample size). Cross-model agreement (re-rate a sample with a 2nd model; large per-option |Δ| = low reliability) is a High-mode add-on. Always pair with the "Evidence ≠ proof" caveat (no controls → no causal claim; self-selected sample → representativeness unknown).
 - Ranking stays upside-only (`Helped% × Magnitude × Evidence-weight`); harms shown as a risk note, never subtracted.
