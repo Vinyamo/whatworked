@@ -306,6 +306,7 @@ pre-filter first** (drops the ~64% incidental posts before the CoT rater sees th
 - [ ] Render: `python3 scripts/build_pdf.py <folder>/study_<slug>.md` (server-side render via `/render_pdf`)
 - [ ] Verify PDF exists and is non-trivial size; spot-check if diagrams/tables present
 - [ ] Study is NOT done until `study_<slug>.pdf` exists
+- [ ] Open the finished PDF for the user automatically (`open` on macOS, `xdg-open` on Linux, `start` on Windows) — every delivered version, including re-runs
 
 **Versioning — every re-run produces a NEW version (separate file):**
 - [ ] **Never overwrite a delivered study.** Each regeneration/update writes a new file: `study_<slug>_v2.md` → `_v2.pdf`, then `_v3`, … (or `study_<slug>_<YYYY-MM-DD>.md`). The first delivery is `v1` (the unsuffixed `study_<slug>.pdf` is v1).

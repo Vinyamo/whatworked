@@ -23,7 +23,8 @@ Everything you need is in the plugin directory (`${CLAUDE_PLUGIN_ROOT}`):
 Non-negotiables (details in AGENTS.md PHASE 0/0B): set up `~/.claude/.studyd_credentials` on
 first run by asking the user for their username + password; never skip the caveats, science
 notes, or missing-info sections; never fabricate brands/doses/clinicians; the study is not
-done until the PDF exists; always run the feedback flow after delivering a report.
+done until the PDF exists; open the finished PDF automatically (`open` / `xdg-open` / `start`);
+always run the feedback flow after delivering a report.
 
 Create the study folder in the user's current working directory (ask where, if unclear) —
 never inside the plugin directory.
