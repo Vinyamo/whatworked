@@ -128,7 +128,7 @@ See `SOURCES.md` for full per-source schemas, strategies, and cost characteristi
   "experience_terms": ["i tried", "worked for me", "didn't work"],
   "min_text_len": 150,
   "min_score": 3,                              // reddit upvote floor
-  "max_candidates": 100000,                    // hard cap (per-scan budget)
+  "max_candidates": 8000,                      // caps EMITTED records, not files read (a scan is read-bound — see Job statuses)
   "include_monthly": true,                     // /reddit/{Sub}/*.jsonl.zst
   "include_torrent": true,                     // /subreddits24/{sub}_{kind}.zst
   "profile": false                             // write Go pprof to job dir (debug)
@@ -379,7 +379,14 @@ capped. Mermaid fences render to inline images server-side.
 
 ## Job statuses
 
-`queued` → `running` → `done` | `failed`. Poll `GET /jobs/{id}` every 5s. Scan jobs typically 30–120s; score jobs typically 30–300s depending on `max_scored_factor` and topic pool size.
+`queued` → `running` → `done` | `failed`. Poll `GET /jobs/{id}` every ~5s — but **poll without
+blocking**: a scan is **read-bound** (it reads every file of every sub, even ones that emit 0), so
+while a narrow scan is ~30–120s, a **wide scan over big subs can take many minutes (10+)**. Don't
+sit in a foreground sleep-loop waiting for it — your tool harness kills long-running calls at its
+timeout ceiling, so a blocking wait dies at the ceiling, wastes the full window, and forces a
+restart. Fire the job and poll in the background / re-check on a later turn. Score jobs typically
+30–300s depending on `max_scored_factor` and topic pool size. `max_candidates` caps emitted records,
+not files read, so raising it does NOT bound scan time. Run heavy scans one at a time.
 
 ## Costs (per /usage)
 

@@ -357,7 +357,9 @@ Cost: $0.005. Time: 20-30s.
 }
 ```
 
-`max_candidates` is the cross-source emission cap.
+`max_candidates` is the cross-source **emission** cap — it bounds records emitted, NOT files read.
+A scan is read-bound (every file of every sub is read regardless), so a large cap does not bound
+scan time; keep subs on-topic and per-sub caps small rather than raising this to "go wide".
 
 ## Per-source recommendations
 

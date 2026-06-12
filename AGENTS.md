@@ -133,6 +133,14 @@ Every request needs the user's personal credentials.
 - [ ] Per-sub scans (cap ~2000–2500 each) + merge/dedup by `uid`. NEVER a single global
       `max_candidates` shared across subs (it starves the canonical sub scanned last). ~15 grep
       terms, over-grep (scoring filters later; scan misses are permanent). Multi-source form (SOURCES.md).
+      `max_candidates` caps **emitted** records, NOT files read — a scan is **read-bound** (every file
+      of every sub is read even when it emits 0), so a huge cap does NOT bound scan time. "Make it
+      extensive" = more on-topic subs + the Phase-5 batched re-grep, never a 50k–100k cap; an over-wide
+      scan over big general subs runs many minutes for little extra signal.
+- [ ] Scans are **async, read-bound jobs**: a wide scan can take 10+ min. Poll the job WITHOUT
+      blocking — fire it, then check back; never sit in a foreground wait-loop, which your tool
+      harness kills at its timeout ceiling, wasting the full window and forcing a restart. Run heavy
+      scans one at a time (concurrent full scans can overwhelm the server).
 - [ ] Check `summary.by_source`: <500 emitted → too narrow, fix the patterns/sources; canonical
       sub ~0 → re-scan it isolated before continuing.
 
