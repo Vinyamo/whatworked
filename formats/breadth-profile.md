@@ -34,4 +34,5 @@ line · `**Science:**` line · 1–2 blockquoted arc-quotes cited `— r/<sub>`.
 
 **Always include:** demographics · missing-info questions · caveats (incl. the required
 "Evidence ≠ proof" box; disclose sampling: "rated 50 of ~180 attributable", % ± Wilson CI) ·
-key takeaways.
+key takeaways · `## Appendix — Original request` (verbatim prompt + clarifying Q&A + re-run
+settings — template in `STUDY_GUIDELINES.md`).

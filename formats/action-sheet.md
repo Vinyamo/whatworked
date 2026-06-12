@@ -26,4 +26,6 @@ see `STUDY_GUIDELINES.md` → "Breadth-mode report format" and "Per-option card 
 
 **Always include:** `## Start here` box · `## What to stop doing` · long-tail table (real ratings,
 never a uniform "3") · `## Sources` appendix (one row per subreddit, posts and comments split) ·
-demographics · missing-info questions · caveats (incl. the "Evidence ≠ proof" box) · key takeaways.
+demographics · missing-info questions · caveats (incl. the "Evidence ≠ proof" box) · key takeaways ·
+`## Appendix — Original request` (verbatim prompt + clarifying Q&A + re-run settings — template in
+`STUDY_GUIDELINES.md`).

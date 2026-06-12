@@ -2,6 +2,8 @@
 *_study_*/
 study_*.md
 study_*.pdf
+# study_*.md matches STUDY_GUIDELINES.md when core.ignorecase=true (macOS default)
+!STUDY_GUIDELINES.md
 discovery_*.json
 diagnostics_*.json
 passing_records.json

@@ -294,6 +294,8 @@ pre-filter first** (drops the ~64% incidental posts before the CoT rater sees th
 8. Caveats — seven structural biases + diagnostic-derived caveats (sentiment skew, sub dominance, canonical-sub contribution, thin-category ease scores)
 9. Key takeaways — ≤5 actionable bullets; lead with §4 step
 
+Plus a required closing **Appendix — Original request** (all formats, incl. breadth/atlas): the user's prompt verbatim + clarifying Q&A + re-run settings (mode, sources/subs, target_n, model, scan_id/score_id) — template in STUDY_GUIDELINES.md. This makes the report reproducible later.
+
 **Style rules (see STUDY_GUIDELINES.md style notes for full detail):**
 - Concrete: name specific products/brands/doses/costs/tests/clinics — only when a source names them; never invent
 - Confidence labels: Robust (ease ≥ 1.5) / Standard (0.7–1.5) / Thin (< 0.7) — label every step recommendation
@@ -348,7 +350,7 @@ Decision: "what's my next step" → filter-first. "What are all my options / don
   - One `###` section per group; sorted by **expected improvement = Helped% × Magnitude × min(1, Confidence/3), NOT popularity**. **Not harm-aware — never subtract Worse% from the rank;** show harms as a per-option **risk note** (⚠ + "reportedly worse for N%") so high-ceiling options still surface with the risk stated plainly.
   - BUT do not bury a proven mainstream first-line option (e.g. allopurinol for gout) just because the sort puts it lower — keep the reader's most-likely starting point prominent (surface it in the Start-here box / flag it in its section)
   - Each: statbar one-liner — **Helped% · Worse% · Magnitude (tag + mean + n) · Reports (attributable count) · Confidence (●●●○○)**; exact HTML in STUDY_GUIDELINES; group members; How line; Science line; 2 blockquoted arc-quotes cited `— r/<sub>` (no score)
-  - Include: "Start here" box, "What to stop doing" anti-patterns block, Sources appendix
+  - Include: "Start here" box, "What to stop doing" anti-patterns block, Sources appendix, Original-request appendix (verbatim prompt + Q&A — STUDY_GUIDELINES.md)
   - Long tail → compact table at end with REAL ratings (never uniform "3"); never silently dropped
 
 ### Breadth-mode method notes
