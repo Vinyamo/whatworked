@@ -84,9 +84,10 @@ expensive data work is reused, so iterating is fast and nearly free.
 
 ## What can I research?
 
-Almost any personal health or lifestyle issue where people share what they tried. The best
-prompts say three things: **the issue, who you are, and the goal** — and mention what you've
-already tried. A few realistic examples to spark ideas:
+Almost any personal issue where people share what they tried — health and lifestyle, but also
+relationships, family, work, and the bigger questions of growth and meaning. The best prompts
+say three things: **the issue, who you are, and the goal** — and mention what you've already
+tried. A few realistic examples to spark ideas:
 
 **Sleep**
 > "38F, for six months I've woken around 3am almost every night and lie awake an hour or two before drifting off again. Falling asleep initially is fine — it's the middle-of-the-night waking. Melatonin did nothing; cutting afternoon caffeine helped a little. I'd rather avoid prescription sleeping pills. Goal: sleep through to my 6:30 alarm most nights. What's worked for people with this pattern?"
@@ -114,6 +115,30 @@ already tried. A few realistic examples to spark ideas:
 
 **Metabolic health**
 > "45M, just told I'm prediabetic with an A1c of 6.0, plus belly weight I've carried for years. I want to avoid metformin if a serious lifestyle effort can do it, but my past attempts to 'eat better' had no structure. I want to see what actually brought A1c back to normal for people in my situation — specific diets, exercise patterns, what order they did things — ranked by what worked. Goal: A1c under 5.7 at my next test in six months, no medication."
+
+**Relationships**
+> "34F, with my partner six years. We've drifted into roommates — affectionate but no real connection, every conversation is logistics, and weeks pass without anything that feels like *us*. No affair, no big fights, just flat. A couple of forced date nights fizzled. I want to know what actually rebuilt closeness for couples in a long-term rut — not generic 'communicate more,' but the specific things people did. Goal: feel like partners again, not co-managers of a household."
+
+**Parenting a teen**
+> "Dad of a 14-year-old who's pulled away hard this year — one-word answers, door always shut, every attempt to talk turns into a fight or silence. I don't want to be the cop, but I also can't reach him. I've tried backing off and tried forcing 'family time'; both flopped. I want to know what genuinely reopened the connection for parents of teens this age. Goal: a kid who'll actually talk to me again, even a little."
+
+**Family of origin**
+> "41F, my relationship with my mother has been low-grade toxic my whole life — guilt trips, criticism dressed as concern, and I leave every visit drained. Going fully no-contact feels too extreme and I'd carry the guilt; pretending it's fine isn't working either. I want to understand what people in similar spots actually did — boundaries, limited contact, scripts, therapy approaches — and what brought them peace. Goal: a relationship with her that doesn't cost me my mental health."
+
+**Conflict & hard conversations**
+> "29M, new-ish manager and I freeze on conflict — a teammate who keeps missing deadlines, a peer who talks over me in meetings — I either avoid it for weeks or finally snap. I've skimmed a couple of 'crucial conversations' summaries but nothing sticks in the moment. I want to know what actually helped people get good at hard conversations and holding their ground without blowing up. Goal: handle friction directly and calmly instead of dreading it for days."
+
+**Personal growth**
+> "26, shy and self-conscious my whole life — I rehearse texts for an hour, dodge phone calls, and replay every social interaction for days afterward. Therapy helped me understand where it comes from but not change it day to day. I want the practical playbook: what actually built real confidence and quieted the overthinking for people who started where I am. Goal: move through social situations without the constant dread and post-mortems."
+
+**Purpose & meaning**
+> "52M, financially fine and externally 'successful,' but the last few years feel hollow — I hit the goals I set at 30 and now I'm just running out the clock, going through the motions at work and home. I don't want a midlife-crisis cliché; I want to know what actually helped people rebuild a sense of purpose and direction in midlife. Goal: wake up with something that feels worth doing, not just a list of obligations."
+
+**Intimacy & desire**
+> "37F, married eight years, and our sex life has nearly stopped — I love my husband but my desire has cratered and the mismatch is becoming a wound for both of us. Some of it's stress and exhaustion, some I can't explain, and I've been too embarrassed to dig into it. I want an honest look at what actually helped couples with a desire gap — medical, psychological, relational — without the cringe or the snake oil. Goal: rebuild a sex life that works for both of us."
+
+**Sexual confidence**
+> "44M, performance anxiety that's snowballed — a couple of off nights turned into dreading sex entirely, and now the anxiety itself is the problem more than anything physical. My GP ran bloods and said it's likely in my head. I want to know what genuinely helped men break this anxiety loop — mental approaches, what to say to a partner, when meds actually help and when they don't. Goal: be present and relaxed with my partner again instead of stuck in my own head."
 
 You don't have to be this complete — say a rough version and the agent asks follow-ups. You can
 also steer the *shape*: **"what should I try next?"** gives one recommended step plus alternatives;
