@@ -54,7 +54,11 @@ Go scanner already produces. Downstream code keys off `subreddit` for the
   ],
   "min_text_len": 150,                 // global default; each source can override
   "min_score": 3,
-  "max_candidates": 100000
+  "max_candidates": 100000,
+  "per_sub_cap": 0,                    // 0 = unlimited (default). >0 = emit at most N matches per
+                                       //   subreddit then abandon it — an even, bounded sample for
+                                       //   the opt-in wide cross-community discovery (AGENT Phase 3).
+  "max_file_bytes": 0                  // 0 = no limit. >0 skips files larger than this (e.g. 30000000)
 }
 ```
 

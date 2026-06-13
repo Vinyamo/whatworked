@@ -500,7 +500,21 @@ The one-page summary (when requested) covers §3 (goal restatement) + §4
 
 ## Per-option card & metrics — generalized model (2026-06; supersedes the earlier `.statbar` spec)
 
-**Percentages everywhere.** Express every outcome metric as a **% of the rated reports**, never raw counts ("32%", not "22 of 68"). Show the sample size **once** per option as `n≈N` (the denominator); the Evidence dot carries volume. The only legitimate absolute is the sample size.
+### ⛔ PERCENTAGES, NEVER RAW COUNTS — one explicit denominator (IMPORTANT; must NEVER drift)
+
+**Every outcome metric — in the card AND in prose — is a `%`, never a raw count.** The *only*
+legitimate absolute anywhere is the sample size `n`, shown **once** per option as `n≈N`. Write
+"helps the chest pressure: 33% (n≈55)", **never** "helped the chest pressure in 18 of 55 stories";
+write "sustained 33% / fades 2%", **never** "sustained 17 / fades 1".
+
+**All facet sub-splits use the SAME denominator as Helped%/Worse% — the attributable/rated `n`**, not
+a second hidden base: `sustained% + fades% ≤ helped%` (gap = durability-unknown); `acute% + lasting% ≤
+worse%`; `sub-problem% ≤ helped%`. State the base once; never switch mid-card.
+
+**Why non-negotiable:** a raw count with an implied denominator misleads — `sustained 17 / fades 1 of
+51 helped` reads as 33% (17/51) but is really 94% (17/18 with data); the reader can't tell. A `%`
+against one stated denominator removes the ambiguity. Thin sub-split → show as % of the stated `n`
+(so the unknown remainder is visible), or omit it — never a bare count.
 
 **Five rating facets per option (all generalize across topics):**
 1. **Direction** — Helped / No-effect / Worse (% of rated), from the attribution-first CoT pass (skip non-first-hand).

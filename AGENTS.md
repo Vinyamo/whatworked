@@ -45,6 +45,11 @@ Every request needs the user's personal credentials.
       only for a missing fact that would change the report; otherwise state your assumption.
 - [ ] Never print a % without its n (and a CI or evidence-dot band). A bare "3% worse" from a
       small sample is a classic error — show the interval.
+- [ ] **Never print a raw count as a metric — always a `%` of one explicit denominator** (the only
+      legitimate absolute is the sample size `n`, shown once). "sustained 33% / fades 2% (n≈51)",
+      never "sustained 17 / fades 1 of 51"; "33% (n≈55)", never "18 of 55". All facet sub-splits
+      use the SAME base as Helped%/Worse% (attributable n) — never a hidden second denominator
+      (17/51 reads 33% but is 94% of the 18 with data). See STUDY_GUIDELINES "PERCENTAGES, NEVER RAW COUNTS".
 - [ ] Never invent a statistic, RR, trial id, brand, dose, price, or clinician to look
       authoritative. Every science citation is **verified against a real source this run, or
       marked `[unverified]`**. "No peer-reviewed evidence located" is always preferred over a
@@ -157,6 +162,17 @@ Every request needs the user's personal credentials.
       `"low fodmap diet"`).
 - [ ] Consolidate to ~20–30 groups: merge true variants (five birth-control brands → "combined
       OCPs"), but keep a clearly higher/lower-rated member as its own entry.
+- [ ] **OPT-IN: wide cross-community discovery (OFF by default).** Only when the user asks to "go
+      wide / don't miss anything / find what other communities use" — never by default. Fire a wide
+      scout across (almost) all subs to discover treatments the canonical subs never mention:
+      `POST /scans` with `kind=reddit_posts`, all subs, the condition grep, **`per_sub_cap=10` +
+      `max_file_bytes≈30MB`** (an even, bounded sample — not an uncapped wide scan), then `/discover`.
+      Add only the **novel** names to the candidate list; rate them with the Phase-5 batched re-grep.
+      **Two hard cautions:** (a) it wins mainly for psych/neuro topics where high-impact options live
+      in drug/nootropic communities, and adds little where the home sub already concentrates the strong
+      options — it AUGMENTS canonical, never replaces it; (b) many wide finds are **high-risk**
+      (addictive/illegal) — magnitude ≠ recommend; surface under a prominent ⚠ harm flag, never tout.
+      The scout is read-bound (~minutes/topic).
 
 ## PHASE 4 — Rate + Tally (compute the numbers)
 
