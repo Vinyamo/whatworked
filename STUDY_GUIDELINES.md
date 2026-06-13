@@ -22,6 +22,15 @@ Do not draw boxes/arrows/trees out of `-`, `|`, `+`, `└`, etc. in a code block
 mode to avoid (e.g. the unreadable "THE THREE MECHANISMS AT A GLANCE" ASCII block). Markdown tables
 are fine for tabular data; *diagrams* must be rendered Mermaid images.
 
+**⛔ RENDER-FAILURE GATE — a study with a failed render is NOT deliverable.** The builder is the source
+of truth, not your eyes: `scripts/build_pdf.py` **exits non-zero** when any diagram fails to render
+(the `/render_pdf` endpoint returns an `X-Diagram-Failures` header it checks). The server first
+**auto-corrects common breakers** (smart quotes, em/en-dashes, non-breaking spaces, ellipses) and
+retries; if it still fails it emits a source-free placeholder and the build fails. When that happens
+you MUST **fix the Mermaid syntax (or omit the diagram) and rebuild until the build exits 0** — never
+deliver a PDF containing the "⚠️ Diagram failed to render" placeholder, and never paste raw Mermaid
+source as a workaround. Rely on the build's exit code, not on visually scanning the PDF.
+
 **Keep diagrams compact and legible.** A wide tree renders as an unreadable sliver once scaled to the
 page, so: prefer `graph TD` (vertical), **≤ ~10–12 nodes**, short node labels, and branch only the
 main choices — push detail into the prose, not the diagram. **After building the PDF, look at the

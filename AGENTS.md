@@ -270,7 +270,10 @@ etc.); (d) partition any conclusion that is driven by a contaminated / off-topic
       ids here — pick one place, don't duplicate.
 - [ ] `python3 scripts/build_pdf.py <folder>/study_<slug>.md` (server-side render via `/render_pdf`:
       real rendered diagrams, readable font — never ASCII art, never raw diagram source). Study is
-      NOT done until the PDF exists and is non-trivial.
+      NOT done until the PDF exists and is non-trivial — AND the build **exited 0**. A non-zero exit
+      means a diagram failed to render (`X-Diagram-Failures > 0`) → fix the Mermaid (or omit it) and
+      rebuild until it exits 0. Never deliver a PDF with the "⚠️ Diagram failed to render"
+      placeholder. (STUDY_GUIDELINES RENDER-FAILURE GATE.)
 - [ ] Open the finished PDF for the user automatically (`open` on macOS, `xdg-open` on Linux,
       `start` on Windows) — every delivered version, including re-runs.
 - [ ] **Versioning — never overwrite a delivered study.** Each re-run writes a new file

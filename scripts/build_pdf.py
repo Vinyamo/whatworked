@@ -53,6 +53,7 @@ def build(md_path: str, out_path: str | None = None) -> str:
     try:
         with urllib.request.urlopen(req, timeout=300) as r:
             pdf = r.read()
+            n_failed = int(r.headers.get("X-Diagram-Failures", "0") or "0")
     except urllib.error.HTTPError as e:
         detail = e.read()[:300].decode("utf-8", "replace")
         sys.exit(f"render failed: HTTP {e.code} — {detail}")
@@ -62,6 +63,12 @@ def build(md_path: str, out_path: str | None = None) -> str:
     with open(out_path, "wb") as f:
         f.write(pdf)
     print(f"{md_path} -> {out_path} ({len(pdf) // 1024} KB)")
+    # FAIL LOUD: a diagram that didn't render shipped a "failed to render" placeholder into the PDF.
+    # The file is written so you can inspect it, but it is NOT deliverable — fix the Mermaid syntax
+    # (or remove that diagram) and rebuild until this exits 0. Never deliver with the placeholder.
+    if n_failed:
+        sys.exit(f"\n❌ {n_failed} diagram(s) failed to render — the PDF has a placeholder and is "
+                 "NOT deliverable. Fix the Mermaid (or omit the diagram) and rebuild.")
     return out_path
 
 
