@@ -102,7 +102,12 @@ Open with what THIS study is trying to do — the audience-facing version of "we
 
 In one paragraph: what question this study is answering, what kind of recommendation the user can expect to walk away with (e.g. "a single recommended next step plus 3 alternatives plus 3–5 successful paths"), and what kinds of decisions this study is NOT designed to support (e.g. "this is not a personalized medical recommendation; consult a clinician").
 
-## How this study was made
+## The corpus (data description)
+
+A short reader-facing description of the data the findings rest on. This is **NOT** a provenance
+block — carry no job ids, models, caps, or run settings here (those live only in the closing
+"How this study was built" box; the inputs live only in the top Reproduce box). Keep just what
+the reader needs to judge the evidence:
 
 - **Sources**: <list which sources were used and why; e.g. "Reddit submissions + post-anchored Reddit comments — high discussion volume in r/X, r/Y; Erowid (psilocybin) — substance-specific corpus; Brave web search NOT used because reddit+erowid supply was already dense">.
   - For each source: the parameters used (subs / substances / queries),
@@ -292,12 +297,28 @@ The bottom line. Each item:
 
 Lead with the recommended next step from §4. Items 2–5 are the most important caveats / alternatives the user should hold in mind, and a pointer to §7 ("if you can answer Q1, the recommendation may shift to...").
 
-### Appendix — Original request (required, for reproducibility)
+### Provenance: exactly TWO boxes, partitioned by who produced each fact
 
-Every study — all formats, including breadth and atlas mode — closes with a short appendix recording the exact inputs, so the report can be reproduced (or knowingly varied) later:
+A study records its provenance in **exactly two blocks** — no more. Earlier drafts grew four
+overlapping "about this study" sections (a top Reproduce box, a §1 "How this study was made", an
+"Original request" appendix, and a closing "How this study was built"), repeating the prompt, the
+sub list, the date, and the job ids two or three times each. Collapse to two, and obey one rule:
+
+> **Every provenance fact lives in exactly ONE box. Top box = what the *human* supplied. Bottom box
+> = what the *machine* did. Any machine-generated value — job ids, sub list, models, caps, story
+> target, discovery passes, run date — goes in the bottom box and NEVER the top. Never restate a
+> fact across the two boxes.**
+
+(The body's "The corpus (data description)" section may describe the data in prose for the reader,
+but it is NOT a third provenance block — it carries no job ids, models, caps, or settings.)
+
+#### TOP — Reproduce box (REQUIRED, first thing after the title block)
+
+Only what the human supplied, so a reader sees the exact ask + assumptions before the findings,
+and a future run can restate them:
 
 ```markdown
-## Appendix — Original request
+## Reproduce box
 
 **Original prompt (verbatim):**
 
@@ -305,30 +326,33 @@ Every study — all formats, including breadth and atlas mode — closes with a 
 
 **Clarifying questions & answers:**
 
-1. **Q:** <question as asked> — **A:** <the user's answer; verbatim if short, tight paraphrase if long>
+1. **Q:** <question as asked> — **A:** <answer; verbatim if short, tight paraphrase if long>
 2. ...
 
-**Other inputs:** report format chosen; supplemental files provided (filenames only — never file contents); any defaults assumed instead of asked (e.g. assumed audience or goal).
-
-**Re-run settings:** mode (filter-first / breadth + cheap/moderate/high), sources & subs, target_n, scoring model, scan_id / score_id (artifacts are reusable on re-runs).
+**Assumptions / defaults:** <any report-changing fact assumed instead of asked — e.g. assumed audience or goal>
+**Format chosen:** <format> — <one-line why, from the goal clause>
+**Supplemental files:** <filenames only — never file contents; "none" if none>
 ```
 
-Keep it factual and compact — what the user actually said, not a narrative. Together with §1 "How this study was made", this makes the study reproducible: a future run restates the same prompt and answers and reuses (or recreates) the same scan/score artifacts.
+Keep it factual — what the user actually said, not a narrative. No job ids, subs, models, or run
+date here (everything machine-generated lives in the closing box below).
 
-### Appendix — How this study was built (REQUIRED — the VERY LAST section of every study)
+#### BOTTOM — How this study was built (REQUIRED — the VERY LAST section of every study)
 
-The **closing** block. Where the top-of-report Reproduce-box / "Original request" appendix records *what was asked*, this records **how the report was built** — plugin version + models + config — so a delivered study can be reproduced or audited later. It is the final section of every study, all formats (action sheet, mechanism map, decision cards, breadth profile, atlas). Keep it compact — a short labeled block, not a big table.
+The audit footer: the single home for everything the pipeline did, all formats. Compact — one
+label per line, not a table.
 
 ```markdown
 ## How this study was built
 
-- **Generated by:** WhatWorked plugin v<version> — the assistant reads the `"version"` field from `.claude-plugin/plugin.json` of the installed plugin (or the cloned repo). If it can't be found, write "version: local/unknown".
+- **Generated by:** WhatWorked plugin v<version> — read the `"version"` field from `.claude-plugin/plugin.json` of the installed plugin (or the cloned repo); else "version: local/unknown".
 - **Date:** <YYYY-MM-DD run date>
-- **Models used:** writer/assistant model `<the model that generated this prose>` · rating model `<server-side /rate, default gemini-2.5-flash-lite>` · discovery model `<server-side /discover, default gemini-2.5-flash-lite>`<; filter model `<model>` if the optional /scores path was used>. State each role explicitly so it's clear which model did what.
-- **Config / pipeline:** subreddits scanned `<list>`; per-sub scan cap `<~2000–2500>`; story target `<e.g. ~40 attributable stories/option, census below that>`; discovery passes `<N>`; contamination gate `<result — e.g. "no sub exceeded median skip%" / "dropped r/X">`<; filter target_n `<N>` if the /scores path was used>. Job ids: reference the scan/disc/rate/tally ids from the top Reproduce-box, OR list them here — **pick one place, don't duplicate**.
+- **Models used:** writer/assistant model `<model that generated this prose>` · rating model `<server-side /rate, default gemini-2.5-flash-lite>` · discovery model `<server-side /discover, default gemini-2.5-flash-lite>`<; filter model `<model>` if the optional /scores path was used>. State each role explicitly.
+- **Config / pipeline:** sources & subreddits scanned `<list>`; per-sub scan cap `<~2000–2500>`; records emitted `<N>`; story target `<e.g. ~40 attributable stories/option, census below that>`; discovery passes `<N>`; contamination gate `<result — e.g. "no sub exceeded median skip%" / "dropped r/X">`<; filter target_n `<N>` if the /scores path was used>; web-research scope `<n distinct sources behind the science notes>`.
+- **Job ids:** scan `<id>` · discovery `<id>` · rate `<id>` · tally `<id>`<; rescue scan/rate `<ids>` if run>. (Job ids live ONLY here — never also in the Reproduce box.)
 ```
 
-This is mandatory and is the last thing in the report. Don't pad it — one label per line.
+This is mandatory and is the last thing in the report. Don't pad it.
 
 ## Style notes
 
@@ -342,7 +366,7 @@ This is mandatory and is the last thing in the report. Don't pad it — one labe
 - No emoji unless the user specifically asked for it.
 - **Plain language first.** Define each technical term in plain words on first use (one clause is enough), and keep a warm, direct register — this is for a worried human, not a journal. Where the corpus genuinely supports it, include one short reassurance / normalisation beat (e.g. a representative "you can live a normal life" quote). Don't let the calibration machinery (confidence labels, ease ratios, supply numbers) make the prose cold or unreadable — it should sit *inside* readable prose, not replace it.
 - **Be concrete, but never invent.** Name specific products/brands, doses, rough costs, exact tests, and named specialists/clinics/centres-of-excellence **when — and only when — the corpus or literature names them**. Concrete beats vague ("ask for the IBS-Smart anti-vinculin test" > "consider further testing"; "Resolor/prucalopride 1–2 mg nightly, Rx in DE/AT/CH" > "a prokinetic"). Never fabricate a brand, dose, price, or clinician; if a source doesn't give the specific, say so and tell the reader to confirm with their clinician.
-- **Atlas mode for broad-domain questions.** When the user's question is "map this whole space" rather than "what's my next step" (e.g. an entire domain of practices/options to survey, not a single decision), you may replace the single-recommended-step framing of §4–§6 with an *atlas* structure — the practices grouped under 3–6 sub-domain headings, with a master decision tree near the top and archetype-based growth paths ("starting point → next move → next stage"). Within each sub-domain, use the **same per-treatment `###` section + `.statbar` one-liner + blockquoted quotes** format as breadth mode (see "Breadth-mode report format" below), and keep the demographics paragraph, §7 (missing info), §8 (caveats), the **Sources appendix**, and **per-claim confidence labels** — the calibration is not optional even in atlas mode. Default to the single-next-step structure; use atlas mode only when the question is genuinely a survey.
+- **Atlas mode for broad-domain questions.** When the user's question is "map this whole space" rather than "what's my next step" (e.g. an entire domain of practices/options to survey, not a single decision), you may replace the single-recommended-step framing of §4–§6 with an *atlas* structure — the practices grouped under 3–6 sub-domain headings, with a master decision tree near the top and archetype-based growth paths ("starting point → next move → next stage"). Within each sub-domain, use the **same per-treatment `###` section + canonical card (bar + caption) + blockquoted quotes** format as breadth mode (see "Breadth-mode report format" below), and keep the demographics paragraph, §7 (missing info), §8 (caveats), the **Sources appendix**, and **per-claim confidence labels** — the calibration is not optional even in atlas mode. Default to the single-next-step structure; use atlas mode only when the question is genuinely a survey.
 - **Short quotes throughout.** Ground the prose in 1–2 short verbatim quotes per treatment / major point, as blockquotes cited `— r/<sub>` (the quercetin-study voice; no score). A short quote beats a paraphrase for making a claim concrete and trustworthy — use them liberally, but keep each short.
 - **Write in the quercetin-study voice** generally: a brief executive summary up front, warm readable prose with bold lead-ins, short inline quotes, and a key-takeaways close. Tables are for reference data (e.g. the long tail), not for the main narrative.
 - **Breadth mode** ("map the full menu" studies, via the discovery-sweep + tally pipeline — `AGENTS.md` → "Breadth mode") uses a dedicated **treatment-profile** report format — see the section below.
@@ -354,7 +378,7 @@ quercetin-study voice (exec summary, warm prose, short quotes, takeaways) — no
 
 **Choose one of three report shapes** (the user picks in the wizard — AGENTS.md step 1c). All three
 use the **same outcome-first, G2-grouped data and the same per-option content** defined below
-(statbar one-liner, How, Science, quotes); they differ only in the top-level organisation:
+(canonical card, How, Science, quotes); they differ only in the top-level organisation:
 
 - **Action sheet (default, all-rounder).** A one-page **## Action sheet** first — top 3–4 moves
   (with `how`), top 3 things to **stop**, and a **red-flags / see-a-clinician** line — then `---`
@@ -403,7 +427,7 @@ improvement that the reader can do now), each with its concrete `how`. Then the 
 **Each group gets its OWN `###` section** (never a shared paragraph, never a table row for the
 profiled set). Inside each section, in this order:
 
-1. **A metrics one-liner**, rendered as a styled callout (`build_pdf.py` styles the `.statbar`
+1. **A metrics one-liner** *(LEGACY — superseded by the design-E CANONICAL card below; kept for older reports)*, rendered as a styled callout (`build_pdf.py` styles the `.statbar`
    class). Emit it as raw HTML directly under the heading (the 2026-06-05 four-signal model):
    ```html
    <div class="statbar"><b>Helped:</b> 66% &nbsp;|&nbsp; <b>Worse:</b> 16% &nbsp;|&nbsp; <b>Magnitude:</b> game-changer (3.8, n=22) &nbsp;|&nbsp; <b>Reports:</b> 107 &nbsp;|&nbsp; <b>Confidence:</b> ●●●●● 5/5</div>
@@ -418,7 +442,7 @@ profiled set). Inside each section, in this order:
    - **Confidence** = `●` filled to 5 from the attributable count (4→1, 8→2, 12→3, 16→4, ≥20→5).
    - If the group has >1 member add a **Includes:** line.
 
-   **This `.statbar` (Helped / Worse / Magnitude / Reports / Confidence) is the ONE canonical way to
+   **SUPERSEDED — the design-E CANONICAL card (below) replaces this `.statbar`; that card is the way to
    show an option's metrics — use it for EVERY option in EVERY shape**, including the action-sheet's
    top moves, mechanism-map nodes, and decision-card picks. Do **not** fall back to a bare mean
    rating or `(N=832, rating 2.92/5)`. The long-tail *table* is the only place a plain numeric column
@@ -536,32 +560,86 @@ against one stated denominator removes the ambiguity. Thin sub-split → show as
 
 **"Evidence ≠ proof" caveat (required box).** Community self-report, no control group → cannot establish causation (placebo, regression-to-mean, co-interventions); posters are a self-selected stratum → representativeness unknown. Even ●●●●● = "lots of consistent reports," not "will work for you." **When ratings are sampled (the default — see AGENTS.md PHASE 6B), show Helped% ± Wilson CI** as the honest readout of the sample size, and state the sample ("rated 50 of ~180 attributable"). Cross-model-agreement is a High-mode add-on flag.
 
-**Scannable card layout (per option):** `###` title → **metrics block directly under the title** (one thin %-segmented outcome bar + a ≤2-line caption with the facet %s, magnitude sparkline, Evidence, n) → 1-line *what-it-is* description → **Best for** → **How / ✅ Get right / ⚠️ Avoid** each its own short paragraph → 1–2 quotes. Reader skims the top, drills in only for relevant options.
+**Scannable card layout (per option):** `###` title → **metrics block directly under the title** (the 5-segment outcome bar + the one-line labelled caption `n · Helped%+CI · Evidence · Magnitude · Prevalence` — see CANONICAL card below) → 1-line *what-it-is* description → **Best for** → **How / ✅ Get right / ⚠️ Avoid** each its own short paragraph → 1–2 quotes. Reader skims the top, drills in only for relevant options.
 
-**Charts stay tiny** — one thin segmented bar + caption + inline sparkline; never bulky bordered tables.
+**Charts stay tiny** — one thin segmented bar + a one-line caption; never bulky bordered tables.
 
 ---
 
 ### ⛔ CANONICAL per-option card — the graphical-bar format (REQUIRED; must NEVER be dropped in a refactor)
 
-This is the preferred, user-loved rendering: a **colored %-segmented outcome bar directly under the
-title** (green helped · grey no-effect · red worse), then a facet line, then a magnitude+sub-problem+Evidence
-line. Emit this exact inline-HTML shape per option (the PDF inherits the colors from the inline styles,
-so it works even without extra CSS). Keep the green `#4a9`, grey `#ccc`, red `#d66` bar segments and the
-widths = the three %s.
+The preferred, user-tested rendering: a **5-segment coloured outcome bar directly under the title**,
+then a **one-line labelled stat caption**. Emit this exact inline-HTML shape per option (the PDF
+inherits the colours from the inline styles, so it works with no extra CSS).
 
+**The bar (design "E" — merges direction × help-magnitude × harm-type into one row).** Five segments;
+widths = **% of the rated attributable stories** (sum to 100, same `n` denominator as every other %):
+
+| segment | colour (text) | meaning | compute from the per-record `/rate` output |
+|---|---|---|---|
+| **big help** | `#1e7a4d` (`#fff`) | helped, large effect | direction=helped AND magnitude ≥ 4 |
+| **modest help** | `#9bd6b6` (`#173a2a`) | helped, small/moderate | direction=helped AND magnitude ≤ 3 |
+| **neutral** | `#c9c9c9` (`#3a3a3a`) | tried it, no real change | direction=noeffect |
+| **worse acute** | `#e08a4e` (`#fff`) | worse but transient (dosing / "worse-before-better") | direction=worse AND harm=acute |
+| **worse lasting** | `#a82c2c` (`#fff`) | worse and persistent | direction=worse AND harm∈{lasting,unclear} |
+
+The `/rate` aggregate gives direction %s and `worse_type` (acute/lasting/unclear); the big/modest-help
+split is computed from the per-record rate `.ndjson` (each record carries `direction` + `magnitude`).
+**In each segment the `%` is ALWAYS shown** (bold, full opacity); a 1–2-word label follows it
+**smaller + 50%-transparent**, and is **dropped (never clipped) when the segment is < ~12% wide**.
+
+**The caption (one line, labelled key-value — "C4").** Bold field name + value, dot-separated:
+
+- **n** — attributable rated stories (the denominator for every %; small n → read %s as rough).
+- **Helped H% (95% CI lo–hi%)** — helped% with Wilson 95% CI (REQUIRED whenever sampled).
+- **Evidence** ●-dots, un-saturated: ●●●●● ≥80 · ●●●●○ 40–79 · ●●●○○ 20–39 · ●●○○○ 10–19 · ●○○○○ <10.
+- **Magnitude M/5** — mean effect size **among helped stories ONLY** (1 barely noticeable … 5 dramatic);
+  compute from helped records in the rate `.ndjson`. **Do NOT use the aggregate's `mag_mean`** — that is
+  the both-directions mean and would mislabel a high-worse option.
+- **Prevalence P mentions** — exhaustive `/tally` count (popularity, NOT effectiveness; far larger than n).
+- Append **⚖️ contested** (amber `#b8860b`) when worse ≈ half-or-more of helped.
+
+Exact HTML template:
 ```html
 ### <Option name>
-<table style="width:100%;border-collapse:collapse;table-layout:fixed;margin:2px 0;"><tr><td style="background:#4a9;color:#fff;width:59%;font-size:7.5pt;text-align:center;padding:1px 0;">59%</td><td style="background:#ccc;color:#555;width:31%;font-size:7.5pt;text-align:center;padding:1px 0;">31%</td><td style="background:#d66;color:#fff;width:10%;font-size:7.5pt;text-align:center;padding:1px 0;">10%</td></tr></table>
-<div style="font-size:8pt;color:#555;margin:0;"><b style="color:#3a9a77">helped 59%</b> (sustained 41% / <span style="color:#c66">fades 0%</span>) &nbsp;·&nbsp; no effect 31% &nbsp;·&nbsp; <b style="color:#c44">worse 10%</b> (acute 5% / lasting 4%)</div>
-<div style="font-size:8pt;color:#777;margin:0 0 5px;">magnitude when it helps: <b>nudge</b> <sparkline of 1–5 distribution> &nbsp;·&nbsp; helps <i>staying&nbsp;asleep</i> specifically: 6% &nbsp;·&nbsp; Evidence ●●●●● (n≈169) <b style="color:#b8860b">⚖️ contested</b></div>
+<table style="width:100%;border-collapse:collapse;table-layout:fixed;margin:2px 0;"><tr><td style="background:#1e7a4d;color:#fff;width:40%;text-align:center;vertical-align:middle;padding:2px 2px;overflow:hidden;white-space:nowrap;"><b style="font-size:8pt;">40%</b> <span style="font-size:6.5pt;opacity:0.5;">big help</span></td><td style="background:#9bd6b6;color:#173a2a;width:30%;text-align:center;vertical-align:middle;padding:2px 2px;overflow:hidden;white-space:nowrap;"><b style="font-size:8pt;">30%</b> <span style="font-size:6.5pt;opacity:0.5;">modest help</span></td><td style="background:#e08a4e;color:#fff;width:20%;text-align:center;vertical-align:middle;padding:2px 2px;overflow:hidden;white-space:nowrap;"><b style="font-size:8pt;">20%</b> <span style="font-size:6.5pt;opacity:0.5;">worse acute</span></td><td style="background:#a82c2c;color:#fff;width:10%;text-align:center;vertical-align:middle;padding:2px 2px;overflow:hidden;white-space:nowrap;"><b style="font-size:8pt;">10%</b></td></tr></table>
+<div style="font-size:8pt;color:#777;margin:0 0 5px;"><b>n</b> 10 &nbsp;·&nbsp; <b>Helped</b> 70% (95% CI 40–89%) &nbsp;·&nbsp; <b>Evidence</b> ●●○○○ &nbsp;·&nbsp; <b>Magnitude</b> 3.5/5 &nbsp;·&nbsp; <b>Prevalence</b> 1,145 mentions</div>
 *<one-line what-it-is description>*
 ```
-- Bar widths = Helped% / No-effect% / Worse% (sum 100). The magnitude sparkline = five 4px-wide bars whose
-  heights encode the 1–5 magnitude distribution (template: `<span style="display:inline-block;width:4px;height:Hpx;background:#7a9bbf;vertical-align:bottom;margin-right:1px;"></span>` ×5).
-- Drop the `⚖️ contested` span unless worse ≈ half-or-more of helped. Keep facet sub-splits (sustained/fades,
-  acute/lasting) only when rated; omit a sub-split rather than invent it.
+- Omit any zero-width segment; keep neutral when it has width (% shown, label dropped if narrow).
+- Colour-blind safety rides on segment ORDER (help→neutral→worse, left→right) + the light/dark lightness
+  ramp + the labels/caption — never hue alone.
 
-**Plain-text fallback** (only if inline HTML can't be used) — the labeled one-liner statbar:
-`Helped: 90% | Worse: 3% | Magnitude: game-changer (4.0, n=29) | Reports: 29 | Evidence: ●●●○○`.
-Prefer the graphical bar above; this is the fallback, not the default.
+**Plain-text fallback** (only if inline HTML can't be used):
+`big help 40% / modest 30% / neutral 0% / worse-acute 20% / worse-lasting 10% — n 10 · Helped 70% (CI 40–89) · Evidence ●●○○○ · Magnitude 3.5/5 · Prevalence 1,145`.
+Prefer the graphical bar; this is the fallback, not the default.
+
+### ⛔ REQUIRED reader legend — "How to read these cards" (emit ONCE, before the first bar/number)
+
+Place this key **immediately before the first section that shows any bar or stat** — i.e. before the
+rated-landscape table AND the first per-option card, whichever comes first — so the reader can decode
+every bar segment and every caption field. Keep it compact; emit verbatim (adapt the swatch colours
+only if the bar palette changes):
+
+```markdown
+## How to read these cards
+
+Each option shows an **outcome bar** over a one-line **stat caption**, computed from real first-hand
+stories people posted — not a controlled trial (see *Evidence ≠ proof*).
+
+**The bar** splits this option's rated stories by what happened; widths are the **% of stories** (add to 100%):
+🟩 **big help** · 🟢 **modest help** — improved, split by how large the change was · ⬜ **neutral** —
+no real change · 🟧 **worse acute** — worse but **temporary** ("worse before better") · 🟥 **worse
+lasting** — worse and it **persisted**.
+
+**The caption:** **n** = first-hand stories rated (every % is over this — small n = rough) ·
+**Helped …% (95% CI)** = share that improved + the likely range given the sample · **Evidence ●●●○○** =
+how much consistent evidence exists (more dots = better-supported, not more proven) · **Magnitude …/5**
+= average size of the effect when it helped · **Prevalence … mentions** = how often it's discussed
+overall (**popularity, not effectiveness** — far larger than n) · **⚖️ contested** = downsides are at
+least half as common as upsides.
+
+> **Evidence ≠ proof.** Self-selected internet anecdotes, no control group — placebo,
+> regression-to-the-mean and co-treatments are invisible. Even ●●●●● means "lots of consistent
+> reports," not "this will work for you."
+```

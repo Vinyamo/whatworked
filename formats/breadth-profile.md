@@ -28,11 +28,12 @@ pipeline; the other three formats are alternative *top-level organisations* of t
 6. `## Sources` appendix — one row per subreddit, posts and comments split.
 
 **Per-option section content** (exact spec in `STUDY_GUIDELINES.md` → "Breadth-mode report format"
-and "Per-option card & metrics"): statbar metrics line (Helped% · Worse% · Magnitude · Reports ·
-Confidence/Evidence) · 1–2 readable paragraphs (who it's for, what experiences say) · `**How:**`
+and "Per-option card & metrics"): the canonical card — 5-segment outcome bar + one-line caption
+(`n · Helped%+CI · Evidence · Magnitude · Prevalence`) · 1–2 readable paragraphs (who it's for, what experiences say) · `**How:**`
 line · `**Science:**` line · 1–2 blockquoted arc-quotes cited `— r/<sub>`.
 
 **Always include:** demographics · missing-info questions · caveats (incl. the required
 "Evidence ≠ proof" box; disclose sampling: "rated 50 of ~180 attributable", % ± Wilson CI) ·
-key takeaways · `## Appendix — Original request` (verbatim prompt + clarifying Q&A + re-run
-settings — template in `STUDY_GUIDELINES.md`).
+key takeaways · the `## How to read these cards` legend before the first card · `## Reproduce box`
+(verbatim prompt + clarifying Q&A + assumptions — human inputs only) · the closing
+`## How this study was built` box (machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.

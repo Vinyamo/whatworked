@@ -20,12 +20,14 @@ across multiple drug classes, or they've tried a first-line option and ask "what
 3. `##` heading per **mechanism / drug class** (not a flat rank); under each, the `###` option
    sections that belong to it, best-rated first within the class.
 
-**Shared content rules** (all formats): every option uses the canonical statbar metrics line,
+**Shared content rules** (all formats): every option uses the canonical per-option card (5-segment
+outcome bar + one-line caption `n · Helped%+CI · Evidence · Magnitude · Prevalence`),
 per-option `**How:**` and `**Science:**` lines, and 1–2 blockquoted quotes cited `— r/<sub>` —
 see `STUDY_GUIDELINES.md` → "Breadth-mode report format" and "Per-option card & metrics".
 
 **Always include:** `## Start here` box · `## What to stop doing` · long-tail table (real ratings,
 never a uniform "3") · `## Sources` appendix (one row per subreddit, posts and comments split) ·
 demographics · missing-info questions · caveats (incl. the "Evidence ≠ proof" box) · key takeaways ·
-`## Appendix — Original request` (verbatim prompt + clarifying Q&A + re-run settings — template in
-`STUDY_GUIDELINES.md`).
+the `## How to read these cards` legend before the first card · `## Reproduce box` (verbatim prompt +
+clarifying Q&A + assumptions — human inputs only) · the closing `## How this study was built` box
+(machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.

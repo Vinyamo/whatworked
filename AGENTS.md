@@ -100,7 +100,7 @@ Every request needs the user's personal credentials.
    worse% ≥ ½ helped%.
 6. **Spend where it changes conclusions.** Server-side gemini does filter / discover / rate; the
    agent does scoping, grouping sanity, and writing.
-7. **Readable + warm.** Per-option sections with a one-line statbar; short real quotes cited
+7. **Readable + warm.** Per-option sections with the canonical card (5-segment bar + caption); short real quotes cited
    `— r/<sub>` (no scores); concrete how-people-use-it (only what a source names); one science
    note per option; scannable first, drill-down second.
 
@@ -219,9 +219,13 @@ Before writing: pull the rated rows + tally; read 30–50 raw record bodies (not
 one-sentence `brief`) for quotes and how-to detail. Run one targeted web search per profiled
 option for its science note.
 
-**Report opens with the Reproduce box** (mandatory): the user's verbatim original prompt + every
-clarifying Q&A + run parameters (subs, scan/discover/rate/tally job ids, models, date). This makes
-the study regenerable and auditable.
+**Report opens with the Reproduce box** (mandatory): ONLY what the user supplied — verbatim
+original prompt + every clarifying Q&A + assumptions/defaults + format chosen + supplemental
+filenames. NO machine params here (job ids, subs, models, caps all live in the closing "How this
+study was built" box). The two provenance boxes are partitioned — **top = what was asked, bottom =
+how it was built, and no fact appears in both** (there are exactly two: do not also emit a separate
+"Original request" appendix or treat the corpus-description section as a third). This makes the
+study regenerable and auditable.
 
 **Auto-pick the report format** from the goal clause and disclose it in one line (no format
 question). Formats are files: **standard formats** ship in `formats/` (locked — never edit), **user
@@ -232,10 +236,13 @@ map** (`formats/mechanism-map.md`); which-case-am-I / broad audience → **Decis
 (`formats/breadth-profile.md`). A user format `inherits:` a standard one — load the standard
 skeleton first, then apply the user file's deltas. Skeletons in STUDY_GUIDELINES.md.
 
-**Body:** orient (goal + data description incl. per-sub counts) → **Start-here box** (the
+**Body:** orient (goal + data description incl. per-sub counts) → **"How to read these cards"
+legend** (REQUIRED, emitted ONCE immediately before the first bar/number — decodes the 5-segment
+bar + every caption field; template in STUDY_GUIDELINES.md) → **Start-here box** (the
 mainstream / most-likely first move, even if the sort ranks it lower) → per-option profiles sorted
-by **Helped% × evidence-discount** (statbar: Helped% · Worse% · magnitude word · n stories ·
-evidence dots · ⚖ if contested; group members; How line; Science line; 2 arc-quotes cited
+by **Helped% × evidence-discount** (the CANONICAL card: 5-segment outcome bar [big help · modest
+help · neutral · worse-acute · worse-lasting] + one-line caption `n · Helped%+CI · Evidence ·
+Magnitude · Prevalence`, ⚖ if contested; group members; How line; Science line; 2 arc-quotes cited
 `— r/<sub>`) → **What to stop doing** anti-patterns → successful paths + timelines (rendered Mermaid
 if ≥3 clear paths) → **Missing information** (3–6 questions + why each shifts the recommendation) →
 **Caveats** (structural biases + diagnostic-derived) → ≤5 key takeaways leading with the next step.
@@ -266,8 +273,9 @@ etc.); (d) partition any conclusion that is driven by a contaminated / off-topic
       `/rate`, default gemini-2.5-flash-lite · discovery model = server-side `/discover`, default
       gemini-2.5-flash-lite · filter model if the optional `/scores` path was used) · **Config/pipeline**
       (subs scanned, per-sub scan cap, story target, discovery passes, contamination-gate result, filter
-      target_n if used). Reference the job ids from the top Reproduce-box OR list scan/disc/rate/tally
-      ids here — pick one place, don't duplicate.
+      target_n if used). **Job ids (scan/disc/rate/tally + any rescue) live ONLY here — never also in
+      the Reproduce box.** This is the single home for every machine-generated fact; the top Reproduce
+      box and the body's corpus-description section must not repeat job ids, subs, models, or caps.
 - [ ] `python3 scripts/build_pdf.py <folder>/study_<slug>.md` (server-side render via `/render_pdf`:
       real rendered diagrams, readable font — never ASCII art, never raw diagram source). Study is
       NOT done until the PDF exists and is non-trivial — AND the build **exited 0**. A non-zero exit
