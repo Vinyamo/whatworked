@@ -85,7 +85,37 @@ graph LR
 ```
 ````
 
-## Required structure (9 sections)
+## Required structure
+
+### ⛔ CANONICAL section order (v0.2.10 — supersedes the older skeleton below)
+
+Lead with the answer; defer reference + provenance to the end. In this exact order:
+
+1. **Title + Issue / Audience / Goal / Date / Format** (one header block — this is the scope line)
+2. **Executive summary** — most useful / surprising findings + the one central fork
+3. **Start here** — the mainstream / most-likely first move(s)
+4. **Rated options** — lead with `### How to read these cards`, then the per-option cards (sorted Helped% × evidence-discount)
+5. **Long tail** — table of the rest, with REAL ratings
+6. **What to stop doing** — anti-patterns
+7. **Successful paths** — rendered Mermaid (diagram only; no prose re-narration)
+8. **Missing information** — questions + why each shifts the rec
+9. **The corpus** — data description incl. per-sub counts
+10. **Caveats** — structural biases + diagnostic-derived (demographics folded in here)
+11. **Your next steps** — ≤5 closing actions
+12. **Sources** — per-subreddit table
+13. **The prompt** — what the user supplied (provenance box 1)
+14. **How this study was built** — machine facts (provenance box 2, very last)
+
+**Say-it-once (S4 — REQUIRED).** Each recurring meta-point has exactly ONE home; elsewhere reference
+it, never restate: the **central fork** is owned by the Executive summary; **demographics** is folded
+into Caveats (no standalone "who's in the data" section); **Evidence ≠ proof** lives only in the
+legend; **closing actions are next-steps only** (not a re-summary); **Successful paths is the diagram
+only**. There is no standalone "What this study tries to do" — the header + executive summary cover
+it. Trim duplicating surfaces, but NEVER drop a required calibration element (n, CI, Evidence, the
+Evidence ≠ proof box).
+
+*(The numbered skeleton below predates this order and is kept for the per-section field detail; follow
+the order above where they differ.)*
 
 ### 1. Study goal + data description (≤300 words)
 
@@ -106,7 +136,7 @@ In one paragraph: what question this study is answering, what kind of recommenda
 
 A short reader-facing description of the data the findings rest on. This is **NOT** a provenance
 block — carry no job ids, models, caps, or run settings here (those live only in the closing
-"How this study was built" box; the inputs live only in the top Reproduce box). Keep just what
+"How this study was built" box; the inputs live only in "The prompt" box). Keep just what
 the reader needs to judge the evidence:
 
 - **Sources**: <list which sources were used and why; e.g. "Reddit submissions + post-anchored Reddit comments — high discussion volume in r/X, r/Y; Erowid (psilocybin) — substance-specific corpus; Brave web search NOT used because reddit+erowid supply was already dense">.
@@ -304,21 +334,22 @@ overlapping "about this study" sections (a top Reproduce box, a §1 "How this st
 "Original request" appendix, and a closing "How this study was built"), repeating the prompt, the
 sub list, the date, and the job ids two or three times each. Collapse to two, and obey one rule:
 
-> **Every provenance fact lives in exactly ONE box. Top box = what the *human* supplied. Bottom box
-> = what the *machine* did. Any machine-generated value — job ids, sub list, models, caps, story
-> target, discovery passes, run date — goes in the bottom box and NEVER the top. Never restate a
-> fact across the two boxes.**
+> **Every provenance fact lives in exactly ONE box. "The prompt" = what the *human* supplied. "How
+> this study was built" = what the *machine* did. Any machine-generated value — job ids, sub list,
+> models, caps, story target, discovery passes, run date — goes in "How this study was built" and
+> NEVER in "The prompt". Never restate a fact across the two boxes.**
 
-(The body's "The corpus (data description)" section may describe the data in prose for the reader,
-but it is NOT a third provenance block — it carries no job ids, models, caps, or settings.)
+Both boxes are the **last two sections** of the report (lead with the answer; provenance is an
+appendix pair). The body's "The corpus (data description)" section may describe the data in prose for
+the reader, but it is NOT a third provenance block — it carries no job ids, models, caps, or settings.
 
-#### TOP — Reproduce box (REQUIRED, first thing after the title block)
+#### "The prompt" (REQUIRED — second-to-last section, just before "How this study was built")
 
-Only what the human supplied, so a reader sees the exact ask + assumptions before the findings,
-and a future run can restate them:
+Only what the human supplied, so the reader can see the exact ask + assumptions and a future run can
+restate them:
 
 ```markdown
-## Reproduce box
+## The prompt
 
 **Original prompt (verbatim):**
 
@@ -349,7 +380,7 @@ label per line, not a table.
 - **Date:** <YYYY-MM-DD run date>
 - **Models used:** writer/assistant model `<model that generated this prose>` · rating model `<server-side /rate, default gemini-2.5-flash-lite>` · discovery model `<server-side /discover, default gemini-2.5-flash-lite>`<; filter model `<model>` if the optional /scores path was used>. State each role explicitly.
 - **Config / pipeline:** sources & subreddits scanned `<list>`; per-sub scan cap `<~2000–2500>`; records emitted `<N>`; story target `<e.g. ~40 attributable stories/option, census below that>`; discovery passes `<N>`; contamination gate `<result — e.g. "no sub exceeded median skip%" / "dropped r/X">`<; filter target_n `<N>` if the /scores path was used>; web-research scope `<n distinct sources behind the science notes>`.
-- **Job ids:** scan `<id>` · discovery `<id>` · rate `<id>` · tally `<id>`<; rescue scan/rate `<ids>` if run>. (Job ids live ONLY here — never also in the Reproduce box.)
+- **Job ids:** scan `<id>` · discovery `<id>` · rate `<id>` · tally `<id>`<; rescue scan/rate `<ids>` if run>. (Job ids live ONLY here — never also in "The prompt" box.)
 ```
 
 This is mandatory and is the last thing in the report. Don't pad it.
@@ -614,15 +645,15 @@ Exact HTML template:
 `big help 40% / modest 30% / neutral 0% / worse-acute 20% / worse-lasting 10% — n 10 · Helped 70% (CI 40–89) · Evidence ●●○○○ · Magnitude 3.5/5 · Prevalence 1,145`.
 Prefer the graphical bar; this is the fallback, not the default.
 
-### ⛔ REQUIRED reader legend — "How to read these cards" (emit ONCE, before the first bar/number)
+### ⛔ REQUIRED reader legend — "How to read these cards" (the FIRST subsection of "Rated options")
 
-Place this key **immediately before the first section that shows any bar or stat** — i.e. before the
-rated-landscape table AND the first per-option card, whichever comes first — so the reader can decode
-every bar segment and every caption field. Keep it compact; emit verbatim (adapt the swatch colours
-only if the bar palette changes):
+Emit this key ONCE, as the **lead `###` subsection directly under the `## Rated options` heading,
+immediately before the first card** — so the reader decodes every bar segment and caption field right
+where the cards begin (not as a standalone top-of-report section). Keep it compact; emit verbatim
+(adapt the swatch colours only if the bar palette changes):
 
 ```markdown
-## How to read these cards
+### How to read these cards
 
 Each option shows an **outcome bar** over a one-line **stat caption**, computed from real first-hand
 stories people posted — not a controlled trial (see *Evidence ≠ proof*).

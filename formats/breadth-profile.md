@@ -34,6 +34,6 @@ line · `**Science:**` line · 1–2 blockquoted arc-quotes cited `— r/<sub>`.
 
 **Always include:** demographics · missing-info questions · caveats (incl. the required
 "Evidence ≠ proof" box; disclose sampling: "rated 50 of ~180 attributable", % ± Wilson CI) ·
-key takeaways · the `## How to read these cards` legend before the first card · `## Reproduce box`
-(verbatim prompt + clarifying Q&A + assumptions — human inputs only) · the closing
-`## How this study was built` box (machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.
+next steps · the `### How to read these cards` legend as the lead subsection of `## Rated options` ·
+then, LAST, the two provenance boxes: `## The prompt` (human inputs only) followed by
+`## How this study was built` (machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.

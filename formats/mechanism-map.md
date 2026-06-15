@@ -28,6 +28,6 @@ see `STUDY_GUIDELINES.md` → "Breadth-mode report format" and "Per-option card 
 **Always include:** `## Start here` box · `## What to stop doing` · long-tail table (real ratings,
 never a uniform "3") · `## Sources` appendix (one row per subreddit, posts and comments split) ·
 demographics · missing-info questions · caveats (incl. the "Evidence ≠ proof" box) · key takeaways ·
-the `## How to read these cards` legend before the first card · `## Reproduce box` (verbatim prompt +
-clarifying Q&A + assumptions — human inputs only) · the closing `## How this study was built` box
-(machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.
+the `### How to read these cards` legend as the lead subsection of `## Rated options` · then, LAST, the
+two provenance boxes: `## The prompt` (verbatim prompt + clarifying Q&A + assumptions — human inputs
+only) followed by `## How this study was built` (machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.
