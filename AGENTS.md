@@ -219,13 +219,13 @@ Before writing: pull the rated rows + tally; read 30–50 raw record bodies (not
 one-sentence `brief`) for quotes and how-to detail. Run one targeted web search per profiled
 option for its science note.
 
-**Report ENDS with two provenance boxes** (mandatory; the last two sections — NOT at the top, lead
-with the answer instead): **"The prompt"** = ONLY what the user supplied (verbatim original prompt +
-every clarifying Q&A + assumptions/defaults + format chosen + supplemental filenames), then **"How
-this study was built"** = the machine facts. They are partitioned — **"The prompt" = what was asked,
-"How this study was built" = how it was built, and no fact appears in both** (exactly two boxes: no
-separate "Original request" appendix, and the corpus-description section is not a third). This makes
-the study regenerable and auditable.
+**Provenance — two boxes, split:** **"The prompt"** = ONLY what the user supplied (verbatim original
+prompt + every clarifying Q&A + assumptions/defaults + format chosen + supplemental filenames) — sits
+**right after the Executive summary** for scope/context. **"How this study was built"** = the machine
+facts — the **very last** section. They are partitioned — **"The prompt" = what was asked, "How this
+study was built" = how it was built, and no fact appears in both** (exactly two boxes: no separate
+"Original request" appendix, and the corpus section is not a third). This makes the study regenerable
+and auditable.
 
 **Auto-pick the report format** from the goal clause and disclose it in one line (no format
 question). Formats are files: **standard formats** ship in `formats/` (locked — never edit), **user
@@ -236,28 +236,28 @@ map** (`formats/mechanism-map.md`); which-case-am-I / broad audience → **Decis
 (`formats/breadth-profile.md`). A user format `inherits:` a standard one — load the standard
 skeleton first, then apply the user file's deltas. Skeletons in STUDY_GUIDELINES.md.
 
-**Body — NATURAL ORDER, lead with the answer, defer reference/provenance to the end:**
-**Executive summary** (most useful / surprising findings + the one central fork) → **Start here**
-(the mainstream / most-likely first move, even if the sort ranks it lower) → **Rated options**: lead
-this section with the **"How to read these cards"** legend as its first `###` subsection (decodes the
-5-segment bar + every caption field; template in STUDY_GUIDELINES.md), then per-option cards sorted
-by **Helped% × evidence-discount** (the CANONICAL card: 5-segment outcome bar [big help · modest
-help · neutral · worse-acute · worse-lasting] + one-line caption `n · Helped%+CI · Evidence ·
-Magnitude · Prevalence`, ⚖ if contested; group members; How line; Science line; 2 arc-quotes cited
-`— r/<sub>`) → **Long tail** table (REAL ratings, never a uniform "3", never silently dropped;
-Phase-5-confirmed rare labeled "rare (confirmed)") → **What to stop doing** anti-patterns →
-**Successful paths** (rendered Mermaid if ≥3 clear paths) → **Missing information** (3–6 questions +
-why each shifts the recommendation) → **The corpus** (data description incl. per-sub counts) →
-**Caveats** (structural biases + diagnostic-derived) → **Your next steps** (≤5 closing actions) →
-the two provenance boxes. Canonical card + section specs in STUDY_GUIDELINES.md.
+**Body — NATURAL ORDER, lead with the answer:**
+**Executive summary** (most useful / surprising findings + the one central fork; ALSO name the
+mainstream / most-likely first move here, even if the sort ranks it lower — there is **no separate
+"Start here" section**) → **The prompt** (the request box; provenance) → **Successful paths**
+(rendered Mermaid if ≥3 clear paths — the triage map, placed **before** the menu) → **Rated options**:
+lead with the **"How to read these cards"** legend as its first `###` subsection, then per-option
+cards sorted by the **ranking formula** (see STUDY_GUIDELINES → "Ordering"; the CANONICAL card:
+5-segment outcome bar [big help · modest help · neutral · worse-acute · worse-lasting] + caption
+`n · Helped%+CI · Evidence · Magnitude · Prevalence`, ⚖ if contested; group members; How line;
+Science line; 2 arc-quotes cited `— r/<sub>`) → **Long tail** table (REAL ratings, never a uniform
+"3", never silently dropped; Phase-5-confirmed rare labeled "rare (confirmed)") → **What to stop
+doing** anti-patterns → **Missing information** (3–6 questions + why each shifts the rec) →
+**Sources & corpus** (per-sub table + data description, merged) → **Caveats** (structural biases +
+who's-in-the-data folded in) → **Your next steps** (≤5 closing actions) → **How this study was built**
+(machine facts; job ids go in the study folder's `job_ids.json`, not the report). Specs in STUDY_GUIDELINES.md.
 
 **Say-it-once (S4 — REQUIRED).** Each recurring meta-point has ONE home and is not restated: the
-**central fork** lives in the Executive summary (other sections reference it, never repeat);
-**demographics / who's-in-the-data** is folded into **Caveats** (no standalone section); the
-*Evidence ≠ proof* disclaimer lives only in the legend; **closing actions are next-steps only** (not
-a re-summary); and **Successful paths is the diagram only** — no prose re-narration of the same arcs.
-Trim duplicating surfaces, but never drop a required calibration element (n, CI, Evidence, the
-Evidence ≠ proof box).
+**central fork** + the **mainstream first move** live in the Executive summary (no separate "Start
+here"); **who's-in-the-data** is folded into **Caveats** (no standalone section); the *Evidence ≠
+proof* disclaimer lives only in the legend; **closing actions are next-steps only** (not a
+re-summary); **Successful paths is the diagram only** — no prose re-narration. Trim duplicating
+surfaces, but never drop a required calibration element (n, CI, Evidence, the Evidence ≠ proof box).
 
 **Four writing-level musts** (commonly missed): (a) access / logistics — how to obtain or afford
 the top option, and what to do if none is local; (b) answer EVERY symptom the persona named;
@@ -307,9 +307,19 @@ etc.); (d) partition any conclusion that is driven by a contaminated / off-topic
 
 **9b. Feedback — ALWAYS run this after a delivered report**
 
-Ask the user: *"Was this report useful? Anything missing, wrong, or that you'd want done differently?"*
+**Process retrospective (you run this yourself, every study, before asking the user).** Review the
+whole run end-to-end — intake → scan supply (emitted total, canonical contribution, skip% /
+contamination) → discovery coverage → rate reliability flags (low_n / high_skip; how many options
+needed the Phase-5 rescue) → format fit → any hard-rule near-miss or manual workaround you had to
+improvise. If something **didn't go smoothly AND a change to AGENTS.md / a guideline / a format would
+prevent it on future studies** (i.e. it's structural, not a one-off data quirk), name the concrete
+symptom + the proposed fix and fold it into the feedback email below as a **route-1 (guidelines
+change)** suggestion. If the run was clean, say so and move on. Don't mistake normal per-topic
+variation (one-off) for a real process gap (worth a guideline change for everyone).
 
-If they have feedback, offer to send it to the maintainer by email:
+Then ask the user: *"Was this report useful? Anything missing, wrong, or that you'd want done differently?"*
+
+If there is feedback — from the retrospective and/or the user — offer to send it to the maintainer by email:
 - The feedback address is stored base64-encoded (anti-scraping): `d2hhdHdvcmtlZEBmYXN0bWFpbC5jb20=`.
   Decode it at send time (`echo d2hhdHdvcmtlZEBmYXN0bWFpbC5jb20= | base64 -d`) — never write
   the decoded address into any file.

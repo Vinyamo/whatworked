@@ -89,30 +89,28 @@ graph LR
 
 ### ⛔ CANONICAL section order (v0.2.10 — supersedes the older skeleton below)
 
-Lead with the answer; defer reference + provenance to the end. In this exact order:
+Lead with the answer; provenance/reference deferred. In this exact order:
 
-1. **Title + Issue / Audience / Goal / Date / Format** (one header block — this is the scope line)
-2. **Executive summary** — most useful / surprising findings + the one central fork
-3. **Start here** — the mainstream / most-likely first move(s)
-4. **Rated options** — lead with `### How to read these cards`, then the per-option cards (sorted Helped% × evidence-discount)
-5. **Long tail** — table of the rest, with REAL ratings
-6. **What to stop doing** — anti-patterns
-7. **Successful paths** — rendered Mermaid (diagram only; no prose re-narration)
+1. **Title + Issue / Audience / Goal / Date / Format** (one header block — the scope line)
+2. **Executive summary** — most useful / surprising findings + the one central fork + the mainstream / most-likely first move (there is **no separate "Start here"**)
+3. **The prompt** — what the user supplied (provenance box 1; placed here for scope/context)
+4. **Successful paths** — rendered Mermaid (diagram only; no prose re-narration), **before** the menu
+5. **Rated options** — lead with `### How to read these cards`, then the per-option cards (sorted by the **ranking formula** → see "Ordering" below)
+6. **Long tail** — table of the rest, with REAL ratings
+7. **What to stop doing** — anti-patterns
 8. **Missing information** — questions + why each shifts the rec
-9. **The corpus** — data description incl. per-sub counts
-10. **Caveats** — structural biases + diagnostic-derived (demographics folded in here)
+9. **Sources & corpus** — per-subreddit table + data description (merged into one section)
+10. **Caveats** — structural biases + diagnostic-derived (who's-in-the-data folded in here)
 11. **Your next steps** — ≤5 closing actions
-12. **Sources** — per-subreddit table
-13. **The prompt** — what the user supplied (provenance box 1)
-14. **How this study was built** — machine facts (provenance box 2, very last)
+12. **How this study was built** — machine facts, very last (job ids go in the study folder's `job_ids.json`, NOT the report)
 
 **Say-it-once (S4 — REQUIRED).** Each recurring meta-point has exactly ONE home; elsewhere reference
-it, never restate: the **central fork** is owned by the Executive summary; **demographics** is folded
-into Caveats (no standalone "who's in the data" section); **Evidence ≠ proof** lives only in the
-legend; **closing actions are next-steps only** (not a re-summary); **Successful paths is the diagram
-only**. There is no standalone "What this study tries to do" — the header + executive summary cover
-it. Trim duplicating surfaces, but NEVER drop a required calibration element (n, CI, Evidence, the
-Evidence ≠ proof box).
+it, never restate: the **central fork** and the **mainstream first move** are owned by the Executive
+summary (no "Start here"); **who's-in-the-data** is folded into Caveats (no standalone section);
+**Evidence ≠ proof** lives only in the legend; **closing actions are next-steps only** (not a
+re-summary); **Successful paths is the diagram only**. There is no standalone "What this study tries
+to do" — the header + executive summary cover it. Trim duplicating surfaces, but NEVER drop a required
+calibration element (n, CI, Evidence, the Evidence ≠ proof box).
 
 *(The numbered skeleton below predates this order and is kept for the per-section field detail; follow
 the order above where they differ.)*
@@ -380,7 +378,7 @@ label per line, not a table.
 - **Date:** <YYYY-MM-DD run date>
 - **Models used:** writer/assistant model `<model that generated this prose>` · rating model `<server-side /rate, default gemini-2.5-flash-lite>` · discovery model `<server-side /discover, default gemini-2.5-flash-lite>`<; filter model `<model>` if the optional /scores path was used>. State each role explicitly.
 - **Config / pipeline:** sources & subreddits scanned `<list>`; per-sub scan cap `<~2000–2500>`; records emitted `<N>`; story target `<e.g. ~40 attributable stories/option, census below that>`; discovery passes `<N>`; contamination gate `<result — e.g. "no sub exceeded median skip%" / "dropped r/X">`<; filter target_n `<N>` if the /scores path was used>; web-research scope `<n distinct sources behind the science notes>`.
-- **Job ids:** scan `<id>` · discovery `<id>` · rate `<id>` · tally `<id>`<; rescue scan/rate `<ids>` if run>. (Job ids live ONLY here — never also in "The prompt" box.)
+- *(Job ids are NOT printed in the report — they're written to the study folder's `job_ids.json` for reproducibility. Keep the rendered report clean.)*
 ```
 
 This is mandatory and is the last thing in the report. Don't pad it.

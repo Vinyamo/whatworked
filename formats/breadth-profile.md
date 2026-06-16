@@ -17,7 +17,7 @@ pipeline; the other three formats are alternative *top-level organisations* of t
    high-rated option, anything underrated or counter-intuitive, the clearest thing to avoid) as
    3–5 bold-lead-in beats. Then one sentence: ranking is by *expected improvement (Helped% ×
    Magnitude × certainty), not popularity* — the reader should think for themselves.
-2. `## Start here` box — 2–4 highest-leverage *actionable* moves with their concrete `how`.
+2. **No separate `## Start here`** — name the mainstream / highest-leverage first move inside the Executive summary. Then `## Successful paths` (the triage Mermaid) **before** the rated menu.
 3. One `###` section per treatment **group** (~20–30 groups, consolidated; merge true variants,
    keep standouts visible), sorted by expected improvement. **Never subtract harms from the rank**
    — surface risk as a per-option ⚠ risk note. Don't bury a proven mainstream first-line option —
@@ -25,15 +25,16 @@ pipeline; the other three formats are alternative *top-level organisations* of t
 4. `## What to stop doing` — 3–6 corpus-anchored anti-patterns.
 5. **Long-tail table** at the very end (treatment · prevalence · rating · certainty) with REAL
    per-row ratings; `—` = genuinely unrated; never impute a uniform "3"; never silently drop.
-6. `## Sources` appendix — one row per subreddit, posts and comments split.
+6. `## Sources & corpus` — data description + one row per subreddit (posts and comments split).
 
 **Per-option section content** (exact spec in `STUDY_GUIDELINES.md` → "Breadth-mode report format"
 and "Per-option card & metrics"): the canonical card — 5-segment outcome bar + one-line caption
 (`n · Helped%+CI · Evidence · Magnitude · Prevalence`) · 1–2 readable paragraphs (who it's for, what experiences say) · `**How:**`
 line · `**Science:**` line · 1–2 blockquoted arc-quotes cited `— r/<sub>`.
 
-**Always include:** demographics · missing-info questions · caveats (incl. the required
-"Evidence ≠ proof" box; disclose sampling: "rated 50 of ~180 attributable", % ± Wilson CI) ·
-next steps · the `### How to read these cards` legend as the lead subsection of `## Rated options` ·
-then, LAST, the two provenance boxes: `## The prompt` (human inputs only) followed by
-`## How this study was built` (machine facts + job ids) — templates in `STUDY_GUIDELINES.md`.
+**Always include:** who's-in-the-data (folded into caveats, not a standalone section) · missing-info
+questions · caveats (incl. the required "Evidence ≠ proof" box; disclose sampling: "rated 50 of ~180
+attributable", % ± Wilson CI) · next steps · the `### How to read these cards` legend as the lead
+subsection of `## Rated options` · `## The prompt` right after the executive summary · `## How this
+study was built` (machine facts; job ids → folder `job_ids.json`, not the report) as the very last
+section — templates in `STUDY_GUIDELINES.md`.
