@@ -34,7 +34,7 @@ line · `**Science:**` line · 1–2 blockquoted arc-quotes cited `— r/<sub>`.
 
 **Always include:** who's-in-the-data (folded into caveats, not a standalone section) · missing-info
 questions · caveats (incl. the required "Evidence ≠ proof" box; disclose sampling: "rated 50 of ~180
-attributable", % ± Wilson CI) · next steps · the `### How to read these cards` legend as the lead
+attributable", % ± Wilson CI) · the `### How to read these cards` legend as the lead
 subsection of `## Rated options` · `## The prompt` right after the executive summary · `## How this
 study was built` (machine facts; job ids → folder `job_ids.json`, not the report) as the very last
 section — templates in `STUDY_GUIDELINES.md`.
