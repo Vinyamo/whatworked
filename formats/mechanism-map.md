@@ -26,9 +26,9 @@ per-option `**How:**` and `**Science:**` lines, and 1–2 blockquoted quotes cit
 see `STUDY_GUIDELINES.md` → "Breadth-mode report format" and "Per-option card & metrics".
 
 **Always include:** `## What to stop doing` (no separate "Start here" — the mainstream first move is
-named in the executive summary) · long-tail table (real ratings, never a uniform "3") · `## Sources &
-corpus` (data description + one row per subreddit) · who's-in-the-data (folded into caveats) ·
-missing-info questions · caveats (incl. the "Evidence ≠ proof" box) · the `### How to
+named in the executive summary) · long-tail table (real ratings, never a uniform "3") · `## About this data` (per-sub table + data
+description + limits: who's-in-the-data, structural biases, sampling; Evidence ≠ proof stays in the
+legend) · missing-info questions · the `### How to
 read these cards` legend as the lead subsection of `## Rated options` · `## The prompt` right after the
 executive summary · `## How this study was built` (machine facts; job ids → folder `job_ids.json`, not
 the report) as the very last section — templates in `STUDY_GUIDELINES.md`.

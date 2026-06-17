@@ -253,15 +253,15 @@ cards sorted by the **ranking formula** (see STUDY_GUIDELINES → "Ordering"; th
 Science line; 2 arc-quotes cited `— r/<sub>`) → **Long tail** table (REAL ratings, never a uniform
 "3", never silently dropped; Phase-5-confirmed rare labeled "rare (confirmed)") → **What to stop
 doing** anti-patterns → **Missing information** (3–6 questions + why each shifts the rec) →
-**Sources & corpus** (per-sub table + data description, merged) → **Caveats** (structural biases +
-who's-in-the-data folded in) → **How this study was built** (machine facts; no subreddit list and no
-job ids — subs live in "Sources & corpus", job ids in the study folder's `job_ids.json`). Specs in
-STUDY_GUIDELINES.md. (No "Your next steps" / "Key takeaways" section — the headline action is in the
-Executive summary.)
+**About this data** (data description + per-sub table + a short **limits** block: who's-in-the-data,
+structural biases, sampling ± CI — merges the old corpus + sources + caveats) → **How this study was
+built** (machine facts; no subreddit list, no job ids — subs live in "About this data", job ids in the
+study folder's `job_ids.json`). Specs in STUDY_GUIDELINES.md. (No "Your next steps" / "Key takeaways"
+section — the headline action is in the Executive summary.)
 
 **Say-it-once (S4 — REQUIRED).** Each recurring meta-point has ONE home and is not restated: the
 **central fork** + the **mainstream first move** live in the Executive summary (no separate "Start
-here"); **who's-in-the-data** is folded into **Caveats** (no standalone section); the *Evidence ≠
+here"); **who's-in-the-data** + structural-bias **caveats** are folded into **About this data** (no standalone Caveats or corpus section); the *Evidence ≠
 proof* disclaimer lives only in the legend; the **headline next action** lives in the Executive
 summary (**no separate "Your next steps" / "Key takeaways" section**); **Successful paths is the
 diagram only** — no prose re-narration. Trim duplicating surfaces, but never drop a required
@@ -290,7 +290,7 @@ etc.); (d) partition any conclusion that is driven by a contaminated / off-topic
       `/rate`, default gemini-2.5-flash-lite · discovery model = server-side `/discover`, default
       gemini-2.5-flash-lite · filter model if the optional `/scores` path was used) · **Config/pipeline**
       (source types, per-sub scan cap, story target, discovery passes, contamination-gate result, filter
-      target_n if used). **Do NOT print the subreddit list (it lives in "Sources & corpus") or the job
+      target_n if used). **Do NOT print the subreddit list (it lives in "About this data") or the job
       ids (they go in the study folder's `job_ids.json`)** — keep this footer compact and reader-facing.
 - [ ] `python3 scripts/build_pdf.py <folder>/study_<slug>.md` (server-side render via `/render_pdf`:
       real rendered diagrams, readable font — never ASCII art, never raw diagram source). Study is
