@@ -45,11 +45,13 @@ Every request needs the user's personal credentials.
       only for a missing fact that would change the report; otherwise state your assumption.
 - [ ] Never print a % without its n (and a CI or evidence-dot band). A bare "3% worse" from a
       small sample is a classic error — show the interval.
-- [ ] **Never print a raw count as a metric — always a `%` of one explicit denominator** (the only
-      legitimate absolute is the sample size `n`, shown once). "sustained 33% / fades 2% (n≈51)",
-      never "sustained 17 / fades 1 of 51"; "33% (n≈55)", never "18 of 55". All facet sub-splits
-      use the SAME base as Helped%/Worse% (attributable n) — never a hidden second denominator
-      (17/51 reads 33% but is 94% of the 18 with data). See STUDY_GUIDELINES "PERCENTAGES, NEVER RAW COUNTS".
+- [ ] **Never print a raw count as an OUTCOME metric — always a `%` of one explicit denominator.**
+      "sustained 33% / fades 2% (n≈51)", never "sustained 17 / fades 1 of 51"; "33% (n≈55)", never
+      "18 of 55". All facet sub-splits use the SAME base as Helped%/Worse% (attributable n) — never a
+      hidden second denominator (17/51 reads 33% but is 94% of the 18 with data). **Counts that are NOT
+      outcome metrics ARE allowed when clearly labeled:** the sample size `n`, prevalence `mentions`,
+      and per-sub post/comment corpus counts (the Sources table) are descriptive, not effectiveness —
+      show them. See STUDY_GUIDELINES "PERCENTAGES, NEVER RAW COUNTS".
 - [ ] Never invent a statistic, RR, trial id, brand, dose, price, or clinician to look
       authoritative. Every science citation is **verified against a real source this run, or
       marked `[unverified]`**. "No peer-reviewed evidence located" is always preferred over a
@@ -140,19 +142,27 @@ root** — write them under `work/` from the start (or move them there before de
       highest-signal; skip general subs like r/AskReddit; cross-domain subs contaminate — don't add
       them to fatten the corpus). If the topic involves psychoactives, confirm substance keys with
       `GET /erowid/substances?q=` and add an `erowid` source.
-- [ ] Per-sub scans (cap ~2000–2500 each) + merge/dedup by `uid`. NEVER a single global
-      `max_candidates` shared across subs (it starves the canonical sub scanned last). ~15 grep
-      terms, over-grep (scoring filters later; scan misses are permanent). Multi-source form (SOURCES.md).
-      `max_candidates` caps **emitted** records, NOT files read — a scan is **read-bound** (every file
-      of every sub is read even when it emits 0), so a huge cap does NOT bound scan time. "Make it
-      extensive" = more on-topic subs + the Phase-5 batched re-grep, never a 50k–100k cap; an over-wide
-      scan over big general subs runs many minutes for little extra signal.
+- [ ] Per-sub scans (cap ~2000–2500 each) + merge/dedup by `uid`. **Always set `per_sub_cap`** on any
+      multi-sub / multi-source scan — it is the STANDARD knob for source/sub balance (not just the
+      opt-in wide-scout). **`max_candidates` is a single budget SHARED across all sources, filled in
+      order — whichever source (or sub) hits the scan first eats it and starves the rest** (e.g. a giant
+      r/<canonical> posts source fills the cap and the comments source emits 0). `per_sub_cap` prevents
+      that; rely on it, not on `max_candidates`, to balance sources. `max_candidates` caps **emitted**
+      records, NOT files read — a scan is **read-bound** (every file of every sub is read even when it
+      emits 0), so a huge cap does NOT bound scan time. "Make it extensive" = more on-topic subs + the
+      Phase-5 batched re-grep, never a 50k–100k cap. ~15 grep terms, over-grep (scoring filters later;
+      scan misses are permanent). Multi-source form (SOURCES.md).
+      **Capped scans are not a census:** once you set `per_sub_cap`, `/tally` runs over a per-sub-capped
+      sample, so disclose prevalence as "over a per-sub-capped scan," not as an exhaustive count.
 - [ ] Scans are **async, read-bound jobs**: a wide scan can take 10+ min. Poll the job WITHOUT
       blocking — fire it, then check back; never sit in a foreground wait-loop, which your tool
       harness kills at its timeout ceiling, wasting the full window and forcing a restart. Run heavy
       scans one at a time (concurrent full scans can overwhelm the server).
 - [ ] Check `summary.by_source`: <500 emitted → too narrow, fix the patterns/sources; canonical
-      sub ~0 → re-scan it isolated before continuing.
+      sub ~0 → re-scan it isolated before continuing. **`by_source` only splits source TYPES
+      (reddit_posts vs reddit_comments), NOT per subreddit** — for the per-sub counts the report needs,
+      count downloaded records by `subreddit`. **Report corpus size = the deduped `/tally` `corpus_n`,
+      not the raw `emitted`** (emitted is pre-dedup and larger; they will differ — state corpus_n once).
 
 ## PHASE 3 — Discover
 
@@ -186,9 +196,17 @@ root** — write them under `work/` from the start (or move them there before de
       "worse-before-better = helped"). Sample to the **story target**: ~30–50 attributable
       stories/option; census options with fewer mentions than that. Derive
       Helped%/Noeffect%/Worse% (over attributable posts), magnitude bucket + n, Evidence dots,
-      Reports = attributable count. ~64% of grep-matched posts are `skip` (incidental / list-only /
-      question / recommendation-without-trying / someone else / venting) — never count them. See
-      `API.md` → `POST /rate` for the request shape and story-target sampling.
+      Reports = attributable count.
+- [ ] **`sample_n` samples RAW posts, not attributable stories — and ~64–90% are `skip`** (incidental /
+      list-only / question / recommendation-without-trying / someone else / venting). So **set
+      `sample_n` ≈ 4–6× your attributable story target** (target 40 → `sample_n` ≈ 200–300); a naïve
+      `sample_n=50` yields ~10 attributable/option = unrankable. Re-rate deeper if the first pass lands
+      under target. See `API.md` → `POST /rate`.
+- [ ] **`/rate` matches an option's aliases by plain SUBSTRING** (unlike `/tally`'s word-boundary
+      match) — so a short alias that is a substring of common words silently over-matches (e.g. `ldn`
+      matches "wou**ldn**'t" / "cou**ldn**'t", inflating its n with junk). **Never pass a short alias
+      that's a substring of common English words; prefer the full term**, and **verify any thin headline
+      option against real record bodies** before trusting its %.
 - [ ] `POST /tally` for exact corpus mention counts (prevalence). **Prevalence = the tally;
       rate = the sampled %. Never conflate them.**
 
@@ -207,6 +225,10 @@ root** — write them under `work/` from the start (or move them there before de
       still <~30 after the re-grep is genuinely rare → label it "rare (confirmed by targeted
       search)"**, not merely thin. (Batched, not per-option: the global cap does not starve options,
       so one scan matches per-option thoroughness at a fraction of the cost.)
+      **Rescue makes a SECOND corpus** (a separate, name-grepped scan with its own denominator): a
+      rescued option's census n can EXCEED its main-`/tally` count, so do NOT assert "n ≤ Prevalence"
+      across the two corpora. Report a rescued option's prevalence from its per-record `mentions` field
+      (or its own tally), and disclose that rescued options were measured on a separate targeted scan.
 - [ ] **Thin total supply OR a contested top option → also widen** to more on-topic subs + census
       all options (this is what makes niche topics work). Dense + uncontested + nothing
       thin-but-promising → proceed lean. The user never pre-picks a fidelity mode.
@@ -215,8 +237,9 @@ root** — write them under `work/` from the start (or move them there before de
 
 - [ ] From the server numbers (per-sub contribution, skip-rates, supply vs claims): is the
       canonical sub starved? Is one sub dominating? Is a sub's skip% ≫ the corpus median
-      (contamination)? These become §8 caveats — disclosed, not silently fixed. (`GET
-      /jobs/{id}/diagnostics` on a score job gives supply / share / ease per dimension.)
+      (contamination)? These become caveats (folded into "About this data") — disclosed, not silently
+      fixed. **Derive these from the rate `profiles` + per-sub record counts** — there is **no
+      `/diagnostics` endpoint in the rate/tally pipeline** (it was score-mode only; don't wait for it).
 
 ## PHASE 7 — Write (ONE pass; auto-format; verification guard)
 
@@ -240,6 +263,11 @@ map** (`formats/mechanism-map.md`); which-case-am-I / broad audience → **Decis
 (`formats/decision-cards.md`); full-landscape survey → **Breadth profile**
 (`formats/breadth-profile.md`). A user format `inherits:` a standard one — load the standard
 skeleton first, then apply the user file's deltas. Skeletons in STUDY_GUIDELINES.md.
+**A format's named lead block IS the Executive summary** — e.g. the Action sheet's `## Action sheet`
+block or the Decision cards' archetype cards play the role of section 2; don't ALSO emit a separate
+"Executive summary" and don't drop the format's lead block. The canonical ORDER (answer first →
+reference/provenance last) always holds; the format only changes what the lead block is called and how
+the rated options are grouped.
 
 **Body — NATURAL ORDER, lead with the answer:**
 **Executive summary** (most useful / surprising findings + the one central fork; ALSO name the

@@ -147,9 +147,10 @@ the reader needs to judge the evidence:
 - **What this is NOT**: peer-reviewed evidence. Self-reported, self-selected anecdotes from internet users, contextualized against the scientific literature in §4–§6.
 ```
 
-### 2. Demographics estimate (≤200 words)
+### 2. Who's-in-the-data (folded into "About this data" — NOT a standalone section)
 
-Who is behind the data — three-tier confidence framework.
+Per the canonical order, this is **not** its own section — it lives as the first part of the **limits**
+block inside **About this data**. Keep it short; use the three-tier confidence framework below.
 
 ```markdown
 **Certain** (explicitly stated or quantifiable):
@@ -168,7 +169,7 @@ Who is behind the data — three-tier confidence framework.
 - Whether the poster's situation matches the user's specifically
 ```
 
-This section is mandatory and short — readers need to know who the data represents before the recommendations.
+This content is mandatory and short, but it appears **inside "About this data"** (the limits block), not as a standalone "Demographics" section.
 
 ### 3. Goal restatement + what success looks like (≤150 words)
 
@@ -310,9 +311,9 @@ Source-specific biases when multiple sources were used:
 - **Erowid**: experience reports are written *after* the experience, often days-to-years later. Prone to recall bias and narrative-reframe (a bad trip processed for two years reads more positive than the day-after raw account). Also: Erowid's editorial process rejects ~5% of submissions — the surviving ones are more articulate than Reddit comments.
 - **Brave web search**: pulls personal blogs, advocacy sites, news features. Heavy bias toward articulate writers AND authors with reasons to publish (selling something, evangelizing, processing personal trauma into a public narrative). Many sites are paywalled (skipped) or anti-bot (skipped) — the visible sample is not the full web.
 
-Plus the **diagnostic-derived caveats** for this specific study — anything notable from `GET /jobs/{score_id}/diagnostics`:
-- If sentiment supply was skewed (e.g. only 260 negatives vs 892 positives in the source pool), say "The apparent balance in this study is partly a quota artifact; the underlying corpus is N× more positive than negative."
-- If a single sub supplied >50% of quality records (pre-cap), say "X% of corpus records came from r/<sub>, capped at 30% in selection. The findings are heavily community-shaped."
+Plus the **diagnostic-derived caveats** for this specific study — derived from the rate profiles + per-sub record counts (NOT a `/diagnostics` endpoint, which is score-mode only):
+- If a single sub supplied >50% of the corpus, say "X% of corpus records came from r/<sub>; the findings are heavily shaped by that community."
+- If an option's rated stories concentrate in a **self-selected sub** (e.g. r/hysterectomy for hysterectomy), flag that its Helped% may be selection-inflated.
 - If the topic's **canonical community contributed little or nothing** (check `summary.by_source` / per-sub supply), say so plainly — e.g. "r/SIBO, the core community for this topic, contributed 0 records; the corpus here is shaped by adjacent subs, so for topic-specific claims the literature (§4) is more reliable than the corpus." (And see AGENTS.md step 7b — ideally you caught and re-scanned this before writing.)
 - If any step's category had ease < 0.7, the corresponding finding in §4/§5/§6 is Thin and was already labelled — but call it out here as a global note.
 
@@ -511,8 +512,11 @@ misleads by implying all tail items are equal.
 
 **Sources appendix (required).** Close with a `## Sources` section: a table with **one row per
 subreddit listing its posts and comments separately** (columns: Subreddit · Posts · Comments · Main
-themes), plus one sentence on total corpus size and any dominant or thin sub. The per-sub counts come
-from the scan summary (`by_source`) — posts and comments are separate sources, so the split is already available. **Never lump subs together** — e.g.
+themes), plus one sentence on total corpus size and any dominant or thin sub. **Per-sub counts are NOT
+in the scan `by_source`** — that only splits source *types* (reddit_posts vs reddit_comments), not per
+subreddit; derive per-sub counts by counting the downloaded records per `subreddit`. **Use the deduped
+corpus size** (the `/tally` `corpus_n`), not the raw `emitted` total (which is pre-dedup and larger);
+state which once. **Never lump subs together** — e.g.
 not "9,921 posts (r/stopsmoking, r/quittingsmoking)" but a row each: `r/stopsmoking · 6,441 posts ·
 0 comments`, `r/quittingsmoking · 3,480 posts · 0 comments`. Any inline "Data:" line that cites
 sources must likewise break the counts out per sub. This makes the corpus's shape — and its
@@ -528,36 +532,23 @@ split between profiled and long-tail is by evidence: profile everything with eno
 
 In order:
 
-1. **`GET /jobs/{score_id}`** — confirm `status=done`, sanity-check `summary.passed`, sentiment balance, top sub, AND `summary.by_source` if multi-source (each source's emit + per-source contribution). Halt if `passed < target_n × 0.6` — too thin, surface to user.
-2. **`GET /jobs/{score_id}/diagnostics`** — pull supply / share / ease per dimension. **This is what §1 supply numbers, §4–§6 confidence labels, and §8 diagnostic-derived caveats are built from.** Skipping this means the study can't tell quota artifacts from real signals.
-3. **`GET /jobs/{score_id}/excluded?n=20`** — sanity-check false negatives. 3+ relevant misses → thresholds too strict, halt.
-4. **Read passed records' raw text** — pull `?passed_only=true&limit=300`, read at least 30–50. Don't synthesize from `brief` alone. The brief is one-sentence LLM gloss; the body has dosing, timeline, and "what I tried first" which the brief usually misses. The "successful paths" section in §6 specifically requires reading bodies — paths aren't visible from briefs.
+1. **`GET /jobs/{rate_id}/profiles`** (and `/results`) — confirm the rate job is done; sanity-check each option's **attributable n**, **skip%**, the `low_n`/`high_skip`/`rateable` flags, and **Evidence dots**. Most options under the story target → too thin: run the Phase-5 rescue or deepen, don't write thin.
+2. **Supply confidence comes from the rate outputs themselves** — per-option attributable counts → Evidence dots; `skip%` + `high_skip` → which options are degenerate/untrustworthy; per-sub record counts → dominance/contamination. **There is NO `/diagnostics` endpoint in the rate/tally pipeline** (that was score-mode only) — derive these from the rate profiles + the records; don't block waiting for it.
+3. **Skim skipped + low-rated records** — confirm the rater isn't over-skipping a real option (a substring-alias mismatch or too-narrow grep). Spot-check any thin headline option against record bodies (see the `/rate` substring-alias caution in AGENTS PHASE 4).
+4. **Read raw record bodies** — read at least 30–50 from the rate `results` / scan records, not the one-sentence `brief`. The body has dosing, timeline, and "what I tried first" that the brief misses; "Successful paths" requires reading bodies.
 5. **Web search per step** — for each step in §4 / §5 / §6, run one focused search: `<step name> randomized controlled trial`, `<step name> meta-analysis OR systematic review`, `<step name> mechanism efficacy review`. Use what you find for the "What the science says" subsections. If you find nothing peer-reviewed, say so explicitly ("no RCT located; only case reports and community testimony").
 6. **Identify the missing-info questions for §7** — what dimensions did the corpus stratify on that the user hasn't told you about? Those become the §7 questions, each with a 1–3 sentence "why it matters" explaining how the answer would shift the recommendation.
 7. **Pull discovery output** if available (`discovery_<scan_id>_<date>.json`) — its `categories` block tells you which axes were considered, which informs how to read the post-cap distribution.
 
-If the diagnostic endpoint isn't available (older studyd, or the call failed), explicitly note in §1 that supply landscape was not measured, and treat all post-cap distributions as approximate.
+(Supply confidence is always derivable from the rate profiles + per-sub record counts, so this step never blocks — there is no separate diagnostics call to fail.)
 
 ## Output format
 
-Studies live inside a per-study folder created in step 1b:
-
-```
-<YYYY-MM-DD>_study_<slug>/
-  study_<slug>.pdf               — main study (REQUIRED)
-  passing_records.json           — score-job passed-only dump (optional, on request)
-  diagnostics_<score_id>.json    — saved diagnostics for §1/§8 (optional)
-  study_summary.md               — ~400-word one-page derivative (optional, on request)
-  transcripts/<filename>.txt     — transcribed voice memos from supplemental input
-  notes/<filename>.md            — extracted text from supplemental documents
-```
-
-The agent owns `study_<slug>.pdf`, `passing_records.json`, `diagnostics_*.json`,
-`study_summary.md`, `transcripts/*`, and `notes/*`. User-supplied files
-stay where the user put them.
-
-The one-page summary (when requested) covers §3 (goal restatement) + §4
-(recommended next step) + §7 (missing info) + §9 (key takeaways).
+Folder layout is defined in **AGENTS.md → PHASE 1 (folder hygiene)**: the study-folder **root holds
+ONLY `study_<slug>.{md,pdf}`** (and versioned copies); **all pipeline artifacts** (scan/discover/rate/
+tally requests + responses + results, profiles, `job_ids.json`, helper scripts) go in **`work/`**;
+supplemental files in `inputs/`; plus `transcripts/` and `notes/`. Don't leave loose
+`.json`/`.ndjson`/`.py` in the root.
 
 ---
 
