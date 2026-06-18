@@ -24,3 +24,6 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
+
+# Playwright MCP browser-test artifacts
+.playwright-mcp/
