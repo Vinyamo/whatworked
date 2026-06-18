@@ -176,7 +176,11 @@ root** — write them under `work/` from the start (or move them there before de
       that cause false-positive substring hits; merge substring variants (`"low fodmap"` ⊂
       `"low fodmap diet"`).
 - [ ] Consolidate to ~20–30 groups: merge true variants (five birth-control brands → "combined
-      OCPs"), but keep a clearly higher/lower-rated member as its own entry.
+      OCPs"), but keep a clearly higher/lower-rated member as its own entry. **YOU (the writing model)
+      do this grouping — do NOT call `/consolidate_labels` for it.** `/consolidate_labels` runs a cheap
+      model and is meant ONLY for the discovery sweep (collapsing raw map-reduce labels); the
+      report's treatment grouping is a judgment call that needs the strong writing model, so group the
+      names yourself.
 - [ ] **OPT-IN: wide cross-community discovery (OFF by default).** Only when the user asks to "go
       wide / don't miss anything / find what other communities use" — never by default. Fire a wide
       scout across (almost) all subs to discover treatments the canonical subs never mention:
@@ -202,23 +206,30 @@ root** — write them under `work/` from the start (or move them there before de
       `sample_n` ≈ 4–6× your attributable story target** (target 40 → `sample_n` ≈ 200–300); a naïve
       `sample_n=50` yields ~10 attributable/option = unrankable. Re-rate deeper if the first pass lands
       under target. See `API.md` → `POST /rate`.
-- [ ] **`/rate` matches an option's aliases by plain SUBSTRING** (unlike `/tally`'s word-boundary
-      match) — so a short alias that is a substring of common words silently over-matches (e.g. `ldn`
-      matches "wou**ldn**'t" / "cou**ldn**'t", inflating its n with junk). **Never pass a short alias
-      that's a substring of common English words; prefer the full term**, and **verify any thin headline
-      option against real record bodies** before trusting its %.
+- [ ] **Always pass `alias_match: "word"` to `/rate`** (word-boundary matching, like `/tally`). The
+      legacy default is plain SUBSTRING, which silently over-matches short aliases (e.g. `ldn` matches
+      "wou**ldn**'t" / "cou**ldn**'t", inflating its n with junk). Even with `"word"` set, prefer full
+      terms over bare abbreviations, and **verify any thin headline option against real record bodies**
+      before trusting its %.
 - [ ] `POST /tally` for exact corpus mention counts (prevalence). **Prevalence = the tally;
       rate = the sampled %. Never conflate them.**
 
 ## PHASE 5 — Adaptive depth check (replaces the mode question)
 
-- [ ] **Thin-but-promising rescue (the long-tail fix) — auto-run ONCE when it applies.** From the
-      rated numbers, select options that are **thin (<~30 attributable stories) AND promising
-      (Helped% point estimate ≥ ~50%)** — these would otherwise be buried, unrankable, in the tail.
+- [ ] **Thin-option rescue (the long-tail fix) — auto-run ONCE when it applies.** From the
+      rated numbers, select **all options that are thin (<~30 attributable stories), REGARDLESS of how
+      they currently rate** — do NOT gate on Helped% ≥ 50%. The root cause is a grep miss (the baseline
+      greps the condition, so option-only posts never entered the corpus), which is direction-blind: a
+      genuine winner often looks mediocre on its tiny first sample, so gating on the current % buries
+      exactly the options the rescue exists to recover.
       Fire **one** batched re-scan over the SAME subs (submissions + comments in a single
       multi-source scan) with **all** those option names (+aliases) as `grep_patterns` and the
-      condition terms as `context_keywords` (keeps it on-topic), then re-rate just those options
-      (`/rate sample_n=0`) and fold the new counts in. They're usually *grep-missed*, not rare — the
+      condition terms as `context_keywords` (keeps it on-topic), then re-rate just those options and
+      fold the new counts in. **Cap the re-rate cost — do NOT blanket-census (`sample_n=0`)**: use
+      `sample_n` ≈ 4–6× the story target (~200–300), and only census an option whose mentions are truly
+      small (<~500); exclude generic/substring aliases from the rescue grep so they don't pull in junk.
+      (A blanket census rated ~24k rows / ~$1.34 on a dense topic — far more than the baseline, for no
+      added accuracy on already-common options.) They're usually *grep-missed*, not rare — the
       baseline greps the condition, so posts that name only the option never entered the corpus; a
       name-grep recovers them (one batched scan roughly doubled treatment coverage on heavy-tail
       topics in testing). One scan + one rate on existing endpoints, ~cents and ~a minute. **Anything

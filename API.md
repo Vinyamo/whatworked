@@ -216,9 +216,10 @@ precise %s when `rateable` is false.
   "model": "gemini-2.5-flash-lite",          // gpt-* also dispatch (for cross-model checks)
   "facets": ["magnitude","sub","harm","durability"],   // subset to go cheaper/faster
   "sub_labels": ["onset","maintenance"],     // sub-problem axis ([] disables 'sub')
-  "sample_n": 50,                            // story target per treatment (0 = census)
+  "sample_n": 50,                            // RAW posts sampled/treatment (0 = census). ~64–90% are skip → set ≈ 4–6× your attributable target
   "batch_size": 8, "workers": 24, "seed": 1,
-  "min_attributable": 8, "skip_rate_warn": 0.9
+  "min_attributable": 8, "skip_rate_warn": 0.9,
+  "alias_match": "word"                       // "word" = boundary match (like /tally); default "substring" over-matches short aliases ("ldn" ⊂ "wouldn't")
 }
 // Response: {"job_id": "rate_…", "status": "queued"}
 ```
@@ -251,7 +252,10 @@ Use it to (a) confirm sentiment buckets are filling; (b) spot the dominant bindi
 
 ## POST /consolidate_labels
 
-Used by the categories-discovery flow (see `scripts/discover_categories.py`). Takes free-form snake_case labels and counts; returns a canonical closed list, preserving distinct drugs/symptoms/methods.
+**Discovery-only helper — runs a CHEAP model.** Used by the categories-discovery flow (see
+`scripts/discover_categories.py`) to collapse the raw map-reduce labels. **Do NOT use it for the
+report's treatment grouping** — that ~20–30-group consolidation is a judgment call and must be done by
+the writing model itself (see AGENTS.md PHASE 3). Takes free-form snake_case labels and counts; returns a canonical closed list, preserving distinct drugs/symptoms/methods.
 
 ```jsonc
 // Request

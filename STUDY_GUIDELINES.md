@@ -112,42 +112,25 @@ summary (no "Your next steps"); **Successful paths is the diagram only**. There 
 this study tries to do" — the header + executive summary cover it. Trim duplicating surfaces, but NEVER
 drop a required calibration element (n, CI, Evidence, the Evidence ≠ proof box).
 
-*(The numbered skeleton below predates this order and is kept for the per-section field detail; follow
-the order above where they differ.)*
+*(The old §1–§9 numbered skeleton is REMOVED — the CANONICAL order above is the only structure. Below
+is the **per-section field reference**: what goes in each canonical section. A heading below names a
+canonical section; it is NOT a second order, and the old filter-first "single recommended step +
+alternatives + ease-ratio Confidence" scaffolding is gone — breadth uses ranked cards.)*
 
-### 1. Study goal + data description (≤300 words)
-
-Open with what THIS study is trying to do — the audience-facing version of "we asked the corpus X to help you decide Y" — then a factual block about the corpus.
+### Header + Executive summary (the first two sections)
 
 ```markdown
-# <Topic, written as the user's issue and goal>
-
-**Issue:** <verbatim from user step 1>
-**Goal:** <verbatim from user step 1>
-**Date:** <YYYY-MM-DD>
-
-## What this study tries to do
-
-In one paragraph: what question this study is answering, what kind of recommendation the user can expect to walk away with (e.g. "a single recommended next step plus 3 alternatives plus 3–5 successful paths"), and what kinds of decisions this study is NOT designed to support (e.g. "this is not a personalized medical recommendation; consult a clinician").
-
-## The corpus (data description)
-
-A short reader-facing description of the data the findings rest on. This is **NOT** a provenance
-block — carry no job ids, models, caps, or run settings here (those live only in the closing
-"How this study was built" box; the inputs live only in "The prompt" box). Keep just what
-the reader needs to judge the evidence:
-
-- **Sources**: <list which sources were used and why; e.g. "Reddit submissions + post-anchored Reddit comments — high discussion volume in r/X, r/Y; Erowid (psilocybin) — substance-specific corpus; Brave web search NOT used because reddit+erowid supply was already dense">.
-  - For each source: the parameters used (subs / substances / queries),
-    candidates emitted, and pass count.
-- **Categories**: derived from the data via the discovery step (`scripts/discover_categories.py`); operator-edited list of <C> categories. (List them.)
-- **Scoring**: model `<gemini-2.5-flash-lite or gpt-4o-mini>`, target_n=<N>, rel.min_pct=0.6, qual.min_pct=0.6, sentiment quota with max_per_bucket_pct=0.333.
-- **Result**: <P> records passed of <S> scored; underlying quality-supply pool was <Q> records.
-- **Web research**: <list of broad searches done up front + per-step searches at writing time; how many distinct sources informed the science notes>.
-- **What this is NOT**: peer-reviewed evidence. Self-reported, self-selected anecdotes from internet users, contextualized against the scientific literature in §4–§6.
+# <Topic, as the user's issue and goal>
+**Issue:** <verbatim>  ·  **Audience:** <who + age/sex/context>  ·  **Goal:** <verbatim>
+**Date:** <YYYY-MM-DD>  ·  **Format:** <action sheet / mechanism map / decision cards / breadth profile>
 ```
+Then the **Executive summary** (3–5 bold-lead-in beats): standout / surprising findings + the ONE
+central fork + the mainstream / most-likely first move (this replaces the old "Start here" and the old
+single "recommended next step"). Add one line: "ranked by *expected improvement (Helped% × Magnitude ×
+evidence), not popularity* — think for yourself." **No** standalone "What this study tries to do" and
+no methodology up top. The corpus / data description lives in **About this data** below, not here.
 
-### 2. Who's-in-the-data (folded into "About this data" — NOT a standalone section)
+### Who's-in-the-data (goes in the "limits" block of About this data — NOT a standalone section)
 
 Per the canonical order, this is **not** its own section — it lives as the first part of the **limits**
 block inside **About this data**. Keep it short; use the three-tier confidence framework below.
@@ -171,19 +154,13 @@ block inside **About this data**. Keep it short; use the three-tier confidence f
 
 This content is mandatory and short, but it appears **inside "About this data"** (the limits block), not as a standalone "Demographics" section.
 
-### 3. Goal restatement + what success looks like (≤150 words)
+### Goal anchor (one line in the Executive summary)
 
-Restate the user's issue and goal in their own words. Then define **what success would look like** so the recommendations are anchored:
+Define what success looks like (e.g. "fewer than 2 middle-of-night wakings/week, sustained 4+ weeks") as one line in the Executive summary — it anchors the rankings. No separate "Goal restatement" section.
 
-> "Your goal is to reduce middle-of-night wakings to fewer than 2 per week, sustained over 4+ weeks. The recommended next step below has the highest probability of moving you closer to that benchmark; the alternatives have lower probabilities or longer timelines."
+### Per-option card prose (the lines under each rated card)
 
-Without this anchor the study becomes a survey instead of a recommendation.
-
-### 4. The recommended next step (the centerpiece)
-
-ONE concrete step. Not a menu. The single step you've identified as having the highest probability of moving the user closer to their goal — even if it's not by itself the full solution. A "preparation" step that sets up the eventual solution counts; "do nothing and wait 6 months" counts if the data supports it.
-
-Format:
+Breadth ranks many options as cards (no single "recommended step", no separate "Alternatives"). Under each card's bar + caption, include: a 1-line *what-it-is*; **How / ✅ get-right / ⚠️ avoid**; a **Science:** line; and 1–2 arc-quotes. Reference shapes below (legacy single-rec framing — apply per card):
 
 ```markdown
 ## Recommended next step: <step name>
@@ -205,9 +182,9 @@ Format:
 
 If you can't write a confident "Why this and not the alternatives" paragraph, the corpus probably doesn't support a single recommendation. Surface that to the user instead of fabricating one.
 
-### 5. Alternative current options (3–5 entries)
+### (legacy) Alternatives — in breadth these are just more ranked cards
 
-Other steps the user could take RIGHT NOW. Each with the same shape but compressed:
+In filter-first mode alternatives were a separate compressed list; in breadth/canonical they are simply the other ranked option cards. Kept for the compressed-entry shape:
 
 ```markdown
 ## Alternative: <step name>  ·  ~<%> success rate from corpus  ·  Confidence <Robust / Standard / Thin>
@@ -233,9 +210,9 @@ Close §5 with a short **"what to stop / de-prioritise"** block whenever the cor
 
 Anchor each anti-pattern in the corpus (a pattern you saw repeatedly, not a hunch), and hold it to the same honesty bar as §4/§5 — if an anti-pattern is only weakly supported, say so or leave it out.
 
-### 6. Successful paths from similar starting points (3–5 entries)
+### Successful paths (canonical: diagram-first, BEFORE the rated menu)
 
-Whereas §4 and §5 are about the *next* step, this section is about *full trajectories* posters took. From a starting point similar to the user's, what sequence of steps got them to (or close to) the goal?
+*Full trajectories* posters took: from a starting point similar to the user's, what sequence of steps got them to (or close to) the goal? Render the **Mermaid decision tree only** (no prose re-narration of the same arcs).
 
 **A Mermaid decision tree showing how paths branch is REQUIRED at the start of §6 if there are ≥3 paths.** Place it before describing the individual paths. Example shape:
 
@@ -270,7 +247,7 @@ For each path:
 
 Aim for 3–5 distinct paths. If two "paths" differ only in dose, fold them into one. If a path is supported by fewer than 5 corpus records, label it Speculative and put it last.
 
-### 7. Missing information that would improve this study (REQUIRED)
+### Missing information (REQUIRED — canonical section, after What-to-stop)
 
 Identify 3–6 specific things you don't know about the user, but which the corpus *did* stratify on — meaning if the user told you, you could give a more targeted recommendation. Format each as a question + explanation of impact.
 
@@ -293,9 +270,9 @@ Examples of useful gaps:
 
 This section is mandatory and is the user's invitation to refine the study. The agent should be ready to re-run §4 / §5 / §6 with new info if the user provides it (Step 9 — Iteration in AGENTS.md).
 
-### 8. Caveats (REQUIRED — never skip)
+### About this data — the "limits" block (REQUIRED — never skip)
 
-Every study inherits these structural biases. State them honestly:
+This is the limits part of **About this data** (merged with the corpus description + per-sub table). Every study inherits these structural biases. State them honestly:
 
 1. **Articulation bias** — fluent writers are over-represented at high quality scores. Clear writing ≠ representative experience.
 2. **Subreddit selection bias** — we only see the communities chosen for this study; including or excluding a sub changes the narrative.
@@ -315,16 +292,11 @@ Plus the **diagnostic-derived caveats** for this specific study — derived from
 - If a single sub supplied >50% of the corpus, say "X% of corpus records came from r/<sub>; the findings are heavily shaped by that community."
 - If an option's rated stories concentrate in a **self-selected sub** (e.g. r/hysterectomy for hysterectomy), flag that its Helped% may be selection-inflated.
 - If the topic's **canonical community contributed little or nothing** (check `summary.by_source` / per-sub supply), say so plainly — e.g. "r/SIBO, the core community for this topic, contributed 0 records; the corpus here is shaped by adjacent subs, so for topic-specific claims the literature (§4) is more reliable than the corpus." (And see AGENTS.md step 7b — ideally you caught and re-scanned this before writing.)
-- If any step's category had ease < 0.7, the corresponding finding in §4/§5/§6 is Thin and was already labelled — but call it out here as a global note.
+- If a sub's skip% ≫ the corpus median (contamination), or an option's stories concentrate in a self-selected sub, flag it (the ⚠️ selection-inflated per-card flag) and note it here as a global caveat.
 
-### 9. Key takeaways for the user (numbered, ≤5)
+### (removed) Key takeaways / Your next steps
 
-The bottom line. Each item:
-- Direct, actionable
-- Tied to the data above
-- With its caveat ("but only if...")
-
-Lead with the recommended next step from §4. Items 2–5 are the most important caveats / alternatives the user should hold in mind, and a pointer to §7 ("if you can answer Q1, the recommendation may shift to...").
+Breadth has **no** takeaways or next-steps section — the headline next action is named in the Executive summary (see the canonical order above).
 
 ### Provenance: exactly TWO boxes, partitioned by who produced each fact
 
@@ -619,6 +591,12 @@ split is computed from the per-record rate `.ndjson` (each record carries `direc
   the both-directions mean and would mislabel a high-worse option.
 - **Prevalence P mentions** — exhaustive `/tally` count (popularity, NOT effectiveness; far larger than n).
 - Append **⚖️ contested** (amber `#b8860b`) when worse ≈ half-or-more of helped.
+- Append **⚠️ selection-inflated** (REQUIRED) when an option's attributable stories concentrate in a
+  **self-selected sub** — a community of people who already chose it (e.g. ≥~50% of the option's stories
+  from r/hysterectomy for hysterectomy, r/Nexplanon for the implant). Those posters are survivors/choosers,
+  so the Helped% is biased upward; the flag tells the reader the rate is optimistic. Compute per option
+  from the rate records' `subreddit` field; this is the per-card form of the contamination caveat (it
+  does NOT change the rank — see "never subtract harms / never bias the rank").
 
 Exact HTML template:
 ```html
@@ -658,7 +636,8 @@ lasting** — worse and it **persisted**.
 how much consistent evidence exists (more dots = better-supported, not more proven) · **Magnitude …/5**
 = average size of the effect when it helped · **Prevalence … mentions** = how often it's discussed
 overall (**popularity, not effectiveness** — far larger than n) · **⚖️ contested** = downsides are at
-least half as common as upsides.
+least half as common as upsides · **⚠️ selection-inflated** = most stories come from a community of
+people who already chose it, so the helped-rate is likely optimistic.
 
 > **Evidence ≠ proof.** Self-selected internet anecdotes, no control group — placebo,
 > regression-to-the-mean and co-treatments are invisible. Even ●●●●● means "lots of consistent
