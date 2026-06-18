@@ -1,0 +1,1791 @@
+- generic [active] [ref=e1]:
+  - link [ref=e2] [cursor=pointer]:
+    - /url: "#"
+    - text: ___
+  - img
+  - img
+  - img:
+    - generic:
+      - generic: ">"
+      - generic "iherblogo"
+      - generic "beauty2"
+      - generic "heart-circle"
+      - generic "sports-fitness"
+      - generic "food-nutrition"
+      - generic "herbs-supplements"
+      - generic "pageview"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Click to view our Accessibility Statement" [ref=e6] [cursor=pointer]:
+        - /url: https://ch.iherb.com/info/accessibility
+        - text: Click to view our Accessibility Statement
+        - img [ref=e7]
+      - generic:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - text: We use necessary cookies to make our site work. Our site and
+            - link "partners" [ref=e14] [cursor=pointer]:
+              - /url: https://tracker-detail-page.trustarc.com/?domain=2103&category=0&locale=en
+            - text: also use cookies and similar technologies to provide enhanced functionality and personalize the content of our site, to analyze site usage, and to show you personalized ads. We will set a cookie on your device to remember your preferences and keep your choice for 6 months. You can change your mind at any time by clicking on the "Cookie Preferences" icon at the bottom of each page of our site. However, you should know that blocking some types of cookies may impact your experience on the site and the services we are able to offer.
+          - generic [ref=e15]:
+            - button "Accept All" [ref=e16] [cursor=pointer]
+            - button "Decline All" [ref=e17] [cursor=pointer]
+            - button "Manage Settings" [ref=e18] [cursor=pointer]
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]:
+              - link "20% Off Supplements" [ref=e25] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/supplements?soa=true&pcode=JUNEUAPP
+                - generic [ref=e28]:
+                  - img [ref=e30]
+                  - generic [ref=e33]: 20% Off Supplements
+                  - img [ref=e35]
+              - link "15% Off Gut Health" [ref=e39] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/gut-health?soa=true&pcode=JUN26GH
+                - generic [ref=e42]:
+                  - img [ref=e44]
+                  - generic [ref=e47]: 15% Off Gut Health
+                  - img [ref=e49]
+              - link "Shop Travel Essentials" [ref=e53] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/travel/store
+                - generic [ref=e56]:
+                  - img [ref=e58]
+                  - generic [ref=e61]: Shop Travel Essentials
+                  - img [ref=e63]
+            - text: "}"
+          - generic [ref=e65]:
+            - link "Free delivery over CHF40.00" [ref=e66] [cursor=pointer]:
+              - /url: /shipping
+              - img [ref=e67]
+              - generic [ref=e69]: Free delivery over CHF40.00
+            - generic [ref=e70] [cursor=pointer]:
+              - img [ref=e71]
+              - img:
+                - generic:
+                  - generic "checkoutarrow"
+              - button "Locale menu in header" [ref=e73]:
+                - generic [ref=e75]: CH
+                - generic [ref=e77]: EN
+                - generic [ref=e79]: CHF
+            - button "Share button" [ref=e80]:
+              - generic [ref=e81] [cursor=pointer]:
+                - button "share button" [ref=e82]
+                - img [ref=e85]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - link "Header logo Link to Home" [ref=e92] [cursor=pointer]:
+            - /url: https://ch.iherb.com/
+            - img [ref=e93]: 
+          - generic [ref=e95]:
+            - generic [ref=e98]:
+              - textbox "Search" [ref=e99]:
+                - /placeholder: Search iHerb
+                - text: magnesium l-threonate
+              - generic [ref=e100]:
+                - button "clear search button" [ref=e101]:
+                  - img [ref=e102]: 
+                - button "search button" [ref=e104]:
+                  - img [ref=e105]: 
+            - link "Sign In" [ref=e111] [cursor=pointer]:
+              - /url: https://checkout1.iherb.com/account/login/?referrerRedirect=true&returnUrl=https%3A%2F%2Fch.iherb.com%2Fsearch%3Fkw%3Dmagnesium%2520l-threonate
+              - img [ref=e112]
+              - generic [ref=e114]:
+                - generic [ref=e115]: Sign In
+                - img [ref=e116]
+            - generic [ref=e118]:
+              - link "iHerb Cart link to Checkout" [ref=e119] [cursor=pointer]:
+                - /url: https://checkout1.iherb.com/cart
+                - img [ref=e120]
+                - generic [ref=e122]: "0"
+              - text:    
+        - text:                        
+  - generic [ref=e125]:
+    - text: 
+    - generic [ref=e128]:
+      - link "Shop" [ref=e129] [cursor=pointer]:
+        - /url: /search?kw=magnesium%20l-threonate&tab=0
+        - generic [ref=e131]: Shop
+      - link "Blogs" [ref=e132] [cursor=pointer]:
+        - /url: /search?kw=magnesium%20l-threonate&tab=1
+        - generic [ref=e134]: Blogs
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e144]: 1 - 48 of 3,500 results for "magnesium l-threonate"
+              - link "Visit our Magnesium L-Threonate page" [ref=e146] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/magnesium-l-threonate
+                - text: Visit our Magnesium L-Threonate page
+                - img [ref=e147]
+            - generic [ref=e152]:
+              - generic [ref=e153]: Sort by
+              - generic [ref=e154]: Featured
+              - textbox "Sort by" [ref=e155]
+              - img
+          - generic [ref=e156]:
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - link "Life Extension, Neuro-Mag, Magnesium L-Threonate, 90 Vegetarian Capsules (48 mg per Capsule)" [ref=e161] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-90-vegetarian-capsules-48-mg-per-capsule/40244
+                - generic [ref=e162]:
+                  - img "Life Extension, Neuro-Mag, Magnesium L-Threonate, 90 Vegetarian Capsules (48 mg per Capsule)" [ref=e164]
+                  - button "Add to basket" [ref=e166] [cursor=pointer]
+                - generic [ref=e169]: Life Extension, Neuro-Mag, Magnesium L-Threonate, 90 Vegetarian Capsules (48 mg per Capsule)
+              - generic [ref=e170]:
+                - link "rating stars" [ref=e171] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-90-vegetarian-capsules-48-mg-per-capsule/40244
+                  - img [ref=e172]
+                  - img [ref=e174]
+                  - img [ref=e176]
+                  - img [ref=e178]
+                  - img [ref=e180]
+                - link "rating stars" [ref=e183] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-90-vegetarian-capsules-48-mg-per-capsule/40244
+                  - generic [ref=e184]: 34,865
+              - generic [ref=e185]: 20,000+ sold in 30 days
+              - generic [ref=e186]:
+                - generic [ref=e189]: CHF31.07
+                - 'generic "15% off code: JUN26MG" [ref=e191]'
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - link "NOW Foods, Magtein®, 90 Veg Capsules" [ref=e196] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magtein-90-veg-capsules/57577
+                - generic [ref=e197]:
+                  - img "NOW Foods, Magtein®, 90 Veg Capsules" [ref=e199]
+                  - button "Add to basket" [ref=e201] [cursor=pointer]
+                - generic [ref=e202]: + More options
+                - generic [ref=e204]: NOW Foods, Magtein®, 90 Veg Capsules
+              - generic [ref=e205]:
+                - link "rating stars" [ref=e206] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magtein-90-veg-capsules/57577
+                  - img [ref=e207]
+                  - img [ref=e209]
+                  - img [ref=e211]
+                  - img [ref=e213]
+                  - img [ref=e215]
+                - link "rating stars" [ref=e218] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magtein-90-veg-capsules/57577
+                  - generic [ref=e219]: 20,599
+              - generic [ref=e220]: 5,000+ sold in 30 days
+              - generic [ref=e221]:
+                - generic [ref=e224]: CHF32.61
+                - 'generic "15% off code: JUN26MG" [ref=e226]'
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - link "Life Extension, Neuro-Mag Magnesium L-Threonate, Tropical Punch, 3.293 oz (93.35 g)" [ref=e231] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-tropical-punch-3-293-oz-93-35-g/78401
+                - generic [ref=e232]:
+                  - img "Life Extension, Neuro-Mag Magnesium L-Threonate, Tropical Punch, 3.293 oz (93.35 g)" [ref=e234]
+                  - button "Add to basket" [ref=e236] [cursor=pointer]
+                - generic [ref=e239]: Life Extension, Neuro-Mag Magnesium L-Threonate, Tropical Punch, 3.293 oz (93.35 g)
+              - generic [ref=e240]:
+                - link "rating stars" [ref=e241] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-tropical-punch-3-293-oz-93-35-g/78401
+                  - img [ref=e242]
+                  - img [ref=e244]
+                  - img [ref=e246]
+                  - img [ref=e248]
+                  - img [ref=e250]
+                - link "rating stars" [ref=e253] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-tropical-punch-3-293-oz-93-35-g/78401
+                  - generic [ref=e254]: 17,868
+              - generic [ref=e255]: 2,000+ sold in 30 days
+              - generic [ref=e256]:
+                - generic [ref=e259]: CHF31.07
+                - 'generic "15% off code: JUN26MG" [ref=e261]'
+            - generic [ref=e262]:
+              - generic [ref=e263]: Get the latest deals
+              - generic [ref=e264]:
+                - textbox "Email" [ref=e265]
+                - generic "Subscribe" [ref=e266] [cursor=pointer]
+              - img [ref=e268] [cursor=pointer]
+              - generic [ref=e271]:
+                - text: Your email will only be used for iHerb communications. You can unsubscribe at any time. For more information, see our
+                - link "Privacy Policy." [ref=e272] [cursor=pointer]:
+                  - /url: https://www.iherb.com/info/privacy
+            - generic [ref=e274]:
+              - link "Best seller" [ref=e276] [cursor=pointer]:
+                - /url: /topsellers
+              - generic [ref=e277]:
+                - generic [ref=e278]:
+                  - link "Doctor's Best, High Absorption Magnesium, 120 Tablets (100 mg per Tablet)" [ref=e279] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-tablets-100-mg-per-tablet/15
+                  - generic [ref=e280]:
+                    - img "Doctor's Best, High Absorption Magnesium, 120 Tablets (100 mg per Tablet)" [ref=e282]
+                    - button "Add to basket" [ref=e284] [cursor=pointer]
+                  - generic [ref=e285]: + More options
+                  - generic [ref=e287]: Doctor's Best, High Absorption Magnesium, 120 Tablets (100 mg per Tablet)
+                - generic [ref=e288]:
+                  - link "rating stars" [ref=e289] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-tablets-100-mg-per-tablet/15
+                    - img [ref=e290]
+                    - img [ref=e292]
+                    - img [ref=e294]
+                    - img [ref=e296]
+                    - img [ref=e298]
+                  - link "rating stars" [ref=e301] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-tablets-100-mg-per-tablet/15
+                    - generic [ref=e302]: 204,575
+                - generic [ref=e303]: 50,000+ sold in 30 days
+                - generic [ref=e304]:
+                  - generic [ref=e307]: CHF9.76
+                  - 'generic "15% off code: JUN26MG" [ref=e309]'
+            - generic [ref=e312]:
+              - generic [ref=e313]:
+                - link "KAL, Think, Magnesium L-Threonate, 60 Tablets (72 mg per Tablet)" [ref=e314] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-think-magnesium-l-threonate-60-tablets-72-mg-per-tablet/89445
+                - generic [ref=e315]:
+                  - img "KAL, Think, Magnesium L-Threonate, 60 Tablets (72 mg per Tablet)" [ref=e317]
+                  - button "Add to basket" [ref=e319] [cursor=pointer]
+                - generic [ref=e322]: KAL, Think, Magnesium L-Threonate, 60 Tablets (72 mg per Tablet)
+              - generic [ref=e323]:
+                - link "rating stars" [ref=e324] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-think-magnesium-l-threonate-60-tablets-72-mg-per-tablet/89445
+                  - img [ref=e325]
+                  - img [ref=e327]
+                  - img [ref=e329]
+                  - img [ref=e331]
+                  - img [ref=e333]
+                - link "rating stars" [ref=e336] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-think-magnesium-l-threonate-60-tablets-72-mg-per-tablet/89445
+                  - generic [ref=e337]: 5,456
+              - generic [ref=e338]: 1,000+ sold in 30 days
+              - generic [ref=e339]:
+                - generic [ref=e342]: CHF22.95
+                - 'generic "15% off code: JUN26MG" [ref=e344]'
+            - generic [ref=e347]:
+              - generic [ref=e348]:
+                - link "Sports Research, Magtein®, Magnesium L-Threonate, 90 Veggie Capsules (666 mg per Capsule)" [ref=e349] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magtein-magnesium-l-threonate-90-veggie-capsules-666-mg-per-capsule/115255
+                - img "Sports Research, Magtein®, Magnesium L-Threonate, 90 Veggie Capsules (666 mg per Capsule)" [ref=e352]
+                - generic [ref=e353]: + More options
+                - generic [ref=e355]: Sports Research, Magtein®, Magnesium L-Threonate, 90 Veggie Capsules (666 mg per Capsule)
+              - generic [ref=e356]:
+                - link "rating stars" [ref=e357] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magtein-magnesium-l-threonate-90-veggie-capsules-666-mg-per-capsule/115255
+                  - img [ref=e358]
+                  - img [ref=e360]
+                  - img [ref=e362]
+                  - img [ref=e364]
+                  - img [ref=e366]
+                - link "rating stars" [ref=e369] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magtein-magnesium-l-threonate-90-veggie-capsules-666-mg-per-capsule/115255
+                  - generic [ref=e370]: 1,075
+              - generic [ref=e372]:
+                - generic [ref=e375]: CHF30.08
+                - generic [ref=e377]:
+                  - text: Back on 22/06
+                  - link "Notify me" [ref=e379] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e382]:
+              - generic [ref=e383]:
+                - link "Source Naturals, Magtein®, Magnesium L-Threonate, 90 Capsules" [ref=e384] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magtein-magnesium-l-threonate-90-capsules/107292
+                - generic [ref=e385]:
+                  - img "Source Naturals, Magtein®, Magnesium L-Threonate, 90 Capsules" [ref=e387]
+                  - button "Add to basket" [ref=e389] [cursor=pointer]
+                - generic [ref=e390]: + More options
+                - generic [ref=e392]: Source Naturals, Magtein®, Magnesium L-Threonate, 90 Capsules
+              - generic [ref=e393]:
+                - link "rating stars" [ref=e394] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magtein-magnesium-l-threonate-90-capsules/107292
+                  - img [ref=e395]
+                  - img [ref=e397]
+                  - img [ref=e399]
+                  - img [ref=e401]
+                  - img [ref=e403]
+                - link "rating stars" [ref=e406] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magtein-magnesium-l-threonate-90-capsules/107292
+                  - generic [ref=e407]: 5,592
+              - generic [ref=e408]: 1,000+ sold in 30 days
+              - generic [ref=e409]:
+                - generic [ref=e412]: CHF26.64
+                - 'generic "15% off code: JUN26MG" [ref=e414]'
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - link "NOW Foods, Magtein®, Magnesium L-Threonate, 180 Veg Capsules" [ref=e419] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magtein-magnesium-l-threonate-180-veg-capsules-48-mg-per-capsule/129590
+                - generic [ref=e420]:
+                  - img "NOW Foods, Magtein®, Magnesium L-Threonate, 180 Veg Capsules" [ref=e422]
+                  - button "Add to basket" [ref=e424] [cursor=pointer]
+                - generic [ref=e425]: + More options
+                - generic [ref=e427]: NOW Foods, Magtein®, Magnesium L-Threonate, 180 Veg Capsules
+              - generic [ref=e428]:
+                - link "rating stars" [ref=e429] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magtein-magnesium-l-threonate-180-veg-capsules-48-mg-per-capsule/129590
+                  - img [ref=e430]
+                  - img [ref=e432]
+                  - img [ref=e434]
+                  - img [ref=e436]
+                  - img [ref=e438]
+                - link "rating stars" [ref=e441] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magtein-magnesium-l-threonate-180-veg-capsules-48-mg-per-capsule/129590
+                  - generic [ref=e442]: 20,600
+              - generic [ref=e443]: 3,000+ sold in 30 days
+              - generic [ref=e444]:
+                - generic [ref=e447]: CHF59.80
+                - 'generic "15% off code: JUN26MG" [ref=e449]'
+            - generic [ref=e452]:
+              - generic [ref=e453]:
+                - link "Source Naturals, Magtein®, Magnesium L-Threonate, 180 Capsules" [ref=e454] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magtein-magnesium-l-threonate-180-capsules/47434
+                - generic [ref=e455]:
+                  - img "Source Naturals, Magtein®, Magnesium L-Threonate, 180 Capsules" [ref=e457]
+                  - button "Add to basket" [ref=e459] [cursor=pointer]
+                - generic [ref=e460]: + More options
+                - generic [ref=e462]: Source Naturals, Magtein®, Magnesium L-Threonate, 180 Capsules
+              - generic [ref=e463]:
+                - link "rating stars" [ref=e464] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magtein-magnesium-l-threonate-180-capsules/47434
+                  - img [ref=e465]
+                  - img [ref=e467]
+                  - img [ref=e469]
+                  - img [ref=e471]
+                  - img [ref=e473]
+                - link "rating stars" [ref=e476] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magtein-magnesium-l-threonate-180-capsules/47434
+                  - generic [ref=e477]: 5,590
+              - generic [ref=e478]: 1,000+ sold in 30 days
+              - generic [ref=e479]:
+                - generic [ref=e482]: CHF52.09
+                - 'generic "15% off code: JUN26MG" [ref=e484]'
+            - generic [ref=e487]:
+              - generic [ref=e488]:
+                - link "Swanson Vitamins, Magnesium L-Threonate Featuring Magtein®, 90 Vegan Capsules" [ref=e489] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-magnesium-l-threonate-featuring-magtein-90-vegan-capsules/116329
+                - generic [ref=e490]:
+                  - img "Swanson Vitamins, Magnesium L-Threonate Featuring Magtein®, 90 Vegan Capsules" [ref=e492]
+                  - button "Add to basket" [ref=e494] [cursor=pointer]
+                - generic [ref=e497]: Swanson Vitamins, Magnesium L-Threonate Featuring Magtein®, 90 Vegan Capsules
+              - generic [ref=e498]:
+                - link "rating stars" [ref=e499] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-magnesium-l-threonate-featuring-magtein-90-vegan-capsules/116329
+                  - img [ref=e500]
+                  - img [ref=e502]
+                  - img [ref=e504]
+                  - img [ref=e506]
+                  - img [ref=e508]
+                - link "rating stars" [ref=e511] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-magnesium-l-threonate-featuring-magtein-90-vegan-capsules/116329
+                  - generic [ref=e512]: "698"
+              - generic [ref=e513]: 400+ sold in 30 days
+              - generic [ref=e514]:
+                - generic [ref=e517]: CHF32.56
+                - 'generic "15% off code: JUN26MG" [ref=e519]'
+            - generic [ref=e522]:
+              - generic [ref=e523]:
+                - link "Codeage, Liposomal Magnesium L-Threonate, 90 Vegetable Capsules" [ref=e524] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/codeage-liposomal-magnesium-l-threonate-90-vegetable-capsules/130983
+                - generic [ref=e525]:
+                  - img "Codeage, Liposomal Magnesium L-Threonate, 90 Vegetable Capsules" [ref=e527]
+                  - button "Add to basket" [ref=e529] [cursor=pointer]
+                - generic [ref=e532]: Codeage, Liposomal Magnesium L-Threonate, 90 Vegetable Capsules
+              - generic [ref=e533]:
+                - link "rating stars" [ref=e534] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/codeage-liposomal-magnesium-l-threonate-90-vegetable-capsules/130983
+                  - img [ref=e535]
+                  - img [ref=e537]
+                  - img [ref=e539]
+                  - img [ref=e541]
+                  - img [ref=e543]
+                - link "rating stars" [ref=e546] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/codeage-liposomal-magnesium-l-threonate-90-vegetable-capsules/130983
+                  - generic [ref=e547]: "578"
+              - generic [ref=e548]: 750+ sold in 30 days
+              - generic [ref=e549]:
+                - generic [ref=e552]: CHF36.41
+                - 'generic "15% off code: JUN26MG" [ref=e554]'
+            - generic [ref=e557]:
+              - generic [ref=e558]:
+                - link "Metagenics, Magtein® Magnesium L-Threonate, 120 Capsules" [ref=e559] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/metagenics-magtein-magnesium-l-threonate-120-capsules/125396
+                - generic [ref=e560]:
+                  - img "Metagenics, Magtein® Magnesium L-Threonate, 120 Capsules" [ref=e562]
+                  - button "Add to basket" [ref=e564] [cursor=pointer]
+                - generic [ref=e567]: Metagenics, Magtein® Magnesium L-Threonate, 120 Capsules
+              - generic [ref=e568]:
+                - link "rating stars" [ref=e569] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/metagenics-magtein-magnesium-l-threonate-120-capsules/125396
+                  - img [ref=e570]
+                  - img [ref=e572]
+                  - img [ref=e574]
+                  - img [ref=e576]
+                  - img [ref=e578]
+                - link "rating stars" [ref=e580] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/metagenics-magtein-magnesium-l-threonate-120-capsules/125396
+                  - generic [ref=e581]: "194"
+              - generic [ref=e582]: 400+ sold in 30 days
+              - generic [ref=e583]:
+                - generic [ref=e586]: CHF58.67
+                - 'generic "15% off code: JUN26MG" [ref=e588]'
+            - generic [ref=e591]:
+              - generic [ref=e592]:
+                - link "Nutricost, Magtein®, Magnesium L-Threonate, 120 Capsules (666 mg per Capsule)" [ref=e593] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magtein-magnesium-l-threonate-120-capsules-666-mg-per-capsule/129069
+                - generic [ref=e594]:
+                  - img "Nutricost, Magtein®, Magnesium L-Threonate, 120 Capsules (666 mg per Capsule)" [ref=e596]
+                  - button "Add to basket" [ref=e598] [cursor=pointer]
+                - generic [ref=e599]: + More options
+                - generic [ref=e601]: Nutricost, Magtein®, Magnesium L-Threonate, 120 Capsules (666 mg per Capsule)
+              - generic [ref=e602]:
+                - link "rating stars" [ref=e603] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magtein-magnesium-l-threonate-120-capsules-666-mg-per-capsule/129069
+                  - img [ref=e604]
+                  - img [ref=e606]
+                  - img [ref=e608]
+                  - img [ref=e610]
+                  - img [ref=e612]
+                - link "rating stars" [ref=e615] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magtein-magnesium-l-threonate-120-capsules-666-mg-per-capsule/129069
+                  - generic [ref=e616]: "459"
+              - generic [ref=e617]: 300+ sold in 30 days
+              - generic [ref=e618]:
+                - generic [ref=e621]: CHF48.94
+                - 'generic "15% off code: JUN26MG" [ref=e623]'
+            - generic [ref=e626]:
+              - generic [ref=e627]:
+                - link "Dr. Mercola, Magnesium Advanced, 90 Capsules" [ref=e628] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-magnesium-advanced-90-capsules/72495
+                - generic [ref=e629]:
+                  - img "Dr. Mercola, Magnesium Advanced, 90 Capsules" [ref=e631]
+                  - button "Add to basket" [ref=e633] [cursor=pointer]
+                - generic [ref=e634]: + More options
+                - generic [ref=e636]: Dr. Mercola, Magnesium Advanced, 90 Capsules
+              - generic [ref=e637]:
+                - link "rating stars" [ref=e638] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-magnesium-advanced-90-capsules/72495
+                  - img [ref=e639]
+                  - img [ref=e641]
+                  - img [ref=e643]
+                  - img [ref=e645]
+                  - img [ref=e647]
+                - link "rating stars" [ref=e650] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-magnesium-advanced-90-capsules/72495
+                  - generic [ref=e651]: 4,975
+              - generic [ref=e652]: 500+ sold in 30 days
+              - generic [ref=e653]:
+                - generic [ref=e656]: CHF35.74
+                - 'generic "15% off code: JUN26MG" [ref=e658]'
+            - generic [ref=e660]:
+              - generic [ref=e661]:
+                - img [ref=e662]: 
+                - generic [ref=e664]: Only at iHerb
+              - generic [ref=e665]:
+                - generic [ref=e666]:
+                  - link "Natural Factors, Cognitive Magnesium, 90 Vegetarian Capsules (48 mg per Capsule)" [ref=e667] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-cognitive-magnesium-90-vegetarian-capsules-48-mg-per-capsule/150430
+                  - generic [ref=e668]:
+                    - img "Natural Factors, Cognitive Magnesium, 90 Vegetarian Capsules (48 mg per Capsule)" [ref=e670]
+                    - button "Add to basket" [ref=e672] [cursor=pointer]
+                  - generic [ref=e675]: Natural Factors, Cognitive Magnesium, 90 Vegetarian Capsules (48 mg per Capsule)
+                - generic [ref=e676]:
+                  - link "rating stars" [ref=e677] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-cognitive-magnesium-90-vegetarian-capsules-48-mg-per-capsule/150430
+                    - img [ref=e678]
+                    - img [ref=e680]
+                    - img [ref=e682]
+                    - img [ref=e684]
+                    - img [ref=e686]
+                  - link "rating stars" [ref=e689] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-cognitive-magnesium-90-vegetarian-capsules-48-mg-per-capsule/150430
+                    - generic [ref=e690]: "315"
+                - generic [ref=e691]: 500+ sold in 30 days
+                - generic [ref=e692]:
+                  - generic [ref=e695]: CHF23.23
+                  - 'generic "15% off code: JUN26MG" [ref=e697]'
+            - generic [ref=e700]:
+              - generic [ref=e701]:
+                - link "Solaray, SmartMag™ Magnesium L-Threonate, 90 veg caps (48 mg per veg cap)" [ref=e702] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-smartmag-magnesium-l-threonate-90-vegcaps-48-mg-per-vegcap/155856
+                - generic [ref=e703]:
+                  - img "Solaray, SmartMag™ Magnesium L-Threonate, 90 veg caps (48 mg per veg cap)" [ref=e705]
+                  - button "Add to basket" [ref=e707] [cursor=pointer]
+                - generic [ref=e710]: Solaray, SmartMag™ Magnesium L-Threonate, 90 veg caps (48 mg per veg cap)
+              - generic [ref=e711]:
+                - link "rating stars" [ref=e712] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-smartmag-magnesium-l-threonate-90-vegcaps-48-mg-per-vegcap/155856
+                  - img [ref=e713]
+                  - img [ref=e715]
+                  - img [ref=e717]
+                  - img [ref=e719]
+                  - img [ref=e721]
+                - link "rating stars" [ref=e724] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-smartmag-magnesium-l-threonate-90-vegcaps-48-mg-per-vegcap/155856
+                  - generic [ref=e725]: "128"
+              - generic [ref=e726]: 300+ sold in 30 days
+              - generic [ref=e727]:
+                - generic [ref=e730]: CHF24.47
+                - 'generic "15% off code: JUN26MG" [ref=e732]'
+            - generic [ref=e734]:
+              - generic [ref=e735]:
+                - img [ref=e736]: 
+                - generic [ref=e738]: Only at iHerb
+              - generic [ref=e739]:
+                - generic [ref=e740]:
+                  - link "Force Factor, Ultimate Magtein®, Magnesium L-Threonate, Mixed Berry, 60 Soft Chews" [ref=e741] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-ultimate-magtein-magnesium-l-threonate-mixed-berry-60-soft-chews/148754
+                  - generic [ref=e742]:
+                    - img "Force Factor, Ultimate Magtein®, Magnesium L-Threonate, Mixed Berry, 60 Soft Chews" [ref=e744]
+                    - button "Add to basket" [ref=e746] [cursor=pointer]
+                  - generic [ref=e749]: Force Factor, Ultimate Magtein®, Magnesium L-Threonate, Mixed Berry, 60 Soft Chews
+                - generic [ref=e750]:
+                  - link "rating stars" [ref=e751] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-ultimate-magtein-magnesium-l-threonate-mixed-berry-60-soft-chews/148754
+                    - img [ref=e752]
+                    - img [ref=e754]
+                    - img [ref=e756]
+                    - img [ref=e758]
+                    - img [ref=e760]
+                  - link "rating stars" [ref=e763] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-ultimate-magtein-magnesium-l-threonate-mixed-berry-60-soft-chews/148754
+                    - generic [ref=e764]: "55"
+                - generic [ref=e765]: 100+ sold in 30 days
+                - generic [ref=e769]: CHF28.59
+            - generic [ref=e772]:
+              - generic [ref=e773]:
+                - link "ProHealth Longevity, Brain-Mag Pro, Magnesium L-Threonate, 90 Capsules (48 mg per Capsule)" [ref=e774] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/prohealth-longevity-brain-mag-pro-magnesium-l-threonate-90-capsules-48-mg-per-capsule/137863
+                - generic [ref=e775]:
+                  - img "ProHealth Longevity, Brain-Mag Pro, Magnesium L-Threonate, 90 Capsules (48 mg per Capsule)" [ref=e777]
+                  - button "Add to basket" [ref=e779] [cursor=pointer]
+                - generic [ref=e782]: ProHealth Longevity, Brain-Mag Pro, Magnesium L-Threonate, 90 Capsules (48 mg per Capsule)
+              - generic [ref=e783]:
+                - link "rating stars" [ref=e784] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/prohealth-longevity-brain-mag-pro-magnesium-l-threonate-90-capsules-48-mg-per-capsule/137863
+                  - img [ref=e785]
+                  - img [ref=e787]
+                  - img [ref=e789]
+                  - img [ref=e791]
+                  - img [ref=e793]
+                - link "rating stars" [ref=e796] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/prohealth-longevity-brain-mag-pro-magnesium-l-threonate-90-capsules-48-mg-per-capsule/137863
+                  - generic [ref=e797]: "251"
+              - generic [ref=e798]: 300+ sold in 30 days
+              - generic [ref=e799]:
+                - generic [ref=e802]: CHF33.79
+                - 'generic "15% off code: JUN26MG" [ref=e804]'
+            - generic [ref=e807]:
+              - generic [ref=e808]:
+                - link "Doctor's Best, Brain Magnesium with Magtein®, 90 Veggie Caps (50 mg per Capsule)" [ref=e809] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/doctor-s-best-brain-magnesium-with-magtein-90-veggie-caps-50-mg-per-capsule/46875
+                - img "Doctor's Best, Brain Magnesium with Magtein®, 90 Veggie Caps (50 mg per Capsule)" [ref=e812]
+                - generic [ref=e815]: Doctor's Best, Brain Magnesium with Magtein®, 90 Veggie Caps (50 mg per Capsule)
+              - generic [ref=e816]:
+                - link "rating stars" [ref=e817] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/doctor-s-best-brain-magnesium-with-magtein-90-veggie-caps-50-mg-per-capsule/46875
+                  - img [ref=e818]
+                  - img [ref=e820]
+                  - img [ref=e822]
+                  - img [ref=e824]
+                  - img [ref=e826]
+                - link "rating stars" [ref=e829] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/doctor-s-best-brain-magnesium-with-magtein-90-veggie-caps-50-mg-per-capsule/46875
+                  - generic [ref=e830]: 1,213
+              - generic [ref=e832]:
+                - generic [ref=e835]: CHF34.52
+                - generic [ref=e837]:
+                  - text: Out of Stock
+                  - link "Notify me" [ref=e839] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e842]:
+              - generic [ref=e843]:
+                - link "Dr. Mercola, Magnesium Advanced, 270 Capsules" [ref=e844] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-magnesium-advanced-270-capsules/82240
+                - generic [ref=e845]:
+                  - img "Dr. Mercola, Magnesium Advanced, 270 Capsules" [ref=e847]
+                  - button "Add to basket" [ref=e849] [cursor=pointer]
+                - generic [ref=e850]: + More options
+                - generic [ref=e852]: Dr. Mercola, Magnesium Advanced, 270 Capsules
+              - generic [ref=e853]:
+                - link "rating stars" [ref=e854] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-magnesium-advanced-270-capsules/82240
+                  - img [ref=e855]
+                  - img [ref=e857]
+                  - img [ref=e859]
+                  - img [ref=e861]
+                  - img [ref=e863]
+                - link "rating stars" [ref=e866] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-magnesium-advanced-270-capsules/82240
+                  - generic [ref=e867]: 4,974
+              - generic [ref=e868]: 500+ sold in 30 days
+              - generic [ref=e869]:
+                - generic [ref=e872]: CHF88.65
+                - 'generic "15% off code: JUN26MG" [ref=e874]'
+            - generic [ref=e876]:
+              - generic [ref=e877]:
+                - img [ref=e878]: 
+                - generic [ref=e880]: Only at iHerb
+              - generic [ref=e881]:
+                - generic [ref=e882]:
+                  - link "Force Factor, Magnesium + L-Theanine, 120 Vegetable Capsules" [ref=e883] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-magnesium-l-theanine-120-vegetable-capsules/143109
+                  - generic [ref=e884]:
+                    - img "Force Factor, Magnesium + L-Theanine, 120 Vegetable Capsules" [ref=e886]
+                    - button "Add to basket" [ref=e888] [cursor=pointer]
+                  - generic [ref=e891]: Force Factor, Magnesium + L-Theanine, 120 Vegetable Capsules
+                - generic [ref=e892]:
+                  - link "rating stars" [ref=e893] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-magnesium-l-theanine-120-vegetable-capsules/143109
+                    - img [ref=e894]
+                    - img [ref=e896]
+                    - img [ref=e898]
+                    - img [ref=e900]
+                    - img [ref=e902]
+                  - link "rating stars" [ref=e905] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-magnesium-l-theanine-120-vegetable-capsules/143109
+                    - generic [ref=e906]: "150"
+                - generic [ref=e907]: 400+ sold in 30 days
+                - generic [ref=e911]: CHF18.04
+            - generic [ref=e914]:
+              - generic [ref=e915]:
+                - link "Jarrow Formulas, MagMind®, Brain Health, 90 Veggie Capsules (48 mg per Capsule)" [ref=e916] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/jarrow-formulas-magmind-brain-health-90-veggie-capsules-48-mg-per-capsule/42780
+                - generic [ref=e917]:
+                  - img "Jarrow Formulas, MagMind®, Brain Health, 90 Veggie Capsules (48 mg per Capsule)" [ref=e919]
+                  - button "Add to basket" [ref=e921] [cursor=pointer]
+                - generic [ref=e924]: Jarrow Formulas, MagMind®, Brain Health, 90 Veggie Capsules (48 mg per Capsule)
+              - generic [ref=e925]:
+                - link "rating stars" [ref=e926] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/jarrow-formulas-magmind-brain-health-90-veggie-capsules-48-mg-per-capsule/42780
+                  - img [ref=e927]
+                  - img [ref=e929]
+                  - img [ref=e931]
+                  - img [ref=e933]
+                  - img [ref=e935]
+                - link "rating stars" [ref=e938] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/jarrow-formulas-magmind-brain-health-90-veggie-capsules-48-mg-per-capsule/42780
+                  - generic [ref=e939]: 3,418
+              - generic [ref=e940]: 750+ sold in 30 days
+              - generic [ref=e941]:
+                - generic [ref=e944]: CHF36.43
+                - 'generic "15% off code: JUN26MG" [ref=e946]'
+            - generic [ref=e949]:
+              - generic [ref=e950]:
+                - link "Protocol for Life Balance, Magtein®, Magnesium L-Threonate, 90 Veg Capsules" [ref=e951] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/protocol-for-life-balance-magtein-magnesium-l-threonate-90-veg-capsules/112339
+                - generic [ref=e952]:
+                  - img "Protocol for Life Balance, Magtein®, Magnesium L-Threonate, 90 Veg Capsules" [ref=e954]
+                  - button "Add to basket" [ref=e956] [cursor=pointer]
+                - generic [ref=e959]: Protocol for Life Balance, Magtein®, Magnesium L-Threonate, 90 Veg Capsules
+              - generic [ref=e960]:
+                - link "rating stars" [ref=e961] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/protocol-for-life-balance-magtein-magnesium-l-threonate-90-veg-capsules/112339
+                  - img [ref=e962]
+                  - img [ref=e964]
+                  - img [ref=e966]
+                  - img [ref=e968]
+                  - img [ref=e970]
+                - link "rating stars" [ref=e973] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/protocol-for-life-balance-magtein-magnesium-l-threonate-90-veg-capsules/112339
+                  - generic [ref=e974]: "447"
+              - generic [ref=e976]:
+                - generic [ref=e979]: CHF39.62
+                - 'generic "15% off code: JUN26MG" [ref=e981]'
+            - generic [ref=e984]:
+              - generic [ref=e985]:
+                - link "Sports Research, Magtein®, Magnesium L-Threonate, 180 Veggie Capsules (666 mg per Capsule)" [ref=e986] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magtein-magnesium-l-threonate-180-veggie-capsules-666-mg-per-capsule/134763
+                - img "Sports Research, Magtein®, Magnesium L-Threonate, 180 Veggie Capsules (666 mg per Capsule)" [ref=e989]
+                - generic [ref=e990]: + More options
+                - generic [ref=e992]: Sports Research, Magtein®, Magnesium L-Threonate, 180 Veggie Capsules (666 mg per Capsule)
+              - generic [ref=e993]:
+                - link "rating stars" [ref=e994] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magtein-magnesium-l-threonate-180-veggie-capsules-666-mg-per-capsule/134763
+                  - img [ref=e995]
+                  - img [ref=e997]
+                  - img [ref=e999]
+                  - img [ref=e1001]
+                  - img [ref=e1003]
+                - link "rating stars" [ref=e1006] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magtein-magnesium-l-threonate-180-veggie-capsules-666-mg-per-capsule/134763
+                  - generic [ref=e1007]: 1,073
+              - generic [ref=e1009]:
+                - generic [ref=e1012]: CHF59.06
+                - generic [ref=e1014]:
+                  - text: Back on 22/06
+                  - link "Notify me" [ref=e1016] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e1019]:
+              - generic [ref=e1020]:
+                - link "Bluebonnet Nutrition, Magtein® Magnesium L-Threonate, 90 Vegetable Capsules (48 mg per Capsule)" [ref=e1021] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/bluebonnet-nutrition-magtein-magnesium-l-threonate-90-vegetable-capsules-48-mg-per-capsule/152823
+                - generic [ref=e1022]:
+                  - img "Bluebonnet Nutrition, Magtein® Magnesium L-Threonate, 90 Vegetable Capsules (48 mg per Capsule)" [ref=e1024]
+                  - button "Add to basket" [ref=e1026] [cursor=pointer]
+                - generic [ref=e1029]: Bluebonnet Nutrition, Magtein® Magnesium L-Threonate, 90 Vegetable Capsules (48 mg per Capsule)
+              - generic [ref=e1030]:
+                - link "rating stars" [ref=e1031] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/bluebonnet-nutrition-magtein-magnesium-l-threonate-90-vegetable-capsules-48-mg-per-capsule/152823
+                  - img [ref=e1032]
+                  - img [ref=e1034]
+                  - img [ref=e1036]
+                  - img [ref=e1038]
+                  - img [ref=e1040]
+                - link "rating stars" [ref=e1043] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/bluebonnet-nutrition-magtein-magnesium-l-threonate-90-vegetable-capsules-48-mg-per-capsule/152823
+                  - generic [ref=e1044]: "73"
+              - generic [ref=e1045]: 200+ sold in 30 days
+              - generic [ref=e1049]: CHF25.86
+            - generic [ref=e1052]:
+              - generic [ref=e1053]:
+                - link "Nutricost, Magtein®, Magnesium L-Threonate, 90 Capsules (666 mg per Capsule)" [ref=e1054] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magtein-magnesium-l-threonate-90-capsules-666-mg-per-capsule/147392
+                - generic [ref=e1055]:
+                  - img "Nutricost, Magtein®, Magnesium L-Threonate, 90 Capsules (666 mg per Capsule)" [ref=e1057]
+                  - button "Add to basket" [ref=e1059] [cursor=pointer]
+                - generic [ref=e1060]: + More options
+                - generic [ref=e1062]: Nutricost, Magtein®, Magnesium L-Threonate, 90 Capsules (666 mg per Capsule)
+              - generic [ref=e1063]:
+                - link "rating stars" [ref=e1064] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magtein-magnesium-l-threonate-90-capsules-666-mg-per-capsule/147392
+                  - img [ref=e1065]
+                  - img [ref=e1067]
+                  - img [ref=e1069]
+                  - img [ref=e1071]
+                  - img [ref=e1073]
+                - link "rating stars" [ref=e1076] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magtein-magnesium-l-threonate-90-capsules-666-mg-per-capsule/147392
+                  - generic [ref=e1077]: "459"
+              - generic [ref=e1078]: 100+ sold in 30 days
+              - generic [ref=e1079]:
+                - generic [ref=e1082]: CHF35.89
+                - 'generic "15% off code: JUN26MG" [ref=e1084]'
+            - generic [ref=e1086]:
+              - link "iHerb Brands" [ref=e1088] [cursor=pointer]:
+                - /url: /iherb-brands
+              - generic [ref=e1089]:
+                - generic [ref=e1090]:
+                  - link "California Gold Nutrition, Magnesium Bisglycinate Chelate, Albion TRAACS®, 240 Veggie Capsules (100 mg per Capsule)" [ref=e1091] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-240-veggie-capsules-100-mg-per-capsule/103274
+                  - generic [ref=e1092]:
+                    - img "California Gold Nutrition, Magnesium Bisglycinate Chelate, Albion TRAACS®, 240 Veggie Capsules (100 mg per Capsule)" [ref=e1094]
+                    - button "Add to basket" [ref=e1096] [cursor=pointer]
+                  - generic [ref=e1097]: + More options
+                  - generic [ref=e1099]: California Gold Nutrition, Magnesium Bisglycinate Chelate, Albion TRAACS®, 240 Veggie Capsules (100 mg per Capsule)
+                - generic [ref=e1100]:
+                  - link "rating stars" [ref=e1101] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-240-veggie-capsules-100-mg-per-capsule/103274
+                    - img [ref=e1102]
+                    - img [ref=e1104]
+                    - img [ref=e1106]
+                    - img [ref=e1108]
+                    - img [ref=e1110]
+                  - link "rating stars" [ref=e1113] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-240-veggie-capsules-100-mg-per-capsule/103274
+                    - generic [ref=e1114]: 25,433
+                - generic [ref=e1115]: 10,000+ sold in 30 days
+                - generic [ref=e1116]:
+                  - generic [ref=e1119]: CHF23.00
+                  - 'generic "15% off code: JUN26MG" [ref=e1121]'
+            - generic [ref=e1124]:
+              - generic [ref=e1125]:
+                - link "Natural Stacks, MagTech® Magnesium, 180 Vegan Capsules (66.6 mg per Capsule)" [ref=e1126] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-180-vegan-capsules-66-6-mg-per-capsule/142151
+                - generic [ref=e1127]:
+                  - img "Natural Stacks, MagTech® Magnesium, 180 Vegan Capsules (66.6 mg per Capsule)" [ref=e1129]
+                  - button "Add to basket" [ref=e1131] [cursor=pointer]
+                - generic [ref=e1134]: Natural Stacks, MagTech® Magnesium, 180 Vegan Capsules (66.6 mg per Capsule)
+              - generic [ref=e1135]:
+                - link "rating stars" [ref=e1136] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-180-vegan-capsules-66-6-mg-per-capsule/142151
+                  - img [ref=e1137]
+                  - img [ref=e1139]
+                  - img [ref=e1141]
+                  - img [ref=e1143]
+                  - img [ref=e1145]
+                - link "rating stars" [ref=e1148] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-180-vegan-capsules-66-6-mg-per-capsule/142151
+                  - generic [ref=e1149]: "165"
+              - generic [ref=e1150]: 400+ sold in 30 days
+              - generic [ref=e1151]:
+                - generic [ref=e1154]: CHF52.38
+                - 'generic "15% off code: JUN26MG" [ref=e1156]'
+            - generic [ref=e1159]:
+              - generic [ref=e1160]:
+                - link "EVLution Nutrition, Magnesium + L-Theanine, Pink Lemonade, 3.17 oz (90 g)" [ref=e1161] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/evlution-nutrition-magnesium-l-theanine-pink-lemonade-3-17-oz-90-g/146249
+                - generic [ref=e1162]:
+                  - img "EVLution Nutrition, Magnesium + L-Theanine, Pink Lemonade, 3.17 oz (90 g)" [ref=e1164]
+                  - button "Add to basket" [ref=e1166] [cursor=pointer]
+                - generic [ref=e1168]: EVLution Nutrition, Magnesium + L-Theanine, Pink Lemonade, 3.17 oz (90 g)
+              - generic [ref=e1169]:
+                - link "rating stars" [ref=e1170] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/evlution-nutrition-magnesium-l-theanine-pink-lemonade-3-17-oz-90-g/146249
+                  - img [ref=e1171]
+                  - img [ref=e1173]
+                  - img [ref=e1175]
+                  - img [ref=e1177]
+                  - img [ref=e1179]
+                - link "rating stars" [ref=e1182] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/evlution-nutrition-magnesium-l-theanine-pink-lemonade-3-17-oz-90-g/146249
+                  - generic [ref=e1183]: "636"
+              - generic [ref=e1184]: 100+ sold in 30 days
+              - generic [ref=e1185]:
+                - generic [ref=e1188]: CHF5.98
+                - 'generic "15% off code: JUN26MG" [ref=e1190]'
+            - generic [ref=e1192]:
+              - link "New" [ref=e1194] [cursor=pointer]:
+                - /url: /New-Products
+              - generic [ref=e1195]:
+                - generic [ref=e1196]:
+                  - link "Natural Vitality, Calm®, Magtein®, Magnesium L-Threonate, 90 Vegetarian Capsules" [ref=e1197] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-vitality-calm-magtein-magnesium-l-threonate-90-vegetarian-capsules/160556
+                  - generic [ref=e1198]:
+                    - img "Natural Vitality, Calm®, Magtein®, Magnesium L-Threonate, 90 Vegetarian Capsules" [ref=e1200]
+                    - button "Add to basket" [ref=e1202] [cursor=pointer]
+                  - generic [ref=e1204]: Natural Vitality, Calm®, Magtein®, Magnesium L-Threonate, 90 Vegetarian Capsules
+                - generic [ref=e1208]:
+                  - generic [ref=e1211]: CHF27.31
+                  - 'generic "15% off code: JUN26MG" [ref=e1213]'
+            - generic [ref=e1215]:
+              - link "New" [ref=e1217] [cursor=pointer]:
+                - /url: /New-Products
+              - generic [ref=e1218]:
+                - generic [ref=e1219]:
+                  - link "NOW Foods, Magtein®, Magnesium L-Threonate Powder, 3.2 oz (91 g)" [ref=e1220] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/now-foods-magtein-magnesium-l-threonate-powder-3-2-oz-91-g/160783
+                  - generic [ref=e1221]:
+                    - img "NOW Foods, Magtein®, Magnesium L-Threonate Powder, 3.2 oz (91 g)" [ref=e1223]
+                    - button "Add to basket" [ref=e1225] [cursor=pointer]
+                  - generic [ref=e1227]: NOW Foods, Magtein®, Magnesium L-Threonate Powder, 3.2 oz (91 g)
+                - generic [ref=e1230]: 100+ sold in 30 days
+                - generic [ref=e1231]:
+                  - generic [ref=e1234]: CHF32.61
+                  - 'generic "15% off code: JUN26MG" [ref=e1236]'
+            - generic [ref=e1238]:
+              - link "New" [ref=e1240] [cursor=pointer]:
+                - /url: /New-Products
+              - generic [ref=e1241]:
+                - generic [ref=e1242]:
+                  - link "Qunol, Q-MAG™, Magnesium L-Threonate, 60 Tablets (72 mg per Tablet)" [ref=e1243] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-q-mag-magnesium-l-threonate-60-tablets-72-mg-per-tablet/160145
+                  - generic [ref=e1244]:
+                    - img "Qunol, Q-MAG™, Magnesium L-Threonate, 60 Tablets (72 mg per Tablet)" [ref=e1246]
+                    - button "Add to basket" [ref=e1248] [cursor=pointer]
+                  - generic [ref=e1250]: Qunol, Q-MAG™, Magnesium L-Threonate, 60 Tablets (72 mg per Tablet)
+                - generic [ref=e1254]:
+                  - generic [ref=e1257]: CHF38.06
+                  - 'generic "15% off code: JUN26MG" [ref=e1259]'
+            - generic [ref=e1262]:
+              - generic [ref=e1263]:
+                - link "Jigsaw Health, Brain Boost™, Magnesium L-Threonate, 90 Capsules" [ref=e1264] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/jigsaw-health-brain-boost-magnesium-l-threonate-90-capsules/129831
+                - generic [ref=e1265]:
+                  - img "Jigsaw Health, Brain Boost™, Magnesium L-Threonate, 90 Capsules" [ref=e1267]
+                  - button "Add to basket" [ref=e1269] [cursor=pointer]
+                - generic [ref=e1271]: Jigsaw Health, Brain Boost™, Magnesium L-Threonate, 90 Capsules
+              - generic [ref=e1272]:
+                - link "rating stars" [ref=e1273] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/jigsaw-health-brain-boost-magnesium-l-threonate-90-capsules/129831
+                  - img [ref=e1274]
+                  - img [ref=e1276]
+                  - img [ref=e1278]
+                  - img [ref=e1280]
+                  - img [ref=e1282]
+                - link "rating stars" [ref=e1285] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/jigsaw-health-brain-boost-magnesium-l-threonate-90-capsules/129831
+                  - generic [ref=e1286]: "50"
+              - generic [ref=e1287]: 100+ sold in 30 days
+              - generic [ref=e1291]: CHF43.22
+            - generic [ref=e1294]:
+              - generic [ref=e1295]:
+                - link "Life Extension, Neuro-Mag®, Magnesium L-Threonate, Natural Orange, 60 Gummies (36 mg per Gummy)" [ref=e1296] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-natural-orange-60-gummies-36-mg-per-gummy/138618
+                - generic [ref=e1297]:
+                  - img "Life Extension, Neuro-Mag®, Magnesium L-Threonate, Natural Orange, 60 Gummies (36 mg per Gummy)" [ref=e1299]
+                  - button "Add to basket" [ref=e1301] [cursor=pointer]
+                - generic [ref=e1303]: Life Extension, Neuro-Mag®, Magnesium L-Threonate, Natural Orange, 60 Gummies (36 mg per Gummy)
+              - generic [ref=e1304]:
+                - link "rating stars" [ref=e1305] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-natural-orange-60-gummies-36-mg-per-gummy/138618
+                  - img [ref=e1306]
+                  - img [ref=e1308]
+                  - img [ref=e1310]
+                  - img [ref=e1312]
+                  - img [ref=e1314]
+                - link "rating stars" [ref=e1317] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-natural-orange-60-gummies-36-mg-per-gummy/138618
+                  - generic [ref=e1318]: "167"
+              - generic [ref=e1319]: 300+ sold in 30 days
+              - generic [ref=e1320]:
+                - generic [ref=e1323]: CHF29.21
+                - 'generic "15% off code: JUN26MG" [ref=e1325]'
+            - generic [ref=e1328]:
+              - generic [ref=e1329]:
+                - link "Dr. Mercola, Chewable Magnesium Advanced, Natural Cherry, 60 Tablets" [ref=e1330] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-chewable-magnesium-advanced-natural-cherry-60-tablets/147040
+                - generic [ref=e1331]:
+                  - img "Dr. Mercola, Chewable Magnesium Advanced, Natural Cherry, 60 Tablets" [ref=e1333]
+                  - button "Add to basket" [ref=e1335] [cursor=pointer]
+                - generic [ref=e1337]: Dr. Mercola, Chewable Magnesium Advanced, Natural Cherry, 60 Tablets
+              - generic [ref=e1338]:
+                - link "rating stars" [ref=e1339] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-chewable-magnesium-advanced-natural-cherry-60-tablets/147040
+                  - img [ref=e1340]
+                  - img [ref=e1342]
+                  - img [ref=e1344]
+                  - img [ref=e1346]
+                  - img [ref=e1348]
+                - link "rating stars" [ref=e1351] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/dr-mercola-chewable-magnesium-advanced-natural-cherry-60-tablets/147040
+                  - generic [ref=e1352]: "38"
+              - generic [ref=e1354]:
+                - generic [ref=e1357]: CHF40.81
+                - 'generic "15% off code: JUN26MG" [ref=e1359]'
+            - generic [ref=e1362]:
+              - generic [ref=e1363]:
+                - link "Designs For Health, NeuroMag™, 90 vegetarian capsules" [ref=e1364] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/designs-for-health-neuromag-90-vegetarian-capsules-48-3-mg-per-capsule/142841
+                - generic [ref=e1365]:
+                  - img "Designs For Health, NeuroMag™, 90 vegetarian capsules" [ref=e1367]
+                  - button "Add to basket" [ref=e1369] [cursor=pointer]
+                - generic [ref=e1371]: Designs For Health, NeuroMag™, 90 vegetarian capsules
+              - generic [ref=e1372]:
+                - link "rating stars" [ref=e1373] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/designs-for-health-neuromag-90-vegetarian-capsules-48-3-mg-per-capsule/142841
+                  - img [ref=e1374]
+                  - img [ref=e1376]
+                  - img [ref=e1378]
+                  - img [ref=e1380]
+                  - img [ref=e1382]
+                - link "rating stars" [ref=e1385] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/designs-for-health-neuromag-90-vegetarian-capsules-48-3-mg-per-capsule/142841
+                  - generic [ref=e1386]: "94"
+              - generic [ref=e1391]: CHF70.97
+            - generic [ref=e1394]:
+              - generic [ref=e1395]:
+                - link "Nature's Craft, Magnesium Sleeplex, Melatonin-Free, 90 Capsules" [ref=e1396] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-craft-magnesium-sleeplex-melatonin-free-90-capsules/139629
+                - generic [ref=e1397]:
+                  - img "Nature's Craft, Magnesium Sleeplex, Melatonin-Free, 90 Capsules" [ref=e1399]
+                  - button "Add to basket" [ref=e1401] [cursor=pointer]
+                - generic [ref=e1404]: Nature's Craft, Magnesium Sleeplex, Melatonin-Free, 90 Capsules
+              - generic [ref=e1405]:
+                - link "rating stars" [ref=e1406] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-craft-magnesium-sleeplex-melatonin-free-90-capsules/139629
+                  - img [ref=e1407]
+                  - img [ref=e1409]
+                  - img [ref=e1411]
+                  - img [ref=e1413]
+                  - img [ref=e1415]
+                - link "rating stars" [ref=e1418] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-craft-magnesium-sleeplex-melatonin-free-90-capsules/139629
+                  - generic [ref=e1419]: "183"
+              - generic [ref=e1420]: 200+ sold in 30 days
+              - generic [ref=e1424]: CHF30.31
+            - generic [ref=e1427]:
+              - generic [ref=e1428]:
+                - link "Qunol, Brain Health, Memory Plus, Berry Citrus, 60 Chewable Tablets" [ref=e1429] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/qunol-brain-health-memory-plus-berry-citrus-60-chewable-tablets/161039
+                - img "Qunol, Brain Health, Memory Plus, Berry Citrus, 60 Chewable Tablets" [ref=e1432]
+                - generic [ref=e1435]: Qunol, Brain Health, Memory Plus, Berry Citrus, 60 Chewable Tablets
+              - generic [ref=e1439]:
+                - generic [ref=e1442]: CHF47.39
+                - generic [ref=e1444]:
+                  - text: Coming soon
+                  - link "Notify me" [ref=e1446] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e1449]:
+              - generic [ref=e1450]:
+                - link "Natural Stacks, MagTech® Magnesium, Lemonade, 4.76 oz (135 g)" [ref=e1451] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-lemonade-4-76-oz-135-g/153595
+                - generic [ref=e1452]:
+                  - img "Natural Stacks, MagTech® Magnesium, Lemonade, 4.76 oz (135 g)" [ref=e1454]
+                  - button "Add to basket" [ref=e1456] [cursor=pointer]
+                - generic [ref=e1457]: + More options
+                - generic [ref=e1459]: Natural Stacks, MagTech® Magnesium, Lemonade, 4.76 oz (135 g)
+              - generic [ref=e1460]:
+                - link "rating stars" [ref=e1461] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-lemonade-4-76-oz-135-g/153595
+                  - img [ref=e1462]
+                  - img [ref=e1464]
+                  - img [ref=e1466]
+                  - img [ref=e1468]
+                  - img [ref=e1470]
+                - link "rating stars" [ref=e1473] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-lemonade-4-76-oz-135-g/153595
+                  - generic [ref=e1474]: "151"
+              - generic [ref=e1476]:
+                - generic [ref=e1479]: CHF35.66
+                - 'generic "15% off code: JUN26MG" [ref=e1481]'
+            - generic [ref=e1484]:
+              - generic [ref=e1485]:
+                - link "Designs For Health, Designs For Sport®, NeuroMag™, 90 Vegetarian Capsules (48.3 mg per Capsule)" [ref=e1486] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/designs-for-health-designs-for-sport-neuromag-90-vegetarian-capsules-48-3-mg-per-capsule/149249
+                - generic [ref=e1487]:
+                  - img "Designs For Health, Designs For Sport®, NeuroMag™, 90 Vegetarian Capsules (48.3 mg per Capsule)" [ref=e1489]
+                  - button "Add to basket" [ref=e1491] [cursor=pointer]
+                - generic [ref=e1494]: Designs For Health, Designs For Sport®, NeuroMag™, 90 Vegetarian Capsules (48.3 mg per Capsule)
+              - generic [ref=e1495]:
+                - link "rating stars" [ref=e1496] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/designs-for-health-designs-for-sport-neuromag-90-vegetarian-capsules-48-3-mg-per-capsule/149249
+                  - img [ref=e1497]
+                  - img [ref=e1499]
+                  - img [ref=e1501]
+                  - img [ref=e1503]
+                  - img [ref=e1505]
+                - link "rating stars" [ref=e1507] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/designs-for-health-designs-for-sport-neuromag-90-vegetarian-capsules-48-3-mg-per-capsule/149249
+                  - generic [ref=e1508]: "7"
+              - generic [ref=e1513]: CHF69.99
+            - generic [ref=e1516]:
+              - generic [ref=e1517]:
+                - link "PatchAid, Triple Magnesium Complex Patch, 30 Patches" [ref=e1518] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/patchaid-triple-magnesium-complex-patch-30-patches/160507
+                - generic [ref=e1519]:
+                  - img "PatchAid, Triple Magnesium Complex Patch, 30 Patches" [ref=e1521]
+                  - button "Add to basket" [ref=e1523] [cursor=pointer]
+                - generic [ref=e1526]: PatchAid, Triple Magnesium Complex Patch, 30 Patches
+              - generic [ref=e1527]:
+                - link "rating stars" [ref=e1528] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/patchaid-triple-magnesium-complex-patch-30-patches/160507
+                  - img [ref=e1529]
+                  - img [ref=e1531]
+                  - img [ref=e1533]
+                  - img [ref=e1535]
+                  - img [ref=e1537]
+                - link "rating stars" [ref=e1540] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/patchaid-triple-magnesium-complex-patch-30-patches/160507
+                  - generic [ref=e1541]: "190"
+              - generic [ref=e1542]:
+                - generic [ref=e1545]: CHF15.51
+                - 'generic "15% off code: JUN26MG" [ref=e1547]'
+            - generic [ref=e1550]:
+              - generic [ref=e1551]:
+                - link "Natural Stacks, MagTech® Magnesium, Lemonade, 20 Stick Packs, 0.12 oz (3.38 g) Each" [ref=e1552] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-lemonade-20-stick-packs-0-12-oz-3-38-g-each/104488
+                - generic [ref=e1553]:
+                  - img "Natural Stacks, MagTech® Magnesium, Lemonade, 20 Stick Packs, 0.12 oz (3.38 g) Each" [ref=e1555]
+                  - button "Add to basket" [ref=e1557] [cursor=pointer]
+                - generic [ref=e1558]: + More options
+                - generic [ref=e1560]: Natural Stacks, MagTech® Magnesium, Lemonade, 20 Stick Packs, 0.12 oz (3.38 g) Each
+              - generic [ref=e1561]:
+                - link "rating stars" [ref=e1562] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-lemonade-20-stick-packs-0-12-oz-3-38-g-each/104488
+                  - img [ref=e1563]
+                  - img [ref=e1565]
+                  - img [ref=e1567]
+                  - img [ref=e1569]
+                  - img [ref=e1571]
+                - link "rating stars" [ref=e1574] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-magnesium-lemonade-20-stick-packs-0-12-oz-3-38-g-each/104488
+                  - generic [ref=e1575]: "151"
+              - generic [ref=e1576]:
+                - generic [ref=e1579]: CHF35.66
+                - 'generic "15% off code: JUN26MG" [ref=e1581]'
+            - generic [ref=e1584]:
+              - generic [ref=e1585]:
+                - link "Intelligent Labs, MagEnhance, Magnesium Complex, 90 Vegan Capsules" [ref=e1586] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/intelligent-labs-magenhance-magnesium-complex-90-vegan-capsules/152598
+                - img "Intelligent Labs, MagEnhance, Magnesium Complex, 90 Vegan Capsules" [ref=e1589]
+                - generic [ref=e1592]: Intelligent Labs, MagEnhance, Magnesium Complex, 90 Vegan Capsules
+              - generic [ref=e1593]:
+                - link "rating stars" [ref=e1594] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/intelligent-labs-magenhance-magnesium-complex-90-vegan-capsules/152598
+                  - img [ref=e1595]
+                  - img [ref=e1597]
+                  - img [ref=e1599]
+                  - img [ref=e1601]
+                  - img [ref=e1603]
+                - link "rating stars" [ref=e1606] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/intelligent-labs-magenhance-magnesium-complex-90-vegan-capsules/152598
+                  - generic [ref=e1607]: "25"
+              - generic [ref=e1608]:
+                - generic [ref=e1611]: CHF30.44
+                - generic [ref=e1613]:
+                  - text: Out of Stock
+                  - link "Notify me" [ref=e1615] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e1617]:
+              - link "New" [ref=e1619] [cursor=pointer]:
+                - /url: /New-Products
+              - generic [ref=e1620]:
+                - generic [ref=e1621]:
+                  - link "Qunol, Brain Health, Focus Plus, 60 Tablets" [ref=e1622] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-brain-health-focus-plus-60-tablets/157236
+                  - generic [ref=e1623]:
+                    - img "Qunol, Brain Health, Focus Plus, 60 Tablets" [ref=e1625]
+                    - button "Add to basket" [ref=e1627] [cursor=pointer]
+                  - generic [ref=e1630]: Qunol, Brain Health, Focus Plus, 60 Tablets
+                - generic [ref=e1631]:
+                  - link "rating stars" [ref=e1632] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-brain-health-focus-plus-60-tablets/157236
+                    - img [ref=e1633]
+                    - img [ref=e1635]
+                    - img [ref=e1637]
+                    - img [ref=e1639]
+                    - img [ref=e1641]
+                  - link "rating stars" [ref=e1643] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-brain-health-focus-plus-60-tablets/157236
+                    - generic [ref=e1644]: "1"
+                - generic [ref=e1648]: CHF37.29
+            - generic [ref=e1650]:
+              - link "Deal" [ref=e1652] [cursor=pointer]:
+                - /url: /Specials
+              - generic [ref=e1653]:
+                - generic [ref=e1654]:
+                  - link "Qunol, Brain Health Memory Plus, 60 Tablets" [ref=e1655] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-brain-health-memory-plus-60-tablets/157237
+                  - generic [ref=e1656]:
+                    - img "Qunol, Brain Health Memory Plus, 60 Tablets" [ref=e1658]
+                    - button "Add to basket" [ref=e1660] [cursor=pointer]
+                  - generic [ref=e1663]: Qunol, Brain Health Memory Plus, 60 Tablets
+                - generic [ref=e1664]:
+                  - link "rating stars" [ref=e1665] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-brain-health-memory-plus-60-tablets/157237
+                    - img [ref=e1666]
+                    - img [ref=e1668]
+                    - img [ref=e1670]
+                    - img [ref=e1672]
+                    - img [ref=e1674]
+                  - link "rating stars" [ref=e1676] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/qunol-brain-health-memory-plus-60-tablets/157237
+                    - generic [ref=e1677]: "1"
+                - generic [ref=e1679]:
+                  - generic [ref=e1680]:
+                    - generic [ref=e1681]: CHF35.54
+                    - generic [ref=e1682]: CHF47.39
+                  - generic [ref=e1684]: 25% off
+            - generic [ref=e1687]:
+              - generic [ref=e1688]:
+                - link "Natural Stacks, MagTech® Sleep, Lavender Berry, 14 Stick Packs, 0.28 oz (7.8 g) Each" [ref=e1689] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-sleep-lavender-berry-14-stick-packs-0-28-oz-7-8-g-each/155518
+                - generic [ref=e1690]:
+                  - img "Natural Stacks, MagTech® Sleep, Lavender Berry, 14 Stick Packs, 0.28 oz (7.8 g) Each" [ref=e1692]
+                  - button "Add to basket" [ref=e1694] [cursor=pointer]
+                - generic [ref=e1697]: Natural Stacks, MagTech® Sleep, Lavender Berry, 14 Stick Packs, 0.28 oz (7.8 g) Each
+              - generic [ref=e1698]:
+                - link "rating stars" [ref=e1699] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-sleep-lavender-berry-14-stick-packs-0-28-oz-7-8-g-each/155518
+                  - img [ref=e1700]
+                  - img [ref=e1702]
+                  - img [ref=e1704]
+                  - img [ref=e1706]
+                  - img [ref=e1708]
+                - link "rating stars" [ref=e1711] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/natural-stacks-magtech-sleep-lavender-berry-14-stick-packs-0-28-oz-7-8-g-each/155518
+                  - generic [ref=e1712]: "5"
+              - generic [ref=e1713]:
+                - generic [ref=e1716]: CHF23.77
+                - 'generic "15% off code: JUN26MG" [ref=e1718]'
+            - generic [ref=e1721]:
+              - generic [ref=e1722]:
+                - link "IQBAR, IQMIX®, Hydration + Clarity + Mood Mix, Blood Orange, 20 Sticks, 0.28 oz (8 g ) Each" [ref=e1723] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/iqbar-iqmix-hydration-clarity-mood-mix-blood-orange-20-sticks-0-28-oz-8-g-each/151474
+                - generic [ref=e1724]:
+                  - img "IQBAR, IQMIX®, Hydration + Clarity + Mood Mix, Blood Orange, 20 Sticks, 0.28 oz (8 g ) Each" [ref=e1726]
+                  - button "Add to basket" [ref=e1728] [cursor=pointer]
+                - generic [ref=e1729]: + More options
+                - generic [ref=e1731]: IQBAR, IQMIX®, Hydration + Clarity + Mood Mix, Blood Orange, 20 Sticks, 0.28 oz (8 g ) Each
+              - generic [ref=e1732]:
+                - link "rating stars" [ref=e1733] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/iqbar-iqmix-hydration-clarity-mood-mix-blood-orange-20-sticks-0-28-oz-8-g-each/151474
+                  - img [ref=e1734]
+                  - img [ref=e1736]
+                  - img [ref=e1738]
+                  - img [ref=e1740]
+                  - img [ref=e1742]
+                - link "rating stars" [ref=e1745] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/iqbar-iqmix-hydration-clarity-mood-mix-blood-orange-20-sticks-0-28-oz-8-g-each/151474
+                  - generic [ref=e1746]: "6"
+              - generic [ref=e1750]: CHF24.86
+            - generic [ref=e1753]:
+              - generic [ref=e1754]:
+                - link "IQBAR, IQJOE®, Instant Coffee for Energy + Clarity + Mood, Variety Pack, 16 Sticks, 0.28 oz (8 g) Each" [ref=e1755] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/iqbar-iqjoe-instant-coffee-for-energy-clarity-mood-variety-pack-16-sticks-0-28-oz-8-g-each/151471
+                - generic [ref=e1756]:
+                  - img "IQBAR, IQJOE®, Instant Coffee for Energy + Clarity + Mood, Variety Pack, 16 Sticks, 0.28 oz (8 g) Each" [ref=e1758]
+                  - button "Add to basket" [ref=e1760] [cursor=pointer]
+                - generic [ref=e1763]: IQBAR, IQJOE®, Instant Coffee for Energy + Clarity + Mood, Variety Pack, 16 Sticks, 0.28 oz (8 g) Each
+              - generic [ref=e1764]:
+                - link "rating stars" [ref=e1765] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/iqbar-iqjoe-instant-coffee-for-energy-clarity-mood-variety-pack-16-sticks-0-28-oz-8-g-each/151471
+                  - img [ref=e1766]
+                  - img [ref=e1768]
+                  - img [ref=e1770]
+                  - img [ref=e1772]
+                  - img [ref=e1774]
+                - link "rating stars" [ref=e1776] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/iqbar-iqjoe-instant-coffee-for-energy-clarity-mood-variety-pack-16-sticks-0-28-oz-8-g-each/151471
+                  - generic [ref=e1777]: "21"
+              - generic [ref=e1781]: CHF19.89
+        - generic [ref=e1782]:
+          - generic:
+            - generic: 
+          - generic [ref=e1784]: "1"
+          - link "2" [ref=e1785] [cursor=pointer]:
+            - /url: /search?kw=magnesium+l-threonate&p=2
+            - generic [ref=e1786]: "2"
+          - link "3" [ref=e1787] [cursor=pointer]:
+            - /url: /search?kw=magnesium+l-threonate&p=3
+            - generic [ref=e1788]: "3"
+          - link "4" [ref=e1789] [cursor=pointer]:
+            - /url: /search?kw=magnesium+l-threonate&p=4
+            - generic [ref=e1790]: "4"
+          - generic [ref=e1791]: ...
+          - link "73" [ref=e1792] [cursor=pointer]:
+            - /url: /search?kw=magnesium+l-threonate&p=73
+            - generic [ref=e1793]: "73"
+          - link "pagination right" [ref=e1794] [cursor=pointer]:
+            - /url: /search?kw=magnesium+l-threonate&p=2
+            - generic [ref=e1795]: 
+      - generic [ref=e1796]:
+        - img
+        - generic [ref=e1798]:
+          - generic [ref=e1800] [cursor=pointer]: Popular filters
+          - list [ref=e1801]:
+            - listitem [ref=e1802]:
+              - generic "Professional Brands" [ref=e1804] [cursor=pointer]
+            - listitem [ref=e1805]:
+              - generic "In stock" [ref=e1807] [cursor=pointer]
+            - listitem [ref=e1808]:
+              - generic "4-star & up" [ref=e1810] [cursor=pointer]:
+                - img [ref=e1811]: 
+                - text: and Up
+            - listitem [ref=e1813]:
+              - generic "iHerb Brands" [ref=e1815] [cursor=pointer]
+            - listitem [ref=e1816]:
+              - generic "Autoship & Save" [ref=e1818] [cursor=pointer]
+        - list [ref=e1820]:
+          - listitem [ref=e1821]:
+            - generic [ref=e1822] [cursor=pointer]:
+              - checkbox "Available items only" [ref=e1823]
+              - generic "Available items only" [ref=e1824]
+          - listitem [ref=e1825]:
+            - generic [ref=e1826] [cursor=pointer]:
+              - checkbox "iTested" [ref=e1827]
+              - generic "iTested" [ref=e1828]:
+                - img "iTested Logo" [ref=e1830]
+              - generic [ref=e1831]:
+                - button "itested tooltip icon" [ref=e1832]:
+                  - text: ‍
+                  - img [ref=e1833]
+                - text:     
+              - text: (88)
+          - listitem [ref=e1835]:
+            - generic [ref=e1836] [cursor=pointer]:
+              - checkbox "Only at iHerb" [ref=e1837]
+              - generic "Only at iHerb" [ref=e1838]:
+                - generic [ref=e1839]: Only at iHerb
+              - text: (97)
+        - generic [ref=e1841]:
+          - generic [ref=e1843] [cursor=pointer]: Categories
+          - list [ref=e1845]:
+            - listitem [ref=e1846]:
+              - generic: All Categories
+              - list [ref=e1847]:
+                - listitem [ref=e1848]:
+                  - button "Supplements (3160)" [ref=e1849] [cursor=pointer]
+                - listitem [ref=e1850]:
+                  - button "Sports (857)" [ref=e1851] [cursor=pointer]
+                - listitem [ref=e1852]:
+                  - button "Baby & Kids (149)" [ref=e1853] [cursor=pointer]
+                - listitem [ref=e1854]:
+                  - button "Bath & Personal Care (85)" [ref=e1855] [cursor=pointer]
+                - listitem [ref=e1856]:
+                  - button "Grocery (37)" [ref=e1857] [cursor=pointer]
+                - listitem [ref=e1858]:
+                  - button "Beauty (9)" [ref=e1859] [cursor=pointer]
+                - listitem [ref=e1860]:
+                  - button "Pets (4)" [ref=e1861] [cursor=pointer]
+                - listitem [ref=e1862]:
+                  - button "Home (1)" [ref=e1863] [cursor=pointer]
+        - generic [ref=e1864]:
+          - generic [ref=e1865]:
+            - generic [ref=e1867] [cursor=pointer]: Brands
+            - generic [ref=e1868]:
+              - textbox "Search brands" [ref=e1869]
+              - img [ref=e1871] [cursor=pointer]
+            - list [ref=e1873]:
+              - listitem [ref=e1874]: Top brands
+              - listitem [ref=e1875]:
+                - generic [ref=e1876] [cursor=pointer]:
+                  - checkbox "iHerb Brands" [ref=e1877]
+                  - generic "iHerb Brands" [ref=e1878]:
+                    - generic [ref=e1880]: iHerb Brands
+                  - button "iherb brands tooltip icon" [ref=e1882]:
+                    - text: ‍
+                    - img [ref=e1883]
+                  - text: (89)
+              - listitem [ref=e1885]:
+                - generic [ref=e1886] [cursor=pointer]:
+                  - checkbox "NOW Foods" [ref=e1887]
+                  - generic "NOW Foods" [ref=e1888]: NOW Foods(239)
+              - listitem [ref=e1889]:
+                - generic [ref=e1890] [cursor=pointer]:
+                  - checkbox "Doctor's Best" [ref=e1891]
+                  - generic "Doctor's Best" [ref=e1892]: Doctor's Best(29)
+              - listitem [ref=e1893]:
+                - generic [ref=e1894] [cursor=pointer]:
+                  - checkbox "Life Extension" [ref=e1895]
+                  - generic "Life Extension" [ref=e1896]: Life Extension(86)
+              - listitem [ref=e1897]:
+                - generic [ref=e1898] [cursor=pointer]:
+                  - checkbox "California Gold Nutrition" [ref=e1899]
+                  - generic "California Gold Nutrition" [ref=e1900]: California Gold Nutrition(83)
+              - listitem [ref=e1901]
+              - listitem [ref=e1902]: All brands
+              - listitem [ref=e1903]:
+                - generic [ref=e1904] [cursor=pointer]:
+                  - checkbox "21st Century" [ref=e1905]
+                  - generic "21st Century" [ref=e1906]: 21st Century(46)
+              - listitem [ref=e1907]:
+                - generic [ref=e1908] [cursor=pointer]:
+                  - checkbox "Absolute Nutrition" [ref=e1909]
+                  - generic "Absolute Nutrition" [ref=e1910]: Absolute Nutrition(6)
+              - listitem [ref=e1911]:
+                - generic [ref=e1912] [cursor=pointer]:
+                  - checkbox "Advance Physician Formulas" [ref=e1913]
+                  - generic "Advance Physician Formulas" [ref=e1914]: Advance Physician Formulas(3)
+              - listitem [ref=e1915]:
+                - generic [ref=e1916] [cursor=pointer]:
+                  - checkbox "Advanced Naturals" [ref=e1917]
+                  - generic "Advanced Naturals" [ref=e1918]: Advanced Naturals(1)
+              - listitem [ref=e1919]:
+                - generic [ref=e1920] [cursor=pointer]:
+                  - checkbox "Advanced Orthomolecular Research AOR" [ref=e1921]
+                  - generic "Advanced Orthomolecular Research AOR" [ref=e1922]: Advanced Orthomolecular Research AOR(8)
+              - listitem [ref=e1923]:
+                - generic [ref=e1924] [cursor=pointer]:
+                  - checkbox "Ageless Foundation Laboratories" [ref=e1925]
+                  - generic "Ageless Foundation Laboratories" [ref=e1926]: Ageless Foundation Laboratories(2)
+              - listitem [ref=e1927]:
+                - generic [ref=e1928] [cursor=pointer]:
+                  - checkbox "Allergy Research Group" [ref=e1929]
+                  - generic "Allergy Research Group" [ref=e1930]: Allergy Research Group(8)
+              - listitem [ref=e1931]:
+                - generic [ref=e1932] [cursor=pointer]:
+                  - checkbox "ALLMAX" [ref=e1933]
+                  - generic "ALLMAX" [ref=e1934]: ALLMAX(21)
+              - listitem [ref=e1935]:
+                - generic [ref=e1936] [cursor=pointer]:
+                  - checkbox "ALPHA LION" [ref=e1937]
+                  - generic "ALPHA LION" [ref=e1938]: ALPHA LION(5)
+              - listitem [ref=e1939]:
+                - generic [ref=e1940] [cursor=pointer]:
+                  - checkbox "Alta Health" [ref=e1941]
+                  - generic "Alta Health" [ref=e1942]: Alta Health(2)
+              - listitem [ref=e1943]:
+                - generic [ref=e1944] [cursor=pointer]:
+                  - checkbox "Amazing Grass" [ref=e1945]
+                  - generic "Amazing Grass" [ref=e1946]: Amazing Grass(4)
+              - listitem [ref=e1947]:
+                - generic [ref=e1948] [cursor=pointer]:
+                  - checkbox "Amazing Nutrition" [ref=e1949]
+                  - generic "Amazing Nutrition" [ref=e1950]: Amazing Nutrition(16)
+              - listitem [ref=e1951]:
+                - generic [ref=e1952] [cursor=pointer]:
+                  - checkbox "American Biotech Labs" [ref=e1953]
+                  - generic "American Biotech Labs" [ref=e1954]: American Biotech Labs(1)
+              - listitem [ref=e1955]:
+                - generic [ref=e1956] [cursor=pointer]:
+                  - checkbox "American Health" [ref=e1957]
+                  - generic "American Health" [ref=e1958]: American Health(2)
+              - listitem [ref=e1959]:
+                - generic [ref=e1960] [cursor=pointer]:
+                  - checkbox "Ancient Nutrition" [ref=e1961]
+                  - generic "Ancient Nutrition" [ref=e1962]: Ancient Nutrition(7)
+              - listitem [ref=e1963]:
+                - generic [ref=e1964] [cursor=pointer]:
+                  - checkbox "Animal" [ref=e1965]
+                  - generic "Animal" [ref=e1966]: Animal(3)
+              - listitem [ref=e1967]:
+                - generic [ref=e1968] [cursor=pointer]:
+                  - checkbox "Applied Nutrition" [ref=e1969]
+                  - generic "Applied Nutrition" [ref=e1970]: Applied Nutrition(3)
+              - listitem [ref=e1971]:
+                - generic [ref=e1972] [cursor=pointer]:
+                  - checkbox "Asutra" [ref=e1973]
+                  - generic "Asutra" [ref=e1974]: Asutra(1)
+              - listitem [ref=e1975]:
+                - generic [ref=e1976] [cursor=pointer]:
+                  - checkbox "Aurora Nutrascience" [ref=e1977]
+                  - generic "Aurora Nutrascience" [ref=e1978]: Aurora Nutrascience(5)
+              - listitem [ref=e1979]:
+                - generic [ref=e1980] [cursor=pointer]:
+                  - checkbox "Bariatric Advantage" [ref=e1981]
+                  - generic "Bariatric Advantage" [ref=e1982]: Bariatric Advantage(6)
+              - listitem [ref=e1983]:
+                - generic [ref=e1984] [cursor=pointer]:
+                  - checkbox "NOW Foods" [ref=e1985]
+                  - generic "NOW Foods" [ref=e1986]: NOW Foods(239)
+              - listitem [ref=e1987]:
+                - generic [ref=e1988] [cursor=pointer]:
+                  - checkbox "Nutricost" [ref=e1989]
+                  - generic "Nutricost" [ref=e1990]: Nutricost(183)
+              - listitem [ref=e1991]:
+                - generic [ref=e1992] [cursor=pointer]:
+                  - checkbox "Source Naturals" [ref=e1993]
+                  - generic "Source Naturals" [ref=e1994]: Source Naturals(150)
+              - listitem [ref=e1995]:
+                - generic [ref=e1996] [cursor=pointer]:
+                  - checkbox "Swanson Vitamins" [ref=e1997]
+                  - generic "Swanson Vitamins" [ref=e1998]: Swanson Vitamins(94)
+          - generic [ref=e2000] [cursor=pointer]: + 330 more
+        - generic [ref=e2002]:
+          - generic [ref=e2004] [cursor=pointer]: Ratings
+          - list [ref=e2005]:
+            - listitem [ref=e2006]:
+              - generic [ref=e2007] [cursor=pointer]:
+                - checkbox "(1464)" [ref=e2008]
+                - generic "ratings5" [ref=e2009]:
+                  - img [ref=e2010]: 
+                  - text: (1464)
+            - listitem [ref=e2012]:
+              - generic [ref=e2013] [cursor=pointer]:
+                - checkbox "(2025)" [ref=e2014]
+                - generic "ratings4" [ref=e2015]:
+                  - img [ref=e2016]: 
+                  - text: (2025)
+            - listitem [ref=e2018]:
+              - generic [ref=e2019] [cursor=pointer]:
+                - checkbox "(3)" [ref=e2020]
+                - generic "ratings3" [ref=e2021]:
+                  - img [ref=e2022]: 
+                  - text: (3)
+        - generic [ref=e2025]:
+          - generic [ref=e2027] [cursor=pointer]: Price
+          - list [ref=e2028]:
+            - listitem [ref=e2029]:
+              - generic [ref=e2030] [cursor=pointer]:
+                - checkbox "CHF0 - CHF5" [ref=e2031]
+                - generic "CHF0 - CHF5" [ref=e2032]: CHF0 - CHF5(51)
+            - listitem [ref=e2033]:
+              - generic [ref=e2034] [cursor=pointer]:
+                - checkbox "CHF5 - CHF10" [ref=e2035]
+                - generic "CHF5 - CHF10" [ref=e2036]: CHF5 - CHF10(485)
+            - listitem [ref=e2037]:
+              - generic [ref=e2038] [cursor=pointer]:
+                - checkbox "CHF10 - CHF20" [ref=e2039]
+                - generic "CHF10 - CHF20" [ref=e2040]: CHF10 - CHF20(1418)
+            - listitem [ref=e2041]:
+              - generic [ref=e2042] [cursor=pointer]:
+                - checkbox "CHF20 - CHF40" [ref=e2043]
+                - generic "CHF20 - CHF40" [ref=e2044]: CHF20 - CHF40(1187)
+            - listitem [ref=e2045]:
+              - generic [ref=e2046] [cursor=pointer]:
+                - checkbox "CHF40+" [ref=e2047]
+                - generic "CHF40+" [ref=e2048]: CHF40+(359)
+        - generic [ref=e2049]:
+          - generic [ref=e2051] [cursor=pointer]:
+            - generic [ref=e2052]: Autoship & Save
+            - button "autoship save tooltip icon" [ref=e2054]:
+              - text: ‍
+              - img [ref=e2055]
+          - list [ref=e2057]:
+            - listitem [ref=e2058]:
+              - generic [ref=e2059] [cursor=pointer]:
+                - checkbox "Eligible items only" [ref=e2060]
+                - generic "Eligible items only" [ref=e2061]: Eligible items only(3165)
+        - generic [ref=e2063]:
+          - generic [ref=e2064] [cursor=pointer]:
+            - generic [ref=e2065]: Special offers
+            - button "Expand filter" [ref=e2066]:
+              - img [ref=e2067]
+          - text: (1) (191)
+        - generic [ref=e2070]:
+          - generic [ref=e2071] [cursor=pointer]:
+            - generic [ref=e2072]: Health Topics
+            - button "Expand filter" [ref=e2073]:
+              - img [ref=e2074]
+          - generic:
+            - textbox "Search health topics"
+            - generic:
+              - img
+          - text: (949) (783) (699) (643) (420) (373) (332) (293) (281) (273) (254) (239) (187) (186) (185) (150) (128) (126) (119) (113) (99) (96) (92) (63) (60) (47) (45) (40) (40) (28) (23) (22) (16) (9) (4) (3) (2) (2)
+        - generic [ref=e2077]:
+          - generic [ref=e2078] [cursor=pointer]:
+            - generic [ref=e2079]: Gender
+            - button "Expand filter" [ref=e2080]:
+              - img [ref=e2081]
+          - text: (101) (54) (3304)
+        - generic [ref=e2084]:
+          - generic [ref=e2085] [cursor=pointer]:
+            - generic [ref=e2086]: Age ranges
+            - button "Expand filter" [ref=e2087]:
+              - img [ref=e2088]
+          - text: (26) (135) (59) (3326) (21)
+        - generic [ref=e2091]:
+          - generic [ref=e2092] [cursor=pointer]:
+            - generic [ref=e2093]: Certification and diet
+            - button "Expand filter" [ref=e2094]:
+              - img [ref=e2095]
+          - text: (76) (16) (34) (25) (3) (159) (2) (54) (86) (24) (16) (3141) (10) (1) (24) (581) (6) (552) (1) (375) (6) (2211) (1244) (4) (4) (235) (12) (1) (96) (44) (41) (40) (88) (118) (438) (120) (1) (14) (352) (643) (530) (330) (11) (217) (5) (52) (22) (32) (45) (62) (103) (34) (17) (331) (350) (39) (1) (139) (386) (1) (96) (1020) (609) (4) (20) (341) (23) (1192) (640) (724) (2) (74) (4) (431)
+        - generic [ref=e2098]:
+          - generic [ref=e2099] [cursor=pointer]:
+            - generic [ref=e2100]: Potency
+            - button "Expand filter" [ref=e2101]:
+              - img [ref=e2102]
+          - text: (1) (8) (2) (1) (1) (1) (80) (4) (5) (7) (2) (31) (12) (14) (3) (2) (54) (29) (39) (7) (10) (78) (123) (197) (92) (113) (226) (41) (46) (7) (5) (264) (17)
+        - generic [ref=e2105]:
+          - generic [ref=e2106] [cursor=pointer]:
+            - generic [ref=e2107]: Package quantity
+            - button "Expand filter" [ref=e2108]:
+              - img [ref=e2109]
+          - text: (88) (217) (702) (598) (481) (255) (193) (32) (4) (28) (39) (3) (16) (37) (116) (26) (2) (1) (2) (7) (13) (99) (32) (7) (1) (3) (28) (34) (23) (213) (184) (14)
+        - generic [ref=e2112]:
+          - generic [ref=e2113] [cursor=pointer]:
+            - generic [ref=e2114]: Product form
+            - button "Expand filter" [ref=e2115]:
+              - img [ref=e2116]
+          - text: (719) (161) (691) (591) (4) (40) (1) (23) (95) (5) (7) (4) (16) (85) (257) (9) (43) (2) (77) (7) (4) (610) (2) (1) (3) (19) (9) (2) (6) (3)
+        - generic [ref=e2119]:
+          - generic [ref=e2120] [cursor=pointer]:
+            - generic [ref=e2121]: Formulation
+            - button "Expand filter" [ref=e2122]:
+              - img [ref=e2123]
+          - text: (2120) (1289) (33) (30) (15)
+        - generic [ref=e2126]:
+          - generic [ref=e2127] [cursor=pointer]:
+            - generic [ref=e2128]: Flavour
+            - button "Expand filter" [ref=e2129]:
+              - img [ref=e2130]
+          - text: (1) (15) (1) (80) (13) (2) (1) (1) (2) (22) (16) (3) (35) (2) (1) (1) (25) (1) (44) (2) (35) (1) (2) (2) (4) (2) (4) (1) (1) (95) (2) (1) (33) (2) (9) (25) (3) (1) (89) (3) (36) (14) (1) (89) (2) (1) (40) (9) (1) (15) (114) (26) (9) (28)
+        - generic [ref=e2133]:
+          - generic [ref=e2134] [cursor=pointer]:
+            - generic [ref=e2135]: Weight
+            - button "Expand filter" [ref=e2136]:
+              - img [ref=e2137]
+          - text: (1931) (977) (370) (107) (48) (66) (1)
+  - contentinfo [ref=e2140]:
+    - generic [ref=e2146]:
+      - generic [ref=e2147]:
+        - generic [ref=e2149]:
+          - 'link "Probiotics for Travel: How to Avoid Stomach Issues on Vacation Blog Link" [ref=e2150] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/probiotics-for-travel/2393
+          - 'img "Probiotics for Travel: How to Avoid Stomach Issues on Vacation" [ref=e2151]'
+          - generic [ref=e2152]: "Probiotics for Travel: How to Avoid Stomach Issues on Vacation"
+        - generic [ref=e2154]:
+          - 'link "Why Men Need Probiotics: Gut Health, Testosterone, and Fertility Blog Link" [ref=e2155] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/men-probiotic-benefits/2394
+          - 'img "Why Men Need Probiotics: Gut Health, Testosterone, and Fertility" [ref=e2156]'
+          - generic [ref=e2157]: "Why Men Need Probiotics: Gut Health, Testosterone, and Fertility"
+        - generic [ref=e2159]:
+          - 'link "Stem Cell Activators: How to Boost Your Body''s Repair System Blog Link" [ref=e2160] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/stem-cell-activators/2373
+          - 'img "Stem Cell Activators: How to Boost Your Body''s Repair System" [ref=e2161]'
+          - generic [ref=e2162]: "Stem Cell Activators: How to Boost Your Body's Repair System"
+      - link "WELLNESS HUB" [ref=e2163] [cursor=pointer]:
+        - /url: /blog
+        - text: WELLNESS
+        - generic [ref=e2164]: HUB
+      - generic [ref=e2165]:
+        - generic [ref=e2167]:
+          - 'link "Probiotics: Top Benefits Explained Blog Link" [ref=e2168] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/probiotics-benefits/158
+          - 'img "Probiotics: Top Benefits Explained" [ref=e2169]'
+          - generic [ref=e2170]: "Probiotics: Top Benefits Explained"
+        - generic [ref=e2172]:
+          - link "10 Ways to Get More Fiber on the Keto Diet Blog Link" [ref=e2173] [cursor=pointer]:
+            - /url: https://ch.iherb.com/blog/keto-diet-tips-how-to-get-more-fiber/2487
+          - img "10 Ways to Get More Fiber on the Keto Diet" [ref=e2174]
+          - generic [ref=e2175]: 10 Ways to Get More Fiber on the Keto Diet
+        - generic [ref=e2177]:
+          - link "Muscle Loss Happens. Here are 5 Things You Can Do to Prevent It. Blog Link" [ref=e2178] [cursor=pointer]:
+            - /url: https://ch.iherb.com/blog/what-is-muscle-atrophy-and-how-can-you-prevent-it/2494
+          - img "Muscle Loss Happens. Here are 5 Things You Can Do to Prevent It." [ref=e2179]
+          - generic [ref=e2180]: Muscle Loss Happens. Here are 5 Things You Can Do to Prevent It.
+    - link "iHerb Rewards Enjoy free products, insider access and exclusive offers" [ref=e2184] [cursor=pointer]:
+      - /url: https://secure.iherb.com/iherb-rewards
+      - generic [ref=e2188]:
+        - img "iHerb Rewards" [ref=e2190]
+        - generic [ref=e2191]: Enjoy free products, insider access and exclusive offers
+    - generic [ref=e2194]:
+      - generic [ref=e2195]:
+        - generic [ref=e2196]:
+          - img [ref=e2197]
+          - generic [ref=e2199]: iHerb Quality Promise
+        - generic [ref=e2200]: Quality you can trust, backed by how we source, verify and store. Find out more
+      - generic [ref=e2201]:
+        - generic [ref=e2202]:
+          - img "Authentic products" [ref=e2203]
+          - generic [ref=e2204]: Authentic products
+        - generic [ref=e2205]:
+          - img "Tested ingredients" [ref=e2206]
+          - generic [ref=e2207]: Tested ingredients
+        - generic [ref=e2208]:
+          - img "Preserved freshness" [ref=e2209]
+          - generic [ref=e2210]: Preserved freshness
+        - generic [ref=e2211]:
+          - img "Easy returns and refunds" [ref=e2212]
+          - generic [ref=e2213]: Easy returns and refunds
+    - generic [ref=e2214]:
+      - generic [ref=e2215] [cursor=pointer]:
+        - img [ref=e2216]
+        - img:
+          - generic:
+            - generic "checkoutarrow"
+        - button "Locale menu in header" [ref=e2218]:
+          - generic [ref=e2220]: CH
+          - generic [ref=e2222]: EN
+          - generic [ref=e2224]: CHF
+      - generic [ref=e2225]:
+        - generic [ref=e2226]:
+          - img [ref=e2228]
+          - generic [ref=e2229]: Since 1996, iHerb has offered Earth’s best-curated selection of authentic health and wellness products at the best possible value.
+        - generic [ref=e2230]:
+          - link "google play Top Quality Store on Google" [ref=e2232] [cursor=pointer]:
+            - /url: https://www.google.com/storepages?q=iherb.com&c=CH&v=19&hl=en_GB
+            - img "google play" [ref=e2233]
+            - generic [ref=e2234]:
+              - generic [ref=e2235]: Top Quality Store
+              - generic [ref=e2236]: on Google
+          - link "iherb logo 4.8 green star green star green star green star green three-quarter star iHerb store reviews" [ref=e2238] [cursor=pointer]:
+            - /url: https://www.iherb.com/ugc/store-reviews
+            - generic [ref=e2239]:
+              - img "iherb logo" [ref=e2241]
+              - generic [ref=e2242]:
+                - generic [ref=e2243]:
+                  - generic [ref=e2244]: "4.8"
+                  - img "green star" [ref=e2246]
+                  - img "green star" [ref=e2248]
+                  - img "green star" [ref=e2250]
+                  - img "green star" [ref=e2252]
+                  - img "green three-quarter star" [ref=e2254]
+                - generic [ref=e2255]: iHerb store reviews
+          - generic [ref=e2256]:
+            - img "ISO" [ref=e2258]
+            - img "GMP certified" [ref=e2260]
+            - img "NSF" [ref=e2262]
+    - text: 
+    - generic [ref=e2264]:
+      - generic [ref=e2265]:
+        - list [ref=e2267]:
+          - listitem [ref=e2268]: ABOUT
+          - listitem [ref=e2269]:
+            - link "About Us" [ref=e2270] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/about
+          - listitem [ref=e2271]:
+            - link "Store Reviews New" [ref=e2272] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/store-reviews
+              - text: Store Reviews
+              - generic [ref=e2273]: New
+          - listitem [ref=e2274]:
+            - link "Rewards Programme" [ref=e2275] [cursor=pointer]:
+              - /url: https://secure.iherb.com/iherb-rewards
+          - listitem [ref=e2276]:
+            - link "Affiliate Programme" [ref=e2277] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/affiliates
+          - listitem [ref=e2278]:
+            - link "Autoship & Save" [ref=e2279] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/autoship-save
+          - listitem [ref=e2280]:
+            - link "iHerb Quality Promise" [ref=e2281] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/quality
+        - list [ref=e2283]:
+          - listitem [ref=e2284]: Company
+          - listitem [ref=e2285]:
+            - link "Corporate" [ref=e2286] [cursor=pointer]:
+              - /url: https://corporate.iherb.com/
+          - listitem [ref=e2287]:
+            - link "Press" [ref=e2288] [cursor=pointer]:
+              - /url: https://ch.iherb.com/pressreleases
+          - listitem [ref=e2289]:
+            - link "Partner with iHerb" [ref=e2290] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/suppliers
+        - list [ref=e2292]:
+          - listitem [ref=e2293]: Resources
+          - listitem [ref=e2294]:
+            - link "Wellness Hub" [ref=e2295] [cursor=pointer]:
+              - /url: https://ch.iherb.com/blog
+          - listitem [ref=e2296]:
+            - link "Accessibility View" [ref=e2297] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e2298]:
+            - link "Sales and Offers" [ref=e2299] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/sales-and-offers
+        - list [ref=e2301]:
+          - listitem [ref=e2302]: customer support
+          - listitem [ref=e2303]:
+            - link "24/7 Support" [ref=e2304] [cursor=pointer]:
+              - /url: https://ch.iherb.com/help/contact?param=%2Fsearch
+          - listitem [ref=e2305]:
+            - link "Suggest a Product" [ref=e2306] [cursor=pointer]:
+              - /url: https://ch.iherb.com/css/request-product
+          - listitem [ref=e2307]:
+            - link "Order Status" [ref=e2308] [cursor=pointer]:
+              - /url: https://secure.iherb.com/orders/gc-tracking
+          - listitem [ref=e2309]:
+            - link "Delivery" [ref=e2310] [cursor=pointer]:
+              - /url: https://ch.iherb.com/shipping
+          - listitem [ref=e2311]:
+            - link "Returns" [ref=e2312] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/returns
+          - listitem [ref=e2313]:
+            - link "Communication Preferences" [ref=e2314] [cursor=pointer]:
+              - /url: https://secure.iherb.com/communications/preferences
+      - generic [ref=e2317]:
+        - generic [ref=e2319]:
+          - generic [ref=e2320]:
+            - img "QR Code App" [ref=e2322]
+            - generic [ref=e2323]:
+              - generic [ref=e2324]: Get the iHerb App Today
+              - generic [ref=e2325]: The smartest way to shop and save.
+              - generic [ref=e2326]:
+                - link "iHerb App on Google Play Store" [ref=e2328] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.iherb
+                  - img "iHerb App on Google Play Store" [ref=e2329]
+                - link "iHerb App on Apple App Store" [ref=e2331] [cursor=pointer]:
+                  - /url: https://itunes.apple.com/us/app/iherb/id636609212?mt=8
+                  - img "iHerb App on Apple App Store" [ref=e2332]
+          - list [ref=e2333]:
+            - listitem [ref=e2334]:
+              - link "Facebook Share Icon" [ref=e2335] [cursor=pointer]:
+                - /url: https://www.facebook.com/iHerb
+                - img "Facebook share icon" [ref=e2336]
+            - listitem [ref=e2337]:
+              - link "Twitter Share Icon" [ref=e2338] [cursor=pointer]:
+                - /url: https://twitter.com/iherb
+                - img "Twitter share icon" [ref=e2339]
+            - listitem [ref=e2340]:
+              - link "YouTube Share Icon" [ref=e2341] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/iherb
+                - img "YouTube share icon" [ref=e2342]
+            - listitem [ref=e2343]:
+              - link "Pinterest Share Icon" [ref=e2344] [cursor=pointer]:
+                - /url: http://www.pinterest.com/iherb/
+                - img "Pinterest share icon" [ref=e2345]
+            - listitem [ref=e2346]:
+              - link "Instagram Share Icon" [ref=e2347] [cursor=pointer]:
+                - /url: http://instagram.com/iherb
+                - img "Instagram share icon" [ref=e2348]
+        - generic [ref=e2351]:
+          - generic [ref=e2352]: Sign up for savings
+          - generic [ref=e2353]: Be the first to get promo offers and reward perks straight to your inbox.
+          - generic [ref=e2355]:
+            - generic [ref=e2356]:
+              - textbox "Email" [ref=e2358]
+              - button [ref=e2359] [cursor=pointer]:
+                - img [ref=e2360]
+            - text: 
+          - generic [ref=e2364]:
+            - text: Your email address will be used to send you Health Newsletters and emails about iHerb’s products, services, sales, and special offers. You can unsubscribe at any time by clicking on the unsubscribe link in each email. For more information on our use of your personal information and your rights, see our
+            - link "Privacy Policy." [ref=e2365] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/privacy
+          - generic [ref=e2367]:
+            - text: This site is protected by reCAPTCHA and the Google
+            - link "Privacy Policy" [ref=e2368] [cursor=pointer]:
+              - /url: https://policies.google.com/privacy
+            - text: and
+            - link "Terms of Service" [ref=e2369] [cursor=pointer]:
+              - /url: https://policies.google.com/terms
+            - text: apply.
+      - generic [ref=e2370]:
+        - paragraph [ref=e2373]:
+          - link "iHerb.com" [ref=e2374] [cursor=pointer]:
+            - /url: https://ch.iherb.com/
+          - text: "© Copyright 1997–2026 iHerb, Ltd. All rights reserved. iHerb® is a registered trademark of iHerb, Ltd. Disclaimer: Statements made, or products sold through this website, have not been evaluated by the United States Food and Drug Administration. They are not intended to diagnose, treat, cure or prevent any disease. Please note that iHerb, Ltd. is not affiliated with, or in any way related to, websites that are not specifically iHerb.com. iHerb, Ltd. is not responsible or liable for products sold or shipped from unauthorised sources."
+          - link "Read More »" [ref=e2375] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/disclaimer
+        - generic [ref=e2376]:
+          - link "Privacy Policy | iHerb" [ref=e2377] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/privacy
+          - link "Terms of Use | iHerb" [ref=e2378] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/terms-of-use
+          - link "Accessibility" [ref=e2379] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/accessibility
+    - text: 
+  - generic [ref=e2381] [cursor=pointer]:
+    - generic [ref=e2382]: Get 15% off your first order!
+    - img [ref=e2385]

@@ -1,0 +1,1918 @@
+- generic [active] [ref=e1]:
+  - link [ref=e2] [cursor=pointer]:
+    - /url: "#"
+    - text: ___
+  - img
+  - img
+  - img:
+    - generic:
+      - generic: ">"
+      - generic "iherblogo"
+      - generic "beauty2"
+      - generic "heart-circle"
+      - generic "sports-fitness"
+      - generic "food-nutrition"
+      - generic "herbs-supplements"
+      - generic "pageview"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Click to view our Accessibility Statement" [ref=e6] [cursor=pointer]:
+        - /url: https://ch.iherb.com/info/accessibility
+        - text: Click to view our Accessibility Statement
+        - img [ref=e7]
+      - generic:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - text: We use necessary cookies to make our site work. Our site and
+            - link "partners" [ref=e14] [cursor=pointer]:
+              - /url: https://tracker-detail-page.trustarc.com/?domain=2103&category=0&locale=en
+            - text: also use cookies and similar technologies to provide enhanced functionality and personalize the content of our site, to analyze site usage, and to show you personalized ads. We will set a cookie on your device to remember your preferences and keep your choice for 6 months. You can change your mind at any time by clicking on the "Cookie Preferences" icon at the bottom of each page of our site. However, you should know that blocking some types of cookies may impact your experience on the site and the services we are able to offer.
+          - generic [ref=e15]:
+            - button "Accept All" [ref=e16] [cursor=pointer]
+            - button "Decline All" [ref=e17] [cursor=pointer]
+            - button "Manage Settings" [ref=e18] [cursor=pointer]
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]:
+              - link "20% Off Supplements" [ref=e25] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/supplements?soa=true&pcode=JUNEUAPP
+                - generic [ref=e28]:
+                  - img [ref=e30]
+                  - generic [ref=e33]: 20% Off Supplements
+                  - img [ref=e35]
+              - link "15% Off Gut Health" [ref=e39] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/gut-health?soa=true&pcode=JUN26GH
+                - generic [ref=e42]:
+                  - img [ref=e44]
+                  - generic [ref=e47]: 15% Off Gut Health
+                  - img [ref=e49]
+              - link "Shop Travel Essentials" [ref=e53] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/travel/store
+                - generic [ref=e56]:
+                  - img [ref=e58]
+                  - generic [ref=e61]: Shop Travel Essentials
+                  - img [ref=e63]
+            - text: "}"
+          - generic [ref=e65]:
+            - link "Free delivery over CHF40.00" [ref=e66] [cursor=pointer]:
+              - /url: /shipping
+              - img [ref=e67]
+              - generic [ref=e69]: Free delivery over CHF40.00
+            - generic [ref=e70] [cursor=pointer]:
+              - img [ref=e71]
+              - img:
+                - generic:
+                  - generic "checkoutarrow"
+              - button "Locale menu in header" [ref=e73]:
+                - generic [ref=e75]: CH
+                - generic [ref=e77]: EN
+                - generic [ref=e79]: CHF
+            - button "Share button" [ref=e80]:
+              - generic [ref=e81] [cursor=pointer]:
+                - button "share button" [ref=e82]
+                - img [ref=e85]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - link "Header logo Link to Home" [ref=e92] [cursor=pointer]:
+            - /url: https://ch.iherb.com/
+            - img [ref=e93]: 
+          - generic [ref=e95]:
+            - generic [ref=e98]:
+              - textbox "Search" [ref=e99]:
+                - /placeholder: Search iHerb
+                - text: magnesium glycinate
+              - generic [ref=e100]:
+                - button "clear search button" [ref=e101]:
+                  - img [ref=e102]: 
+                - button "search button" [ref=e104]:
+                  - img [ref=e105]: 
+            - link "Sign In" [ref=e111] [cursor=pointer]:
+              - /url: https://checkout1.iherb.com/account/login/?referrerRedirect=true&returnUrl=https%3A%2F%2Fch.iherb.com%2Fsearch%3Fkw%3Dmagnesium%2520glycinate
+              - img [ref=e112]
+              - generic [ref=e114]:
+                - generic [ref=e115]: Sign In
+                - img [ref=e116]
+            - generic [ref=e118]:
+              - link "iHerb Cart link to Checkout" [ref=e119] [cursor=pointer]:
+                - /url: https://checkout1.iherb.com/cart
+                - img [ref=e120]
+                - generic [ref=e122]: "0"
+              - text:    
+        - text:                        
+  - generic [ref=e125]:
+    - text: 
+    - generic [ref=e126]:
+      - generic [ref=e129]:
+        - generic:
+          - link "Banner featuring travel essentials arranged in a travel bag with a 'Shop now' button." [ref=e133] [cursor=pointer]:
+            - /url: https://ch.iherb.com/c/travel/store
+            - img "Banner featuring travel essentials arranged in a travel bag with a 'Shop now' button." [ref=e134]
+          - link "Professional supplement brands with product bottles and 'Shop Professional Brands' button" [ref=e138] [cursor=pointer]:
+            - /url: https://ch.iherb.com/c/professional-brands
+            - img "Professional supplement brands with product bottles and 'Shop Professional Brands' button" [ref=e139]
+        - list [ref=e141]:
+          - button "Go to slide 0" [ref=e142] [cursor=pointer]
+          - button "Go to slide 1" [ref=e143] [cursor=pointer]
+        - generic:
+          - button "previous slider" [ref=e144] [cursor=pointer]:
+            - img "Banner carousel pagination previous arrow" [ref=e145]
+          - button "next slider" [ref=e146] [cursor=pointer]:
+            - img "Banner carousel pagination next arrow" [ref=e147]
+      - generic [ref=e149]:
+        - link "Shop" [ref=e150] [cursor=pointer]:
+          - /url: /search?kw=magnesium%20glycinate&tab=0
+          - generic [ref=e152]: Shop
+        - link "Blogs" [ref=e153] [cursor=pointer]:
+          - /url: /search?kw=magnesium%20glycinate&tab=1
+          - generic [ref=e155]: Blogs
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e165]: 1 - 48 of 8,306 results for "magnesium glycinate"
+              - link "Visit our Magnesium Glycinate page" [ref=e167] [cursor=pointer]:
+                - /url: https://ch.iherb.com/c/magnesium-glycinate
+                - text: Visit our Magnesium Glycinate page
+                - img [ref=e168]
+            - generic [ref=e173]:
+              - generic [ref=e174]: Sort by
+              - generic [ref=e175]: Featured
+              - textbox "Sort by" [ref=e176]
+              - img
+          - generic [ref=e177]:
+            - generic [ref=e179]:
+              - link "iHerb Brands" [ref=e181] [cursor=pointer]:
+                - /url: /iherb-brands
+              - generic [ref=e182]:
+                - generic [ref=e183]:
+                  - link "California Gold Nutrition, Magnesium Bisglycinate Chelate, Albion TRAACS®, 240 Veggie Capsules (100 mg per Capsule)" [ref=e184] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-240-veggie-capsules-100-mg-per-capsule/103274
+                  - generic [ref=e185]:
+                    - img "California Gold Nutrition, Magnesium Bisglycinate Chelate, Albion TRAACS®, 240 Veggie Capsules (100 mg per Capsule)" [ref=e187]
+                    - button "Add to basket" [ref=e189] [cursor=pointer]
+                  - generic [ref=e190]: + More options
+                  - generic [ref=e192]: California Gold Nutrition, Magnesium Bisglycinate Chelate, Albion TRAACS®, 240 Veggie Capsules (100 mg per Capsule)
+                - generic [ref=e193]:
+                  - link "rating stars" [ref=e194] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-240-veggie-capsules-100-mg-per-capsule/103274
+                    - img [ref=e195]
+                    - img [ref=e197]
+                    - img [ref=e199]
+                    - img [ref=e201]
+                    - img [ref=e203]
+                  - link "rating stars" [ref=e206] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-240-veggie-capsules-100-mg-per-capsule/103274
+                    - generic [ref=e207]: 25,433
+                - generic [ref=e208]: 10,000+ sold in 30 days
+                - generic [ref=e209]:
+                  - generic [ref=e212]: CHF23.00
+                  - 'generic "15% off code: JUN26MG" [ref=e214]'
+            - generic [ref=e216]:
+              - link "iHerb Brands" [ref=e218] [cursor=pointer]:
+                - /url: /iherb-brands
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - link "California Gold Nutrition, Magnesium Bisglycinate, Formulated with TRAACS®, 60 Veg Capsules (100 mg per Capsule)" [ref=e221] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-60-veggie-capsules-100-mg-per-capsule/103273
+                  - generic [ref=e222]:
+                    - img "California Gold Nutrition, Magnesium Bisglycinate, Formulated with TRAACS®, 60 Veg Capsules (100 mg per Capsule)" [ref=e224]
+                    - button "Add to basket" [ref=e226] [cursor=pointer]
+                  - generic [ref=e227]: + More options
+                  - generic [ref=e229]: California Gold Nutrition, Magnesium Bisglycinate, Formulated with TRAACS®, 60 Veg Capsules (100 mg per Capsule)
+                - generic [ref=e230]:
+                  - link "rating stars" [ref=e231] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-60-veggie-capsules-100-mg-per-capsule/103273
+                    - img [ref=e232]
+                    - img [ref=e234]
+                    - img [ref=e236]
+                    - img [ref=e238]
+                    - img [ref=e240]
+                  - link "rating stars" [ref=e243] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-bisglycinate-chelate-albion-traacs-60-veggie-capsules-100-mg-per-capsule/103273
+                    - generic [ref=e244]: 25,427
+                - generic [ref=e245]: 10,000+ sold in 30 days
+                - generic [ref=e246]:
+                  - generic [ref=e249]: CHF7.46
+                  - 'generic "15% off code: JUN26MG" [ref=e251]'
+            - generic [ref=e253]:
+              - link "iHerb Brands" [ref=e255] [cursor=pointer]:
+                - /url: /iherb-brands
+              - generic [ref=e256]:
+                - generic [ref=e257]:
+                  - link "California Gold Nutrition, Magnesium Glycinate, 180 Veggie Capsules (133 mg per Capsule)" [ref=e258] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-glycinate-180-veggie-capsules-133-mg-per-capsule/129685
+                  - generic [ref=e259]:
+                    - img "California Gold Nutrition, Magnesium Glycinate, 180 Veggie Capsules (133 mg per Capsule)" [ref=e261]
+                    - button "Add to basket" [ref=e263] [cursor=pointer]
+                  - generic [ref=e266]: California Gold Nutrition, Magnesium Glycinate, 180 Veggie Capsules (133 mg per Capsule)
+                - generic [ref=e267]:
+                  - link "rating stars" [ref=e268] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-glycinate-180-veggie-capsules-133-mg-per-capsule/129685
+                    - img [ref=e269]
+                    - img [ref=e271]
+                    - img [ref=e273]
+                    - img [ref=e275]
+                    - img [ref=e277]
+                  - link "rating stars" [ref=e280] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-glycinate-180-veggie-capsules-133-mg-per-capsule/129685
+                    - generic [ref=e281]: 2,672
+                - generic [ref=e282]: 4,000+ sold in 30 days
+                - generic [ref=e283]:
+                  - generic [ref=e286]: CHF20.43
+                  - 'generic "15% off code: JUN26MG" [ref=e288]'
+            - generic [ref=e289]:
+              - generic [ref=e290]: Get the latest deals
+              - generic [ref=e291]:
+                - textbox "Email" [ref=e292]
+                - generic "Subscribe" [ref=e293] [cursor=pointer]
+              - img [ref=e295] [cursor=pointer]
+              - generic [ref=e298]:
+                - text: Your email will only be used for iHerb communications. You can unsubscribe at any time. For more information, see our
+                - link "Privacy Policy." [ref=e299] [cursor=pointer]:
+                  - /url: https://www.iherb.com/info/privacy
+            - generic [ref=e301]:
+              - link "Best seller" [ref=e303] [cursor=pointer]:
+                - /url: /topsellers
+              - generic [ref=e304]:
+                - generic [ref=e305]:
+                  - link "NOW Foods, Magnesium Glycinate, 180 tablets (100 mg per tablet)" [ref=e306] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819
+                  - generic [ref=e307]:
+                    - img "NOW Foods, Magnesium Glycinate, 180 tablets (100 mg per tablet)" [ref=e309]
+                    - button "Add to basket" [ref=e311] [cursor=pointer]
+                  - generic [ref=e312]: + More options
+                  - generic [ref=e314]: NOW Foods, Magnesium Glycinate, 180 tablets (100 mg per tablet)
+                - generic [ref=e315]:
+                  - link "rating stars" [ref=e316] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819
+                    - img [ref=e317]
+                    - img [ref=e319]
+                    - img [ref=e321]
+                    - img [ref=e323]
+                    - img [ref=e325]
+                  - link "rating stars" [ref=e328] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819
+                    - generic [ref=e329]: 37,869
+                - generic [ref=e330]: 80,000+ sold in 30 days
+                - generic [ref=e331]:
+                  - generic [ref=e334]: CHF18.28
+                  - 'generic "15% off code: JUN26MG" [ref=e336]'
+            - generic [ref=e338]:
+              - link "Best seller" [ref=e340] [cursor=pointer]:
+                - /url: /topsellers
+              - generic [ref=e341]:
+                - generic [ref=e342]:
+                  - link "Doctor's Best, High Absorption Magnesium Lysinate Glycinate, Chelated, Albion® TRAACS®, 240 Tablets (100 mg per Tablet)" [ref=e343] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet/16567
+                  - generic [ref=e344]:
+                    - img "Doctor's Best, High Absorption Magnesium Lysinate Glycinate, Chelated, Albion® TRAACS®, 240 Tablets (100 mg per Tablet)" [ref=e346]
+                    - button "Add to basket" [ref=e348] [cursor=pointer]
+                  - generic [ref=e349]: + More options
+                  - generic [ref=e351]: Doctor's Best, High Absorption Magnesium Lysinate Glycinate, Chelated, Albion® TRAACS®, 240 Tablets (100 mg per Tablet)
+                - generic [ref=e352]:
+                  - link "rating stars" [ref=e353] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet/16567
+                    - img [ref=e354]
+                    - img [ref=e356]
+                    - img [ref=e358]
+                    - img [ref=e360]
+                    - img [ref=e362]
+                  - link "rating stars" [ref=e365] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet/16567
+                    - generic [ref=e366]: 204,576
+                - generic [ref=e367]: 90,000+ sold in 30 days
+                - generic [ref=e368]:
+                  - generic [ref=e371]: CHF18.53
+                  - 'generic "15% off code: JUN26MG" [ref=e373]'
+            - generic [ref=e375]:
+              - link "Best seller" [ref=e377] [cursor=pointer]:
+                - /url: /topsellers
+              - generic [ref=e378]:
+                - generic [ref=e379]:
+                  - link "Doctor's Best, High Absorption Magnesium, 120 Tablets (100 mg per Tablet)" [ref=e380] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-tablets-100-mg-per-tablet/15
+                  - generic [ref=e381]:
+                    - img "Doctor's Best, High Absorption Magnesium, 120 Tablets (100 mg per Tablet)" [ref=e383]
+                    - button "Add to basket" [ref=e385] [cursor=pointer]
+                  - generic [ref=e386]: + More options
+                  - generic [ref=e388]: Doctor's Best, High Absorption Magnesium, 120 Tablets (100 mg per Tablet)
+                - generic [ref=e389]:
+                  - link "rating stars" [ref=e390] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-tablets-100-mg-per-tablet/15
+                    - img [ref=e391]
+                    - img [ref=e393]
+                    - img [ref=e395]
+                    - img [ref=e397]
+                    - img [ref=e399]
+                  - link "rating stars" [ref=e402] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-tablets-100-mg-per-tablet/15
+                    - generic [ref=e403]: 204,575
+                - generic [ref=e404]: 50,000+ sold in 30 days
+                - generic [ref=e405]:
+                  - generic [ref=e408]: CHF9.76
+                  - 'generic "15% off code: JUN26MG" [ref=e410]'
+            - generic [ref=e413]:
+              - generic [ref=e414]:
+                - link "Solaray, High Absorption Magnesium Glycinate, 120 veg caps" [ref=e415] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-high-absorption-magnesium-glycinate-120-vegcaps/112971
+                - generic [ref=e416]:
+                  - img "Solaray, High Absorption Magnesium Glycinate, 120 veg caps" [ref=e418]
+                  - button "Add to basket" [ref=e420] [cursor=pointer]
+                - generic [ref=e421]: + More options
+                - generic [ref=e423]: Solaray, High Absorption Magnesium Glycinate, 120 veg caps
+              - generic [ref=e424]:
+                - link "rating stars" [ref=e425] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-high-absorption-magnesium-glycinate-120-vegcaps/112971
+                  - img [ref=e426]
+                  - img [ref=e428]
+                  - img [ref=e430]
+                  - img [ref=e432]
+                  - img [ref=e434]
+                - link "rating stars" [ref=e437] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-high-absorption-magnesium-glycinate-120-vegcaps/112971
+                  - generic [ref=e438]: 60,550
+              - generic [ref=e439]: 10,000+ sold in 30 days
+              - generic [ref=e440]:
+                - generic [ref=e443]: CHF12.97
+                - 'generic "15% off code: JUN26MG" [ref=e445]'
+            - generic [ref=e448]:
+              - generic [ref=e449]:
+                - link "Swanson Vitamins, Albion®, Magnesium Glycinate, 133 mg, 90 Vegan Capsules" [ref=e450] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-albion-magnesium-glycinate-133-mg-90-vegan-capsules/116273
+                - generic [ref=e451]:
+                  - img "Swanson Vitamins, Albion®, Magnesium Glycinate, 133 mg, 90 Vegan Capsules" [ref=e453]
+                  - button "Add to basket" [ref=e455] [cursor=pointer]
+                - generic [ref=e458]: Swanson Vitamins, Albion®, Magnesium Glycinate, 133 mg, 90 Vegan Capsules
+              - generic [ref=e459]:
+                - link "rating stars" [ref=e460] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-albion-magnesium-glycinate-133-mg-90-vegan-capsules/116273
+                  - img [ref=e461]
+                  - img [ref=e463]
+                  - img [ref=e465]
+                  - img [ref=e467]
+                  - img [ref=e469]
+                - link "rating stars" [ref=e472] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-albion-magnesium-glycinate-133-mg-90-vegan-capsules/116273
+                  - generic [ref=e473]: 12,386
+              - generic [ref=e474]: 10,000+ sold in 30 days
+              - generic [ref=e475]:
+                - generic [ref=e478]: CHF6.37
+                - 'generic "15% off code: JUN26MG" [ref=e480]'
+            - generic [ref=e483]:
+              - generic [ref=e484]:
+                - link "Life Extension, Magnesium Caps, 500 mg, 100 Vegetarian Capsules" [ref=e485] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-magnesium-caps-500-mg-100-vegetarian-capsules/48803
+                - generic [ref=e486]:
+                  - img "Life Extension, Magnesium Caps, 500 mg, 100 Vegetarian Capsules" [ref=e488]
+                  - button "Add to basket" [ref=e490] [cursor=pointer]
+                - generic [ref=e493]: Life Extension, Magnesium Caps, 500 mg, 100 Vegetarian Capsules
+              - generic [ref=e494]:
+                - link "rating stars" [ref=e495] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-magnesium-caps-500-mg-100-vegetarian-capsules/48803
+                  - img [ref=e496]
+                  - img [ref=e498]
+                  - img [ref=e500]
+                  - img [ref=e502]
+                  - img [ref=e504]
+                - link "rating stars" [ref=e507] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-magnesium-caps-500-mg-100-vegetarian-capsules/48803
+                  - generic [ref=e508]: 61,471
+              - generic [ref=e509]: 10,000+ sold in 30 days
+              - generic [ref=e510]:
+                - generic [ref=e513]: CHF7.65
+                - 'generic "15% off code: JUN26MG" [ref=e515]'
+            - generic [ref=e518]:
+              - generic [ref=e519]:
+                - link "KAL, High Absorption Magnesium Glycinate 350, 160 VegCaps" [ref=e520] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-high-absorption-magnesium-glycinate-350-160-vegcaps/112998
+                - generic [ref=e521]:
+                  - img "KAL, High Absorption Magnesium Glycinate 350, 160 VegCaps" [ref=e523]
+                  - button "Add to basket" [ref=e525] [cursor=pointer]
+                - generic [ref=e528]: KAL, High Absorption Magnesium Glycinate 350, 160 VegCaps
+              - generic [ref=e529]:
+                - link "rating stars" [ref=e530] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-high-absorption-magnesium-glycinate-350-160-vegcaps/112998
+                  - img [ref=e531]
+                  - img [ref=e533]
+                  - img [ref=e535]
+                  - img [ref=e537]
+                  - img [ref=e539]
+                - link "rating stars" [ref=e542] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-high-absorption-magnesium-glycinate-350-160-vegcaps/112998
+                  - generic [ref=e543]: 28,184
+              - generic [ref=e544]: 10,000+ sold in 30 days
+              - generic [ref=e545]:
+                - generic [ref=e548]: CHF14.14
+                - 'generic "15% off code: JUN26MG" [ref=e550]'
+            - generic [ref=e553]:
+              - generic [ref=e554]:
+                - link "NOW Foods, Magnesium Glycinate With BioPerine®, 60 Veg Capsules" [ref=e555] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-with-bioperine-60-veg-capsules/144961
+                - generic [ref=e556]:
+                  - img "NOW Foods, Magnesium Glycinate With BioPerine®, 60 Veg Capsules" [ref=e558]
+                  - button "Add to basket" [ref=e560] [cursor=pointer]
+                - generic [ref=e561]: + More options
+                - generic [ref=e563]: NOW Foods, Magnesium Glycinate With BioPerine®, 60 Veg Capsules
+              - generic [ref=e564]:
+                - link "rating stars" [ref=e565] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-with-bioperine-60-veg-capsules/144961
+                  - img [ref=e566]
+                  - img [ref=e568]
+                  - img [ref=e570]
+                  - img [ref=e572]
+                  - img [ref=e574]
+                - link "rating stars" [ref=e577] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-with-bioperine-60-veg-capsules/144961
+                  - generic [ref=e578]: 5,482
+              - generic [ref=e579]: 10,000+ sold in 30 days
+              - generic [ref=e580]:
+                - generic [ref=e583]: CHF8.14
+                - 'generic "15% off code: JUN26MG" [ref=e585]'
+            - generic [ref=e588]:
+              - generic [ref=e589]:
+                - link "Solaray, High Absorption Magnesium Glycinate, 240 veg caps" [ref=e590] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-high-absorption-magnesium-glycinate-240-vegcaps/112970
+                - generic [ref=e591]:
+                  - img "Solaray, High Absorption Magnesium Glycinate, 240 veg caps" [ref=e593]
+                  - button "Add to basket" [ref=e595] [cursor=pointer]
+                - generic [ref=e596]: + More options
+                - generic [ref=e598]: Solaray, High Absorption Magnesium Glycinate, 240 veg caps
+              - generic [ref=e599]:
+                - link "rating stars" [ref=e600] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-high-absorption-magnesium-glycinate-240-vegcaps/112970
+                  - img [ref=e601]
+                  - img [ref=e603]
+                  - img [ref=e605]
+                  - img [ref=e607]
+                  - img [ref=e609]
+                - link "rating stars" [ref=e612] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/solaray-high-absorption-magnesium-glycinate-240-vegcaps/112970
+                  - generic [ref=e613]: 60,549
+              - generic [ref=e614]: 10,000+ sold in 30 days
+              - generic [ref=e615]:
+                - generic [ref=e618]: CHF23.61
+                - 'generic "15% off code: JUN26MG" [ref=e620]'
+            - generic [ref=e623]:
+              - generic [ref=e624]:
+                - link "Life Extension, Magnesium Glycinate, 90 Vegetarian Capsules (105 mg per Capsule)" [ref=e625] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-magnesium-glycinate-90-vegetarian-capsules-105-mg-per-capsule/148916
+                - generic [ref=e626]:
+                  - img "Life Extension, Magnesium Glycinate, 90 Vegetarian Capsules (105 mg per Capsule)" [ref=e628]
+                  - button "Add to basket" [ref=e630] [cursor=pointer]
+                - generic [ref=e633]: Life Extension, Magnesium Glycinate, 90 Vegetarian Capsules (105 mg per Capsule)
+              - generic [ref=e634]:
+                - link "rating stars" [ref=e635] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-magnesium-glycinate-90-vegetarian-capsules-105-mg-per-capsule/148916
+                  - img [ref=e636]
+                  - img [ref=e638]
+                  - img [ref=e640]
+                  - img [ref=e642]
+                  - img [ref=e644]
+                - link "rating stars" [ref=e647] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/life-extension-magnesium-glycinate-90-vegetarian-capsules-105-mg-per-capsule/148916
+                  - generic [ref=e648]: 1,552
+              - generic [ref=e649]: 7,500+ sold in 30 days
+              - generic [ref=e650]:
+                - generic [ref=e653]: CHF14.57
+                - 'generic "15% off code: JUN26MG" [ref=e655]'
+            - generic [ref=e658]:
+              - generic [ref=e659]:
+                - link "Nutricost, Magnesium+, 240 Capsules (210 mg per Capsule)" [ref=e660] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magnesium-240-capsules-210-mg-per-capsule/124072
+                - generic [ref=e661]:
+                  - img "Nutricost, Magnesium+, 240 Capsules (210 mg per Capsule)" [ref=e663]
+                  - button "Add to basket" [ref=e665] [cursor=pointer]
+                - generic [ref=e666]: + More options
+                - generic [ref=e668]: Nutricost, Magnesium+, 240 Capsules (210 mg per Capsule)
+              - generic [ref=e669]:
+                - link "rating stars" [ref=e670] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magnesium-240-capsules-210-mg-per-capsule/124072
+                  - img [ref=e671]
+                  - img [ref=e673]
+                  - img [ref=e675]
+                  - img [ref=e677]
+                  - img [ref=e679]
+                - link "rating stars" [ref=e682] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magnesium-240-capsules-210-mg-per-capsule/124072
+                  - generic [ref=e683]: 1,950
+              - generic [ref=e684]: 1,000+ sold in 30 days
+              - generic [ref=e685]:
+                - generic [ref=e688]: CHF17.38
+                - 'generic "15% off code: JUN26MG" [ref=e690]'
+            - generic [ref=e693]:
+              - generic [ref=e694]:
+                - link "NOW Foods, Magnesium Caps, 400 mg, 180 Veg Capsules" [ref=e695] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-caps-400-mg-180-veg-capsules/662
+                - generic [ref=e696]:
+                  - img "NOW Foods, Magnesium Caps, 400 mg, 180 Veg Capsules" [ref=e698]
+                  - button "Add to basket" [ref=e700] [cursor=pointer]
+                - generic [ref=e703]: NOW Foods, Magnesium Caps, 400 mg, 180 Veg Capsules
+              - generic [ref=e704]:
+                - link "rating stars" [ref=e705] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-caps-400-mg-180-veg-capsules/662
+                  - img [ref=e706]
+                  - img [ref=e708]
+                  - img [ref=e710]
+                  - img [ref=e712]
+                  - img [ref=e714]
+                - link "rating stars" [ref=e717] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-caps-400-mg-180-veg-capsules/662
+                  - generic [ref=e718]: 32,268
+              - generic [ref=e719]: 5,000+ sold in 30 days
+              - generic [ref=e720]:
+                - generic [ref=e723]: CHF13.98
+                - 'generic "15% off code: JUN26MG" [ref=e725]'
+            - generic [ref=e727]:
+              - generic [ref=e728]:
+                - img [ref=e729]: 
+                - generic [ref=e731]: Only at iHerb
+              - generic [ref=e732]:
+                - generic [ref=e733]:
+                  - link "Natural Factors, Magnesium Glycinate, 200 mg, 120 Vegetarian Capsules" [ref=e734] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-magnesium-glycinate-200-mg-120-vegetarian-capsules/116559
+                  - generic [ref=e735]:
+                    - img "Natural Factors, Magnesium Glycinate, 200 mg, 120 Vegetarian Capsules" [ref=e737]
+                    - button "Add to basket" [ref=e739] [cursor=pointer]
+                  - generic [ref=e742]: Natural Factors, Magnesium Glycinate, 200 mg, 120 Vegetarian Capsules
+                - generic [ref=e743]:
+                  - link "rating stars" [ref=e744] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-magnesium-glycinate-200-mg-120-vegetarian-capsules/116559
+                    - img [ref=e745]
+                    - img [ref=e747]
+                    - img [ref=e749]
+                    - img [ref=e751]
+                    - img [ref=e753]
+                  - link "rating stars" [ref=e756] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-magnesium-glycinate-200-mg-120-vegetarian-capsules/116559
+                    - generic [ref=e757]: 3,477
+                - generic [ref=e758]: 5,000+ sold in 30 days
+                - generic [ref=e759]:
+                  - generic [ref=e762]: CHF10.10
+                  - 'generic "15% off code: JUN26MG" [ref=e764]'
+            - generic [ref=e767]:
+              - generic [ref=e768]:
+                - link "Metabolic Maintenance, Magnesium Glycinate, 180 Vegetarian Capsules" [ref=e769] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/metabolic-maintenance-magnesium-glycinate-180-vegetarian-capsules/39106
+                - generic [ref=e770]:
+                  - img "Metabolic Maintenance, Magnesium Glycinate, 180 Vegetarian Capsules" [ref=e772]
+                  - button "Add to basket" [ref=e774] [cursor=pointer]
+                - generic [ref=e777]: Metabolic Maintenance, Magnesium Glycinate, 180 Vegetarian Capsules
+              - generic [ref=e778]:
+                - link "rating stars" [ref=e779] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/metabolic-maintenance-magnesium-glycinate-180-vegetarian-capsules/39106
+                  - img [ref=e780]
+                  - img [ref=e782]
+                  - img [ref=e784]
+                  - img [ref=e786]
+                  - img [ref=e788]
+                - link "rating stars" [ref=e790] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/metabolic-maintenance-magnesium-glycinate-180-vegetarian-capsules/39106
+                  - generic [ref=e791]: 5,030
+              - generic [ref=e792]: 1,000+ sold in 30 days
+              - generic [ref=e793]:
+                - generic [ref=e796]: CHF26.41
+                - 'generic "15% off code: JUN26MG" [ref=e798]'
+            - generic [ref=e801]:
+              - generic [ref=e802]:
+                - link "21st Century, Chelated Magnesium Glycinate, 90 Capsules, (100 mg per Capsule)" [ref=e803] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/21st-century-chelated-magnesium-glycinate-90-capsules-100-mg-per-capsule/145057
+                - generic [ref=e804]:
+                  - img "21st Century, Chelated Magnesium Glycinate, 90 Capsules, (100 mg per Capsule)" [ref=e806]
+                  - button "Add to basket" [ref=e808] [cursor=pointer]
+                - generic [ref=e811]: 21st Century, Chelated Magnesium Glycinate, 90 Capsules, (100 mg per Capsule)
+              - generic [ref=e812]:
+                - link "rating stars" [ref=e813] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/21st-century-chelated-magnesium-glycinate-90-capsules-100-mg-per-capsule/145057
+                  - img [ref=e814]
+                  - img [ref=e816]
+                  - img [ref=e818]
+                  - img [ref=e820]
+                  - img [ref=e822]
+                - link "rating stars" [ref=e825] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/21st-century-chelated-magnesium-glycinate-90-capsules-100-mg-per-capsule/145057
+                  - generic [ref=e826]: 1,226
+              - generic [ref=e827]: 1,000+ sold in 30 days
+              - generic [ref=e828]:
+                - generic [ref=e831]: CHF8.55
+                - 'generic "15% off code: JUN26MG" [ref=e833]'
+            - generic [ref=e836]:
+              - generic [ref=e837]:
+                - link "Carlson, Magnesium Glycinate, 200 mg, 90 Tablets" [ref=e838] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/carlson-magnesium-glycinate-200-mg-90-tablets/118440
+                - generic [ref=e839]:
+                  - img "Carlson, Magnesium Glycinate, 200 mg, 90 Tablets" [ref=e841]
+                  - button "Add to basket" [ref=e843] [cursor=pointer]
+                - generic [ref=e844]: + More options
+                - generic [ref=e846]: Carlson, Magnesium Glycinate, 200 mg, 90 Tablets
+              - generic [ref=e847]:
+                - link "rating stars" [ref=e848] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/carlson-magnesium-glycinate-200-mg-90-tablets/118440
+                  - img [ref=e849]
+                  - img [ref=e851]
+                  - img [ref=e853]
+                  - img [ref=e855]
+                  - img [ref=e857]
+                - link "rating stars" [ref=e860] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/carlson-magnesium-glycinate-200-mg-90-tablets/118440
+                  - generic [ref=e861]: 5,997
+              - generic [ref=e862]: 1,000+ sold in 30 days
+              - generic [ref=e863]:
+                - generic [ref=e866]: CHF12.12
+                - 'generic "15% off code: JUN26MG" [ref=e868]'
+            - generic [ref=e871]:
+              - generic [ref=e872]:
+                - link "NOW Foods, Magnesium Bisglycinate Powder, 8 oz (227 g)" [ref=e873] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-bisglycinate-powder-8-oz-227-g/59860
+                - generic [ref=e874]:
+                  - img "NOW Foods, Magnesium Bisglycinate Powder, 8 oz (227 g)" [ref=e876]
+                  - button "Add to basket" [ref=e878] [cursor=pointer]
+                - generic [ref=e881]: NOW Foods, Magnesium Bisglycinate Powder, 8 oz (227 g)
+              - generic [ref=e882]:
+                - link "rating stars" [ref=e883] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-bisglycinate-powder-8-oz-227-g/59860
+                  - img [ref=e884]
+                  - img [ref=e886]
+                  - img [ref=e888]
+                  - img [ref=e890]
+                  - img [ref=e892]
+                - link "rating stars" [ref=e895] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-bisglycinate-powder-8-oz-227-g/59860
+                  - generic [ref=e896]: 10,332
+              - generic [ref=e897]: 4,000+ sold in 30 days
+              - generic [ref=e898]:
+                - generic [ref=e901]: CHF14.09
+                - 'generic "15% off code: JUN26MG" [ref=e903]'
+            - generic [ref=e906]:
+              - generic [ref=e907]:
+                - link "NOW Foods, Magnesium Glycinate With BioPerine®, 180 Veg Capsules" [ref=e908] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-with-bioperine-180-veg-capsules/143369
+                - generic [ref=e909]:
+                  - img "NOW Foods, Magnesium Glycinate With BioPerine®, 180 Veg Capsules" [ref=e911]
+                  - button "Add to basket" [ref=e913] [cursor=pointer]
+                - generic [ref=e914]: + More options
+                - generic [ref=e916]: NOW Foods, Magnesium Glycinate With BioPerine®, 180 Veg Capsules
+              - generic [ref=e917]:
+                - link "rating stars" [ref=e918] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-with-bioperine-180-veg-capsules/143369
+                  - img [ref=e919]
+                  - img [ref=e921]
+                  - img [ref=e923]
+                  - img [ref=e925]
+                  - img [ref=e927]
+                - link "rating stars" [ref=e930] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/now-foods-magnesium-glycinate-with-bioperine-180-veg-capsules/143369
+                  - generic [ref=e931]: 5,483
+              - generic [ref=e932]: 5,000+ sold in 30 days
+              - generic [ref=e933]:
+                - generic [ref=e936]: CHF17.25
+                - 'generic "15% off code: JUN26MG" [ref=e938]'
+            - generic [ref=e941]:
+              - generic [ref=e942]:
+                - link "Swanson Vitamins, Albion® Magnesium Glycinate With Activated B Vitamins, 60 Tablets" [ref=e943] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-albion-magnesium-glycinate-with-activated-b-vitamins-60-tablets/118603
+                - generic [ref=e944]:
+                  - img "Swanson Vitamins, Albion® Magnesium Glycinate With Activated B Vitamins, 60 Tablets" [ref=e946]
+                  - button "Add to basket" [ref=e948] [cursor=pointer]
+                - generic [ref=e951]: Swanson Vitamins, Albion® Magnesium Glycinate With Activated B Vitamins, 60 Tablets
+              - generic [ref=e952]:
+                - link "rating stars" [ref=e953] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-albion-magnesium-glycinate-with-activated-b-vitamins-60-tablets/118603
+                  - img [ref=e954]
+                  - img [ref=e956]
+                  - img [ref=e958]
+                  - img [ref=e960]
+                  - img [ref=e962]
+                - link "rating stars" [ref=e965] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/swanson-vitamins-albion-magnesium-glycinate-with-activated-b-vitamins-60-tablets/118603
+                  - generic [ref=e966]: 1,765
+              - generic [ref=e967]: 1,000+ sold in 30 days
+              - generic [ref=e968]:
+                - generic [ref=e971]: CHF7.95
+                - 'generic "15% off code: JUN26MG" [ref=e973]'
+            - generic [ref=e975]:
+              - generic [ref=e976]:
+                - img [ref=e977]: 
+                - generic [ref=e979]: Only at iHerb
+              - generic [ref=e980]:
+                - generic [ref=e981]:
+                  - link "Force Factor, Magnesium Glycinate, 180 Vegetable Capsules (70 mg per Capsule)" [ref=e982] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-magnesium-glycinate-180-vegetable-capsules-70-mg-per-capsule/139722
+                  - generic [ref=e983]:
+                    - img "Force Factor, Magnesium Glycinate, 180 Vegetable Capsules (70 mg per Capsule)" [ref=e985]
+                    - button "Add to basket" [ref=e987] [cursor=pointer]
+                  - generic [ref=e990]: Force Factor, Magnesium Glycinate, 180 Vegetable Capsules (70 mg per Capsule)
+                - generic [ref=e991]:
+                  - link "rating stars" [ref=e992] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-magnesium-glycinate-180-vegetable-capsules-70-mg-per-capsule/139722
+                    - img [ref=e993]
+                    - img [ref=e995]
+                    - img [ref=e997]
+                    - img [ref=e999]
+                    - img [ref=e1001]
+                  - link "rating stars" [ref=e1004] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/force-factor-magnesium-glycinate-180-vegetable-capsules-70-mg-per-capsule/139722
+                    - generic [ref=e1005]: 1,702
+                - generic [ref=e1006]: 500+ sold in 30 days
+                - generic [ref=e1010]: CHF18.26
+            - generic [ref=e1013]:
+              - generic [ref=e1014]:
+                - link "Nature's Truth, Magnesium Glycinate, Chelated, 60 Quick Release Capsules (100 mg per Capsule)" [ref=e1015] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-truth-magnesium-glycinate-chelated-60-quick-release-capsules-100-mg-per-capsule/115148
+                - generic [ref=e1016]:
+                  - img "Nature's Truth, Magnesium Glycinate, Chelated, 60 Quick Release Capsules (100 mg per Capsule)" [ref=e1018]
+                  - button "Add to basket" [ref=e1020] [cursor=pointer]
+                - generic [ref=e1023]: Nature's Truth, Magnesium Glycinate, Chelated, 60 Quick Release Capsules (100 mg per Capsule)
+              - generic [ref=e1024]:
+                - link "rating stars" [ref=e1025] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-truth-magnesium-glycinate-chelated-60-quick-release-capsules-100-mg-per-capsule/115148
+                  - img [ref=e1026]
+                  - img [ref=e1028]
+                  - img [ref=e1030]
+                  - img [ref=e1032]
+                  - img [ref=e1034]
+                - link "rating stars" [ref=e1037] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-truth-magnesium-glycinate-chelated-60-quick-release-capsules-100-mg-per-capsule/115148
+                  - generic [ref=e1038]: 1,188
+              - generic [ref=e1039]: 500+ sold in 30 days
+              - generic [ref=e1040]:
+                - generic [ref=e1043]: CHF10.21
+                - 'generic "15% off code: JUN26MG" [ref=e1045]'
+            - generic [ref=e1047]:
+              - link "iHerb Brands" [ref=e1049] [cursor=pointer]:
+                - /url: /iherb-brands
+              - generic [ref=e1050]:
+                - generic [ref=e1051]:
+                  - link "California Gold Nutrition, Triple Magnesium Complex, Malate, Citrate & Bisglycinate Chelate, 120 Veggie Capsules (105 mg per Capsule)" [ref=e1052] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-triple-magnesium-complex-malate-citrate-bisglycinate-chelate-120-veggie-capsules-105-mg-per-capsule/139375
+                  - img "California Gold Nutrition, Triple Magnesium Complex, Malate, Citrate & Bisglycinate Chelate, 120 Veggie Capsules (105 mg per Capsule)" [ref=e1055]
+                  - generic [ref=e1058]: California Gold Nutrition, Triple Magnesium Complex, Malate, Citrate & Bisglycinate Chelate, 120 Veggie Capsules (105 mg per Capsule)
+                - generic [ref=e1059]:
+                  - link "rating stars" [ref=e1060] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-triple-magnesium-complex-malate-citrate-bisglycinate-chelate-120-veggie-capsules-105-mg-per-capsule/139375
+                    - img [ref=e1061]
+                    - img [ref=e1063]
+                    - img [ref=e1065]
+                    - img [ref=e1067]
+                    - img [ref=e1069]
+                  - link "rating stars" [ref=e1072] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-triple-magnesium-complex-malate-citrate-bisglycinate-chelate-120-veggie-capsules-105-mg-per-capsule/139375
+                    - generic [ref=e1073]: 2,176
+                - generic [ref=e1075]:
+                  - generic [ref=e1078]: CHF12.55
+                  - generic [ref=e1080]:
+                    - text: Out of Stock
+                    - link "Notify me" [ref=e1082] [cursor=pointer]:
+                      - /url: "#"
+            - generic [ref=e1085]:
+              - generic [ref=e1086]:
+                - link "Nutricost, Magnesium Glycinate, Unflavoured, 8.9 oz (250 g)" [ref=e1087] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magnesium-glycinate-unflavored-8-9-oz-250-g/139392
+                - generic [ref=e1088]:
+                  - img "Nutricost, Magnesium Glycinate, Unflavoured, 8.9 oz (250 g)" [ref=e1090]
+                  - button "Add to basket" [ref=e1092] [cursor=pointer]
+                - generic [ref=e1095]: Nutricost, Magnesium Glycinate, Unflavoured, 8.9 oz (250 g)
+              - generic [ref=e1096]:
+                - link "rating stars" [ref=e1097] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magnesium-glycinate-unflavored-8-9-oz-250-g/139392
+                  - img [ref=e1098]
+                  - img [ref=e1100]
+                  - img [ref=e1102]
+                  - img [ref=e1104]
+                  - img [ref=e1106]
+                - link "rating stars" [ref=e1109] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nutricost-magnesium-glycinate-unflavored-8-9-oz-250-g/139392
+                  - generic [ref=e1110]: 2,428
+              - generic [ref=e1111]: 2,000+ sold in 30 days
+              - generic [ref=e1112]:
+                - generic [ref=e1115]: CHF14.96
+                - 'generic "15% off code: JUN26MG" [ref=e1117]'
+            - generic [ref=e1120]:
+              - generic [ref=e1121]:
+                - link "Source Naturals, Magnesium Glycinate, 120 Tablets" [ref=e1122] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magnesium-glycinate-120-tablets/144214
+                - generic [ref=e1123]:
+                  - img "Source Naturals, Magnesium Glycinate, 120 Tablets" [ref=e1125]
+                  - button "Add to basket" [ref=e1127] [cursor=pointer]
+                - generic [ref=e1128]: + More options
+                - generic [ref=e1130]: Source Naturals, Magnesium Glycinate, 120 Tablets
+              - generic [ref=e1131]:
+                - link "rating stars" [ref=e1132] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magnesium-glycinate-120-tablets/144214
+                  - img [ref=e1133]
+                  - img [ref=e1135]
+                  - img [ref=e1137]
+                  - img [ref=e1139]
+                  - img [ref=e1141]
+                - link "rating stars" [ref=e1144] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-magnesium-glycinate-120-tablets/144214
+                  - generic [ref=e1145]: 1,586
+              - generic [ref=e1146]: 500+ sold in 30 days
+              - generic [ref=e1147]:
+                - generic [ref=e1150]: CHF14.84
+                - 'generic "15% off code: JUN26MG" [ref=e1152]'
+            - generic [ref=e1155]:
+              - generic [ref=e1156]:
+                - link "Carlson, Magnesium Glycinate, 200 mg, 180 Tablets" [ref=e1157] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/carlson-magnesium-glycinate-200-mg-180-tablets/10928
+                - generic [ref=e1158]:
+                  - img "Carlson, Magnesium Glycinate, 200 mg, 180 Tablets" [ref=e1160]
+                  - button "Add to basket" [ref=e1162] [cursor=pointer]
+                - generic [ref=e1163]: + More options
+                - generic [ref=e1165]: Carlson, Magnesium Glycinate, 200 mg, 180 Tablets
+              - generic [ref=e1166]:
+                - link "rating stars" [ref=e1167] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/carlson-magnesium-glycinate-200-mg-180-tablets/10928
+                  - img [ref=e1168]
+                  - img [ref=e1170]
+                  - img [ref=e1172]
+                  - img [ref=e1174]
+                  - img [ref=e1176]
+                - link "rating stars" [ref=e1179] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/carlson-magnesium-glycinate-200-mg-180-tablets/10928
+                  - generic [ref=e1180]: 5,996
+              - generic [ref=e1181]: 1,000+ sold in 30 days
+              - generic [ref=e1182]:
+                - generic [ref=e1185]: CHF23.93
+                - 'generic "15% off code: JUN26MG" [ref=e1187]'
+            - generic [ref=e1190]:
+              - generic [ref=e1191]:
+                - link "Trace, Magnesium Glycinate, 90 Capsules" [ref=e1192] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/trace-magnesium-glycinate-90-capsules/128847
+                - generic [ref=e1193]:
+                  - img "Trace, Magnesium Glycinate, 90 Capsules" [ref=e1195]
+                  - button "Add to basket" [ref=e1197] [cursor=pointer]
+                - generic [ref=e1198]: + More options
+                - generic [ref=e1200]: Trace, Magnesium Glycinate, 90 Capsules
+              - generic [ref=e1201]:
+                - link "rating stars" [ref=e1202] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/trace-magnesium-glycinate-90-capsules/128847
+                  - img [ref=e1203]
+                  - img [ref=e1205]
+                  - img [ref=e1207]
+                  - img [ref=e1209]
+                  - img [ref=e1211]
+                - link "rating stars" [ref=e1214] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/trace-magnesium-glycinate-90-capsules/128847
+                  - generic [ref=e1215]: 1,491
+              - generic [ref=e1216]: 500+ sold in 30 days
+              - generic [ref=e1217]:
+                - generic [ref=e1220]: CHF20.96
+                - 'generic "15% off code: JUN26MG" [ref=e1222]'
+            - generic [ref=e1225]:
+              - generic [ref=e1226]:
+                - link "Nobi Nutrition, Magnesium Glycinate, Maximum Absorption, 120 Capsules (200 mg per Capsule)" [ref=e1227] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nobi-nutrition-magnesium-glycinate-maximum-absorption-120-capsules-200-mg-per-capsule/141701
+                - generic [ref=e1228]:
+                  - img "Nobi Nutrition, Magnesium Glycinate, Maximum Absorption, 120 Capsules (200 mg per Capsule)" [ref=e1230]
+                  - button "Add to basket" [ref=e1232] [cursor=pointer]
+                - generic [ref=e1233]: + More options
+                - generic [ref=e1235]: Nobi Nutrition, Magnesium Glycinate, Maximum Absorption, 120 Capsules (200 mg per Capsule)
+              - generic [ref=e1236]:
+                - link "rating stars" [ref=e1237] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nobi-nutrition-magnesium-glycinate-maximum-absorption-120-capsules-200-mg-per-capsule/141701
+                  - img [ref=e1238]
+                  - img [ref=e1240]
+                  - img [ref=e1242]
+                  - img [ref=e1244]
+                  - img [ref=e1246]
+                - link "rating stars" [ref=e1249] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nobi-nutrition-magnesium-glycinate-maximum-absorption-120-capsules-200-mg-per-capsule/141701
+                  - generic [ref=e1250]: "396"
+              - generic [ref=e1251]: 500+ sold in 30 days
+              - generic [ref=e1252]:
+                - generic [ref=e1255]: CHF14.53
+                - 'generic "15% off code: JUN26MG" [ref=e1257]'
+            - generic [ref=e1260]:
+              - generic [ref=e1261]:
+                - link "Sundance Vitamins, High Absorption Magnesium Glycinate, 665 mg, 50 Quick Release Capsules" [ref=e1262] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sundance-vitamins-high-absorption-magnesium-glycinate-665-mg-50-quick-release-capsules/127143
+                - generic [ref=e1263]:
+                  - img "Sundance Vitamins, High Absorption Magnesium Glycinate, 665 mg, 50 Quick Release Capsules" [ref=e1265]
+                  - button "Add to basket" [ref=e1267] [cursor=pointer]
+                - generic [ref=e1270]: Sundance Vitamins, High Absorption Magnesium Glycinate, 665 mg, 50 Quick Release Capsules
+              - generic [ref=e1271]:
+                - link "rating stars" [ref=e1272] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sundance-vitamins-high-absorption-magnesium-glycinate-665-mg-50-quick-release-capsules/127143
+                  - img [ref=e1273]
+                  - img [ref=e1275]
+                  - img [ref=e1277]
+                  - img [ref=e1279]
+                  - img [ref=e1281]
+                - link "rating stars" [ref=e1284] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sundance-vitamins-high-absorption-magnesium-glycinate-665-mg-50-quick-release-capsules/127143
+                  - generic [ref=e1285]: "422"
+              - generic [ref=e1286]: 400+ sold in 30 days
+              - generic [ref=e1287]:
+                - generic [ref=e1290]: CHF8.37
+                - 'generic "15% off code: JUN26MG" [ref=e1292]'
+            - generic [ref=e1295]:
+              - generic [ref=e1296]:
+                - link "Micro Ingredients, Magnesium Glycinate, 240 Capsules (166 mg per Capsule)" [ref=e1297] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/micro-ingredients-magnesium-glycinate-240-capsules-166-mg-per-capsule/148174
+                - generic [ref=e1298]:
+                  - img "Micro Ingredients, Magnesium Glycinate, 240 Capsules (166 mg per Capsule)" [ref=e1300]
+                  - button "Add to basket" [ref=e1302] [cursor=pointer]
+                - generic [ref=e1303]: + More options
+                - generic [ref=e1305]: Micro Ingredients, Magnesium Glycinate, 240 Capsules (166 mg per Capsule)
+              - generic [ref=e1306]:
+                - link "rating stars" [ref=e1307] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/micro-ingredients-magnesium-glycinate-240-capsules-166-mg-per-capsule/148174
+                  - img [ref=e1308]
+                  - img [ref=e1310]
+                  - img [ref=e1312]
+                  - img [ref=e1314]
+                  - img [ref=e1316]
+                - link "rating stars" [ref=e1319] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/micro-ingredients-magnesium-glycinate-240-capsules-166-mg-per-capsule/148174
+                  - generic [ref=e1320]: "926"
+              - generic [ref=e1321]: 1,000+ sold in 30 days
+              - generic [ref=e1322]:
+                - generic [ref=e1325]: CHF23.27
+                - 'generic "15% off code: JUN26MG" [ref=e1327]'
+            - generic [ref=e1330]:
+              - generic [ref=e1331]:
+                - link "Sports Research, Magnesium Glycinate, 90 Veggie Capsules (80 mg per Capsule)" [ref=e1332] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magnesium-glycinate-90-veggie-capsules-80-mg-per-capsule/146012
+                - img "Sports Research, Magnesium Glycinate, 90 Veggie Capsules (80 mg per Capsule)" [ref=e1335]
+                - generic [ref=e1337]: Sports Research, Magnesium Glycinate, 90 Veggie Capsules (80 mg per Capsule)
+              - generic [ref=e1338]:
+                - link "rating stars" [ref=e1339] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magnesium-glycinate-90-veggie-capsules-80-mg-per-capsule/146012
+                  - img [ref=e1340]
+                  - img [ref=e1342]
+                  - img [ref=e1344]
+                  - img [ref=e1346]
+                  - img [ref=e1348]
+                - link "rating stars" [ref=e1351] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/sports-research-magnesium-glycinate-90-veggie-capsules-80-mg-per-capsule/146012
+                  - generic [ref=e1352]: "431"
+              - generic [ref=e1354]:
+                - generic [ref=e1357]: CHF18.43
+                - generic [ref=e1359]:
+                  - text: Back on 22/06
+                  - link "Notify me" [ref=e1361] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e1364]:
+              - generic [ref=e1365]:
+                - link "BioSchwartz, Maximum Absorption Magnesium Glycinate, 120 Veg Caps" [ref=e1366] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/bioschwartz-maximum-absorption-magnesium-glycinate-120-veggie-caps/138498
+                - generic [ref=e1367]:
+                  - img "BioSchwartz, Maximum Absorption Magnesium Glycinate, 120 Veg Caps" [ref=e1369]
+                  - button "Add to basket" [ref=e1371] [cursor=pointer]
+                - generic [ref=e1373]: BioSchwartz, Maximum Absorption Magnesium Glycinate, 120 Veg Caps
+              - generic [ref=e1374]:
+                - link "rating stars" [ref=e1375] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/bioschwartz-maximum-absorption-magnesium-glycinate-120-veggie-caps/138498
+                  - img [ref=e1376]
+                  - img [ref=e1378]
+                  - img [ref=e1380]
+                  - img [ref=e1382]
+                  - img [ref=e1384]
+                - link "rating stars" [ref=e1387] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/bioschwartz-maximum-absorption-magnesium-glycinate-120-veggie-caps/138498
+                  - generic [ref=e1388]: "360"
+              - generic [ref=e1389]: 500+ sold in 30 days
+              - generic [ref=e1390]:
+                - generic [ref=e1393]: CHF12.57
+                - 'generic "15% off code: JUN26MG" [ref=e1395]'
+            - generic [ref=e1398]:
+              - generic [ref=e1399]:
+                - link "Nature's Truth, Magnesium Glycinate + Ashwagandha, 60 Capsules" [ref=e1400] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-truth-magnesium-glycinate-ashwagandha-60-capsules/137284
+                - generic [ref=e1401]:
+                  - img "Nature's Truth, Magnesium Glycinate + Ashwagandha, 60 Capsules" [ref=e1403]
+                  - button "Add to basket" [ref=e1405] [cursor=pointer]
+                - generic [ref=e1407]: Nature's Truth, Magnesium Glycinate + Ashwagandha, 60 Capsules
+              - generic [ref=e1408]:
+                - link "rating stars" [ref=e1409] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-truth-magnesium-glycinate-ashwagandha-60-capsules/137284
+                  - img [ref=e1410]
+                  - img [ref=e1412]
+                  - img [ref=e1414]
+                  - img [ref=e1416]
+                  - img [ref=e1418]
+                - link "rating stars" [ref=e1421] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nature-s-truth-magnesium-glycinate-ashwagandha-60-capsules/137284
+                  - generic [ref=e1422]: "484"
+              - generic [ref=e1423]: 500+ sold in 30 days
+              - generic [ref=e1427]: CHF10.70
+            - generic [ref=e1430]:
+              - generic [ref=e1431]:
+                - link "Doctor's Best, High Absorption Magnesium, 120 Veggie Caps (52.5 mg per Capsule)" [ref=e1432] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-veggie-caps-52-5-mg-per-capsule/102678
+                - generic [ref=e1433]:
+                  - img "Doctor's Best, High Absorption Magnesium, 120 Veggie Caps (52.5 mg per Capsule)" [ref=e1435]
+                  - button "Add to basket" [ref=e1437] [cursor=pointer]
+                - generic [ref=e1439]: Doctor's Best, High Absorption Magnesium, 120 Veggie Caps (52.5 mg per Capsule)
+              - generic [ref=e1440]:
+                - link "rating stars" [ref=e1441] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-veggie-caps-52-5-mg-per-capsule/102678
+                  - img [ref=e1442]
+                  - img [ref=e1444]
+                  - img [ref=e1446]
+                  - img [ref=e1448]
+                  - img [ref=e1450]
+                - link "rating stars" [ref=e1453] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/doctor-s-best-high-absorption-magnesium-120-veggie-caps-52-5-mg-per-capsule/102678
+                  - generic [ref=e1454]: 8,506
+              - generic [ref=e1455]: 3,000+ sold in 30 days
+              - generic [ref=e1456]:
+                - generic [ref=e1459]: CHF11.39
+                - 'generic "15% off code: JUN26MG" [ref=e1461]'
+            - generic [ref=e1464]:
+              - generic [ref=e1465]:
+                - link "21st Century, Magnesium, 250 mg, 110 Tablets" [ref=e1466] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/21st-century-magnesium-250-mg-110-tablets/43822
+                - generic [ref=e1467]:
+                  - img "21st Century, Magnesium, 250 mg, 110 Tablets" [ref=e1469]
+                  - button "Add to basket" [ref=e1471] [cursor=pointer]
+                - generic [ref=e1472]: + More options
+                - generic [ref=e1474]: 21st Century, Magnesium, 250 mg, 110 Tablets
+              - generic [ref=e1475]:
+                - link "rating stars" [ref=e1476] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/21st-century-magnesium-250-mg-110-tablets/43822
+                  - img [ref=e1477]
+                  - img [ref=e1479]
+                  - img [ref=e1481]
+                  - img [ref=e1483]
+                  - img [ref=e1485]
+                - link "rating stars" [ref=e1488] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/21st-century-magnesium-250-mg-110-tablets/43822
+                  - generic [ref=e1489]: 72,125
+              - generic [ref=e1490]: 10,000+ sold in 30 days
+              - generic [ref=e1491]:
+                - generic [ref=e1494]: CHF2.56
+                - 'generic "15% off code: JUN26MG" [ref=e1496]'
+            - generic [ref=e1499]:
+              - generic [ref=e1500]:
+                - link "Thorne, Magnesium Bisglycinate, 187 g (6.5 oz)" [ref=e1501] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/thorne-magnesium-bisglycinate-6-5-oz-187-g/72886
+                - generic [ref=e1502]:
+                  - img "Thorne, Magnesium Bisglycinate, 187 g (6.5 oz)" [ref=e1504]
+                  - button "Add to basket" [ref=e1506] [cursor=pointer]
+                - generic [ref=e1507]: + More options
+                - generic [ref=e1509]: Thorne, Magnesium Bisglycinate, 187 g (6.5 oz)
+              - generic [ref=e1510]:
+                - link "rating stars" [ref=e1511] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/thorne-magnesium-bisglycinate-6-5-oz-187-g/72886
+                  - img [ref=e1512]
+                  - img [ref=e1514]
+                  - img [ref=e1516]
+                  - img [ref=e1518]
+                  - img [ref=e1520]
+                - link "rating stars" [ref=e1523] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/thorne-magnesium-bisglycinate-6-5-oz-187-g/72886
+                  - generic [ref=e1524]: 2,963
+              - generic [ref=e1525]: 4,000+ sold in 30 days
+              - generic [ref=e1529]: CHF42.08
+            - generic [ref=e1532]:
+              - generic [ref=e1533]:
+                - link "Codeage, Liposomal Magnesium Glycinate, 240 Vegetable Capsules" [ref=e1534] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/codeage-liposomal-magnesium-glycinate-240-vegetable-capsules/115891
+                - generic [ref=e1535]:
+                  - img "Codeage, Liposomal Magnesium Glycinate, 240 Vegetable Capsules" [ref=e1537]
+                  - button "Add to basket" [ref=e1539] [cursor=pointer]
+                - generic [ref=e1540]: + More options
+                - generic [ref=e1542]: Codeage, Liposomal Magnesium Glycinate, 240 Vegetable Capsules
+              - generic [ref=e1543]:
+                - link "rating stars" [ref=e1544] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/codeage-liposomal-magnesium-glycinate-240-vegetable-capsules/115891
+                  - img [ref=e1545]
+                  - img [ref=e1547]
+                  - img [ref=e1549]
+                  - img [ref=e1551]
+                  - img [ref=e1553]
+                - link "rating stars" [ref=e1556] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/codeage-liposomal-magnesium-glycinate-240-vegetable-capsules/115891
+                  - generic [ref=e1557]: 2,020
+              - generic [ref=e1558]: 2,000+ sold in 30 days
+              - generic [ref=e1559]:
+                - generic [ref=e1562]: CHF32.36
+                - 'generic "15% off code: JUN26MG" [ref=e1564]'
+            - generic [ref=e1566]:
+              - link "iHerb Brands" [ref=e1568] [cursor=pointer]:
+                - /url: /iherb-brands
+              - generic [ref=e1569]:
+                - generic [ref=e1570]:
+                  - link "California Gold Nutrition, Magnesium Powder Drink, Unflavoured, 10 oz (283 g)" [ref=e1571] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-powder-beverage-unflavored-10-oz-283-g/97385
+                  - generic [ref=e1572]:
+                    - img "California Gold Nutrition, Magnesium Powder Drink, Unflavoured, 10 oz (283 g)" [ref=e1574]
+                    - button "Add to basket" [ref=e1576] [cursor=pointer]
+                  - generic [ref=e1577]: + More options
+                  - generic [ref=e1579]: California Gold Nutrition, Magnesium Powder Drink, Unflavoured, 10 oz (283 g)
+                - generic [ref=e1580]:
+                  - link "rating stars" [ref=e1581] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-powder-beverage-unflavored-10-oz-283-g/97385
+                    - img [ref=e1582]
+                    - img [ref=e1584]
+                    - img [ref=e1586]
+                    - img [ref=e1588]
+                    - img [ref=e1590]
+                  - link "rating stars" [ref=e1593] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/california-gold-nutrition-magnesium-powder-beverage-unflavored-10-oz-283-g/97385
+                    - generic [ref=e1594]: 3,647
+                - generic [ref=e1595]: 1,000+ sold in 30 days
+                - generic [ref=e1596]:
+                  - generic [ref=e1599]: CHF17.50
+                  - 'generic "15% off code: JUN26MG" [ref=e1601]'
+            - generic [ref=e1604]:
+              - generic [ref=e1605]:
+                - link "KAL, Chelated Magnesium Bisglycinate, 180 Tablets (105 mg per Tablet)" [ref=e1606] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-chelated-magnesium-bisglycinate-180-tablets-105-mg-per-tablet/114458
+                - generic [ref=e1607]:
+                  - img "KAL, Chelated Magnesium Bisglycinate, 180 Tablets (105 mg per Tablet)" [ref=e1609]
+                  - button "Add to basket" [ref=e1611] [cursor=pointer]
+                - generic [ref=e1614]: KAL, Chelated Magnesium Bisglycinate, 180 Tablets (105 mg per Tablet)
+              - generic [ref=e1615]:
+                - link "rating stars" [ref=e1616] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-chelated-magnesium-bisglycinate-180-tablets-105-mg-per-tablet/114458
+                  - img [ref=e1617]
+                  - img [ref=e1619]
+                  - img [ref=e1621]
+                  - img [ref=e1623]
+                  - img [ref=e1625]
+                - link "rating stars" [ref=e1628] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/kal-chelated-magnesium-bisglycinate-180-tablets-105-mg-per-tablet/114458
+                  - generic [ref=e1629]: 7,226
+              - generic [ref=e1630]: 3,000+ sold in 30 days
+              - generic [ref=e1631]:
+                - generic [ref=e1634]: CHF11.46
+                - 'generic "15% off code: JUN26MG" [ref=e1636]'
+            - generic [ref=e1638]:
+              - generic [ref=e1639]:
+                - img [ref=e1640]: 
+                - generic [ref=e1642]: Only at iHerb
+              - generic [ref=e1643]:
+                - generic [ref=e1644]:
+                  - link "Natural Factors, Magnesium Pure Bisglycinate, 4.23 oz (120 g)" [ref=e1645] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-magnesium-pure-glycinate-4-23-oz-120-g/102109
+                  - generic [ref=e1646]:
+                    - img "Natural Factors, Magnesium Pure Bisglycinate, 4.23 oz (120 g)" [ref=e1648]
+                    - button "Add to basket" [ref=e1650] [cursor=pointer]
+                  - generic [ref=e1653]: Natural Factors, Magnesium Pure Bisglycinate, 4.23 oz (120 g)
+                - generic [ref=e1654]:
+                  - link "rating stars" [ref=e1655] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-magnesium-pure-glycinate-4-23-oz-120-g/102109
+                    - img [ref=e1656]
+                    - img [ref=e1658]
+                    - img [ref=e1660]
+                    - img [ref=e1662]
+                    - img [ref=e1664]
+                  - link "rating stars" [ref=e1667] [cursor=pointer]:
+                    - /url: https://ch.iherb.com/pr/natural-factors-magnesium-pure-glycinate-4-23-oz-120-g/102109
+                    - generic [ref=e1668]: 9,221
+                - generic [ref=e1669]: 1,000+ sold in 30 days
+                - generic [ref=e1670]:
+                  - generic [ref=e1673]: CHF10.10
+                  - 'generic "15% off code: JUN26MG" [ref=e1675]'
+            - generic [ref=e1678]:
+              - generic [ref=e1679]:
+                - link "Thorne, Magnesium Glycinate, 90 Capsules (120 mg per Capsule)" [ref=e1680] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/thorne-magnesium-glycinate-90-capsules-120-mg-per-capsule/152148
+                - generic [ref=e1681]:
+                  - img "Thorne, Magnesium Glycinate, 90 Capsules (120 mg per Capsule)" [ref=e1683]
+                  - button "Add to basket" [ref=e1685] [cursor=pointer]
+                - generic [ref=e1688]: Thorne, Magnesium Glycinate, 90 Capsules (120 mg per Capsule)
+              - generic [ref=e1689]:
+                - link "rating stars" [ref=e1690] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/thorne-magnesium-glycinate-90-capsules-120-mg-per-capsule/152148
+                  - img [ref=e1691]
+                  - img [ref=e1693]
+                  - img [ref=e1695]
+                  - img [ref=e1697]
+                  - img [ref=e1699]
+                - link "rating stars" [ref=e1701] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/thorne-magnesium-glycinate-90-capsules-120-mg-per-capsule/152148
+                  - generic [ref=e1702]: "838"
+              - generic [ref=e1703]: 10,000+ sold in 30 days
+              - generic [ref=e1707]: CHF20.23
+            - generic [ref=e1710]:
+              - generic [ref=e1711]:
+                - link "Country Life, Chelated Magnesium Glycinate, 90 Tablets (133 mg per Tablet)" [ref=e1712] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/country-life-chelated-magnesium-glycinate-90-tablets-133-mg-per-tablet/75750
+                - generic [ref=e1713]:
+                  - img "Country Life, Chelated Magnesium Glycinate, 90 Tablets (133 mg per Tablet)" [ref=e1715]
+                  - button "Add to basket" [ref=e1717] [cursor=pointer]
+                - generic [ref=e1718]: + More options
+                - generic [ref=e1720]: Country Life, Chelated Magnesium Glycinate, 90 Tablets (133 mg per Tablet)
+              - generic [ref=e1721]:
+                - link "rating stars" [ref=e1722] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/country-life-chelated-magnesium-glycinate-90-tablets-133-mg-per-tablet/75750
+                  - img [ref=e1723]
+                  - img [ref=e1725]
+                  - img [ref=e1727]
+                  - img [ref=e1729]
+                  - img [ref=e1731]
+                - link "rating stars" [ref=e1734] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/country-life-chelated-magnesium-glycinate-90-tablets-133-mg-per-tablet/75750
+                  - generic [ref=e1735]: 10,232
+              - generic [ref=e1736]: 750+ sold in 30 days
+              - generic [ref=e1737]:
+                - generic [ref=e1740]: CHF15.49
+                - 'generic "15% off code: JUN26MG" [ref=e1742]'
+            - generic [ref=e1745]:
+              - generic [ref=e1746]:
+                - link "Source Naturals, Ultra-Mag™, 120 Tablets" [ref=e1747] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-ultra-mag-120-tablets/1415
+                - generic [ref=e1748]:
+                  - img "Source Naturals, Ultra-Mag™, 120 Tablets" [ref=e1750]
+                  - button "Add to basket" [ref=e1752] [cursor=pointer]
+                - generic [ref=e1753]: + More options
+                - generic [ref=e1755]: Source Naturals, Ultra-Mag™, 120 Tablets
+              - generic [ref=e1756]:
+                - link "rating stars" [ref=e1757] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-ultra-mag-120-tablets/1415
+                  - img [ref=e1758]
+                  - img [ref=e1760]
+                  - img [ref=e1762]
+                  - img [ref=e1764]
+                  - img [ref=e1766]
+                - link "rating stars" [ref=e1768] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/source-naturals-ultra-mag-120-tablets/1415
+                  - generic [ref=e1769]: 53,457
+              - generic [ref=e1770]: 10,000+ sold in 30 days
+              - generic [ref=e1771]:
+                - generic [ref=e1774]: CHF14.24
+                - 'generic "15% off code: JUN26MG" [ref=e1776]'
+            - generic [ref=e1779]:
+              - generic [ref=e1780]:
+                - link "Protocol for Life Balance, Magnesium Glycinate, High Absorption, 180 Veg Capsules" [ref=e1781] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/protocol-for-life-balance-magnesium-glycinate-high-absorption-180-veg-capsules/143368
+                - generic [ref=e1782]:
+                  - img "Protocol for Life Balance, Magnesium Glycinate, High Absorption, 180 Veg Capsules" [ref=e1784]
+                  - button "Add to basket" [ref=e1786] [cursor=pointer]
+                - generic [ref=e1789]: Protocol for Life Balance, Magnesium Glycinate, High Absorption, 180 Veg Capsules
+              - generic [ref=e1790]:
+                - link "rating stars" [ref=e1791] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/protocol-for-life-balance-magnesium-glycinate-high-absorption-180-veg-capsules/143368
+                  - img [ref=e1792]
+                  - img [ref=e1794]
+                  - img [ref=e1796]
+                  - img [ref=e1798]
+                  - img [ref=e1800]
+                - link "rating stars" [ref=e1803] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/protocol-for-life-balance-magnesium-glycinate-high-absorption-180-veg-capsules/143368
+                  - generic [ref=e1804]: "460"
+              - generic [ref=e1805]: 300+ sold in 30 days
+              - generic [ref=e1806]:
+                - generic [ref=e1809]: CHF22.09
+                - 'generic "15% off code: JUN26MG" [ref=e1811]'
+            - generic [ref=e1814]:
+              - generic [ref=e1815]:
+                - link "Nobi Nutrition, Magnesium Glycinate, Maximum Absorption, 120 Capsules (250 mg per Capsule)" [ref=e1816] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nobi-nutrition-magnesium-glycinate-maximum-absorption-120-capsules-250-mg-per-capsule/145165
+                - generic [ref=e1817]:
+                  - img "Nobi Nutrition, Magnesium Glycinate, Maximum Absorption, 120 Capsules (250 mg per Capsule)" [ref=e1819]
+                  - button "Add to basket" [ref=e1821] [cursor=pointer]
+                - generic [ref=e1822]: + More options
+                - generic [ref=e1824]: Nobi Nutrition, Magnesium Glycinate, Maximum Absorption, 120 Capsules (250 mg per Capsule)
+              - generic [ref=e1825]:
+                - link "rating stars" [ref=e1826] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nobi-nutrition-magnesium-glycinate-maximum-absorption-120-capsules-250-mg-per-capsule/145165
+                  - img [ref=e1827]
+                  - img [ref=e1829]
+                  - img [ref=e1831]
+                  - img [ref=e1833]
+                  - img [ref=e1835]
+                - link "rating stars" [ref=e1838] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/nobi-nutrition-magnesium-glycinate-maximum-absorption-120-capsules-250-mg-per-capsule/145165
+                  - generic [ref=e1839]: 1,445
+              - generic [ref=e1840]: 1,000+ sold in 30 days
+              - generic [ref=e1841]:
+                - generic [ref=e1844]: CHF10.80
+                - 'generic "15% off code: JUN26MG" [ref=e1846]'
+            - generic [ref=e1849]:
+              - generic [ref=e1850]:
+                - link "Trace, Magnesium Glycinate, 180 Capsules" [ref=e1851] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/trace-magnesium-glycinate-180-capsules/128848
+                - generic [ref=e1852]:
+                  - img "Trace, Magnesium Glycinate, 180 Capsules" [ref=e1854]
+                  - button "Add to basket" [ref=e1856] [cursor=pointer]
+                - generic [ref=e1857]: + More options
+                - generic [ref=e1859]: Trace, Magnesium Glycinate, 180 Capsules
+              - generic [ref=e1860]:
+                - link "rating stars" [ref=e1861] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/trace-magnesium-glycinate-180-capsules/128848
+                  - img [ref=e1862]
+                  - img [ref=e1864]
+                  - img [ref=e1866]
+                  - img [ref=e1868]
+                  - img [ref=e1870]
+                - link "rating stars" [ref=e1873] [cursor=pointer]:
+                  - /url: https://ch.iherb.com/pr/trace-magnesium-glycinate-180-capsules/128848
+                  - generic [ref=e1874]: 1,491
+              - generic [ref=e1875]: 750+ sold in 30 days
+              - generic [ref=e1876]:
+                - generic [ref=e1879]: CHF27.95
+                - 'generic "15% off code: JUN26MG" [ref=e1881]'
+        - generic [ref=e1882]:
+          - generic:
+            - generic: 
+          - generic [ref=e1884]: "1"
+          - link "2" [ref=e1885] [cursor=pointer]:
+            - /url: /search?kw=magnesium+glycinate&p=2
+            - generic [ref=e1886]: "2"
+          - link "3" [ref=e1887] [cursor=pointer]:
+            - /url: /search?kw=magnesium+glycinate&p=3
+            - generic [ref=e1888]: "3"
+          - link "4" [ref=e1889] [cursor=pointer]:
+            - /url: /search?kw=magnesium+glycinate&p=4
+            - generic [ref=e1890]: "4"
+          - generic [ref=e1891]: ...
+          - link "174" [ref=e1892] [cursor=pointer]:
+            - /url: /search?kw=magnesium+glycinate&p=174
+            - generic [ref=e1893]: "174"
+          - link "pagination right" [ref=e1894] [cursor=pointer]:
+            - /url: /search?kw=magnesium+glycinate&p=2
+            - generic [ref=e1895]: 
+      - generic [ref=e1896]:
+        - img
+        - generic [ref=e1898]:
+          - generic [ref=e1900] [cursor=pointer]: Popular filters
+          - list [ref=e1901]:
+            - listitem [ref=e1902]:
+              - generic "Buy More Save More" [ref=e1904] [cursor=pointer]
+            - listitem [ref=e1905]:
+              - generic "Professional Brands" [ref=e1907] [cursor=pointer]
+            - listitem [ref=e1908]:
+              - generic "In stock" [ref=e1910] [cursor=pointer]
+            - listitem [ref=e1911]:
+              - generic "4-star & up" [ref=e1913] [cursor=pointer]:
+                - img [ref=e1914]: 
+                - text: and Up
+            - listitem [ref=e1916]:
+              - generic "iHerb Brands" [ref=e1918] [cursor=pointer]
+            - listitem [ref=e1919]:
+              - generic "Autoship & Save" [ref=e1921] [cursor=pointer]
+        - list [ref=e1923]:
+          - listitem [ref=e1924]:
+            - generic [ref=e1925] [cursor=pointer]:
+              - checkbox "Available items only" [ref=e1926]
+              - generic "Available items only" [ref=e1927]
+          - listitem [ref=e1928]:
+            - generic [ref=e1929] [cursor=pointer]:
+              - checkbox "iTested" [ref=e1930]
+              - generic "iTested" [ref=e1931]:
+                - img "iTested Logo" [ref=e1933]
+              - generic [ref=e1934]:
+                - button "itested tooltip icon" [ref=e1935]:
+                  - text: ‍
+                  - img [ref=e1936]
+                - text:     
+              - text: (246)
+          - listitem [ref=e1938]:
+            - generic [ref=e1939] [cursor=pointer]:
+              - checkbox "Only at iHerb" [ref=e1940]
+              - generic "Only at iHerb" [ref=e1941]:
+                - generic [ref=e1942]: Only at iHerb
+              - text: (227)
+        - generic [ref=e1944]:
+          - generic [ref=e1946] [cursor=pointer]: Categories
+          - list [ref=e1948]:
+            - listitem [ref=e1949]:
+              - generic: All Categories
+              - list [ref=e1950]:
+                - listitem [ref=e1951]:
+                  - button "Supplements (7460)" [ref=e1952] [cursor=pointer]
+                - listitem [ref=e1953]:
+                  - button "Sports (1787)" [ref=e1954] [cursor=pointer]
+                - listitem [ref=e1955]:
+                  - button "Baby & Kids (427)" [ref=e1956] [cursor=pointer]
+                - listitem [ref=e1957]:
+                  - button "Grocery (163)" [ref=e1958] [cursor=pointer]
+                - listitem [ref=e1959]:
+                  - button "Bath & Personal Care (162)" [ref=e1960] [cursor=pointer]
+                - listitem [ref=e1961]:
+                  - button "Beauty (120)" [ref=e1962] [cursor=pointer]
+                - listitem [ref=e1963]:
+                  - button "Pets (49)" [ref=e1964] [cursor=pointer]
+                - listitem [ref=e1965]:
+                  - button "Home (12)" [ref=e1966] [cursor=pointer]
+                - listitem [ref=e1967]:
+                  - button "Gifts (5)" [ref=e1968] [cursor=pointer]
+        - generic [ref=e1969]:
+          - generic [ref=e1970]:
+            - generic [ref=e1972] [cursor=pointer]: Brands
+            - generic [ref=e1973]:
+              - textbox "Search brands" [ref=e1974]
+              - img [ref=e1976] [cursor=pointer]
+            - list [ref=e1978]:
+              - listitem [ref=e1979]: Top brands
+              - listitem [ref=e1980]:
+                - generic [ref=e1981] [cursor=pointer]:
+                  - checkbox "iHerb Brands" [ref=e1982]
+                  - generic "iHerb Brands" [ref=e1983]:
+                    - generic [ref=e1985]: iHerb Brands
+                  - button "iherb brands tooltip icon" [ref=e1987]:
+                    - text: ‍
+                    - img [ref=e1988]
+                  - text: (266)
+              - listitem [ref=e1990]:
+                - generic [ref=e1991] [cursor=pointer]:
+                  - checkbox "NOW Foods" [ref=e1992]
+                  - generic "NOW Foods" [ref=e1993]: NOW Foods(462)
+              - listitem [ref=e1994]:
+                - generic [ref=e1995] [cursor=pointer]:
+                  - checkbox "Doctor's Best" [ref=e1996]
+                  - generic "Doctor's Best" [ref=e1997]: Doctor's Best(85)
+              - listitem [ref=e1998]:
+                - generic [ref=e1999] [cursor=pointer]:
+                  - checkbox "Life Extension" [ref=e2000]
+                  - generic "Life Extension" [ref=e2001]: Life Extension(126)
+              - listitem [ref=e2002]:
+                - generic [ref=e2003] [cursor=pointer]:
+                  - checkbox "California Gold Nutrition" [ref=e2004]
+                  - generic "California Gold Nutrition" [ref=e2005]: California Gold Nutrition(239)
+              - listitem [ref=e2006]
+              - listitem [ref=e2007]: All brands
+              - listitem [ref=e2008]:
+                - generic [ref=e2009] [cursor=pointer]:
+                  - checkbox "21st Century" [ref=e2010]
+                  - generic "21st Century" [ref=e2011]: 21st Century(119)
+              - listitem [ref=e2012]:
+                - generic [ref=e2013] [cursor=pointer]:
+                  - checkbox "999" [ref=e2014]
+                  - generic "999" [ref=e2015]: 999(1)
+              - listitem [ref=e2016]:
+                - generic [ref=e2017] [cursor=pointer]:
+                  - checkbox "A.C. Grace Company" [ref=e2018]
+                  - generic "A.C. Grace Company" [ref=e2019]: A.C. Grace Company(1)
+              - listitem [ref=e2020]:
+                - generic [ref=e2021] [cursor=pointer]:
+                  - checkbox "ABE" [ref=e2022]
+                  - generic "ABE" [ref=e2023]: ABE(6)
+              - listitem [ref=e2024]:
+                - generic [ref=e2025] [cursor=pointer]:
+                  - checkbox "Absolute Nutrition" [ref=e2026]
+                  - generic "Absolute Nutrition" [ref=e2027]: Absolute Nutrition(10)
+              - listitem [ref=e2028]:
+                - generic [ref=e2029] [cursor=pointer]:
+                  - checkbox "Advance Physician Formulas" [ref=e2030]
+                  - generic "Advance Physician Formulas" [ref=e2031]: Advance Physician Formulas(5)
+              - listitem [ref=e2032]:
+                - generic [ref=e2033] [cursor=pointer]:
+                  - checkbox "Advanced Clinicals" [ref=e2034]
+                  - generic "Advanced Clinicals" [ref=e2035]: Advanced Clinicals(3)
+              - listitem [ref=e2036]:
+                - generic [ref=e2037] [cursor=pointer]:
+                  - checkbox "Advanced Naturals" [ref=e2038]
+                  - generic "Advanced Naturals" [ref=e2039]: Advanced Naturals(1)
+              - listitem [ref=e2040]:
+                - generic [ref=e2041] [cursor=pointer]:
+                  - checkbox "Advanced Orthomolecular Research AOR" [ref=e2042]
+                  - generic "Advanced Orthomolecular Research AOR" [ref=e2043]: Advanced Orthomolecular Research AOR(11)
+              - listitem [ref=e2044]:
+                - generic [ref=e2045] [cursor=pointer]:
+                  - checkbox "Ageless Foundation Laboratories" [ref=e2046]
+                  - generic "Ageless Foundation Laboratories" [ref=e2047]: Ageless Foundation Laboratories(3)
+              - listitem [ref=e2048]:
+                - generic [ref=e2049] [cursor=pointer]:
+                  - checkbox "AHAVA North America" [ref=e2050]
+                  - generic "AHAVA North America" [ref=e2051]: AHAVA North America(1)
+              - listitem [ref=e2052]:
+                - generic [ref=e2053] [cursor=pointer]:
+                  - checkbox "Alani Nu" [ref=e2054]
+                  - generic "Alani Nu" [ref=e2055]: Alani Nu(1)
+              - listitem [ref=e2056]:
+                - generic [ref=e2057] [cursor=pointer]:
+                  - checkbox "Alkalife" [ref=e2058]
+                  - generic "Alkalife" [ref=e2059]: Alkalife(2)
+              - listitem [ref=e2060]:
+                - generic [ref=e2061] [cursor=pointer]:
+                  - checkbox "Allergy Research Group" [ref=e2062]
+                  - generic "Allergy Research Group" [ref=e2063]: Allergy Research Group(10)
+              - listitem [ref=e2064]:
+                - generic [ref=e2065] [cursor=pointer]:
+                  - checkbox "ALLMAX" [ref=e2066]
+                  - generic "ALLMAX" [ref=e2067]: ALLMAX(43)
+              - listitem [ref=e2068]:
+                - generic [ref=e2069] [cursor=pointer]:
+                  - checkbox "ALPHA LION" [ref=e2070]
+                  - generic "ALPHA LION" [ref=e2071]: ALPHA LION(7)
+              - listitem [ref=e2072]:
+                - generic [ref=e2073] [cursor=pointer]:
+                  - checkbox "Alta Health" [ref=e2074]
+                  - generic "Alta Health" [ref=e2075]: Alta Health(3)
+              - listitem [ref=e2076]:
+                - generic [ref=e2077] [cursor=pointer]:
+                  - checkbox "Alterna" [ref=e2078]
+                  - generic "Alterna" [ref=e2079]: Alterna(1)
+              - listitem [ref=e2080]:
+                - generic [ref=e2081] [cursor=pointer]:
+                  - checkbox "Amazing Grass" [ref=e2082]
+                  - generic "Amazing Grass" [ref=e2083]: Amazing Grass(10)
+              - listitem [ref=e2084]:
+                - generic [ref=e2085] [cursor=pointer]:
+                  - checkbox "Amazing India" [ref=e2086]
+                  - generic "Amazing India" [ref=e2087]: Amazing India(3)
+              - listitem [ref=e2088]:
+                - generic [ref=e2089] [cursor=pointer]:
+                  - checkbox "NOW Foods" [ref=e2090]
+                  - generic "NOW Foods" [ref=e2091]: NOW Foods(462)
+              - listitem [ref=e2092]:
+                - generic [ref=e2093] [cursor=pointer]:
+                  - checkbox "Nutricost" [ref=e2094]
+                  - generic "Nutricost" [ref=e2095]: Nutricost(389)
+              - listitem [ref=e2096]:
+                - generic [ref=e2097] [cursor=pointer]:
+                  - checkbox "Source Naturals" [ref=e2098]
+                  - generic "Source Naturals" [ref=e2099]: Source Naturals(270)
+              - listitem [ref=e2100]:
+                - generic [ref=e2101] [cursor=pointer]:
+                  - checkbox "Swanson Vitamins" [ref=e2102]
+                  - generic "Swanson Vitamins" [ref=e2103]: Swanson Vitamins(252)
+          - generic [ref=e2105] [cursor=pointer]: + 575 more
+        - generic [ref=e2107]:
+          - generic [ref=e2109] [cursor=pointer]: Ratings
+          - list [ref=e2110]:
+            - listitem [ref=e2111]:
+              - generic [ref=e2112] [cursor=pointer]:
+                - checkbox "(3375)" [ref=e2113]
+                - generic "ratings5" [ref=e2114]:
+                  - img [ref=e2115]: 
+                  - text: (3375)
+            - listitem [ref=e2117]:
+              - generic [ref=e2118] [cursor=pointer]:
+                - checkbox "(4841)" [ref=e2119]
+                - generic "ratings4" [ref=e2120]:
+                  - img [ref=e2121]: 
+                  - text: (4841)
+            - listitem [ref=e2123]:
+              - generic [ref=e2124] [cursor=pointer]:
+                - checkbox "(12)" [ref=e2125]
+                - generic "ratings3" [ref=e2126]:
+                  - img [ref=e2127]: 
+                  - text: (12)
+            - listitem [ref=e2129]:
+              - generic [ref=e2130] [cursor=pointer]:
+                - checkbox "(1)" [ref=e2131]
+                - generic "ratings1" [ref=e2132]:
+                  - img [ref=e2133]: 
+                  - text: (1)
+        - generic [ref=e2136]:
+          - generic [ref=e2138] [cursor=pointer]: Price
+          - list [ref=e2139]:
+            - listitem [ref=e2140]:
+              - generic [ref=e2141] [cursor=pointer]:
+                - checkbox "CHF0 - CHF5" [ref=e2142]
+                - generic "CHF0 - CHF5" [ref=e2143]: CHF0 - CHF5(181)
+            - listitem [ref=e2144]:
+              - generic [ref=e2145] [cursor=pointer]:
+                - checkbox "CHF5 - CHF10" [ref=e2146]
+                - generic "CHF5 - CHF10" [ref=e2147]: CHF5 - CHF10(1125)
+            - listitem [ref=e2148]:
+              - generic [ref=e2149] [cursor=pointer]:
+                - checkbox "CHF10 - CHF20" [ref=e2150]
+                - generic "CHF10 - CHF20" [ref=e2151]: CHF10 - CHF20(3219)
+            - listitem [ref=e2152]:
+              - generic [ref=e2153] [cursor=pointer]:
+                - checkbox "CHF20 - CHF40" [ref=e2154]
+                - generic "CHF20 - CHF40" [ref=e2155]: CHF20 - CHF40(2823)
+            - listitem [ref=e2156]:
+              - generic [ref=e2157] [cursor=pointer]:
+                - checkbox "CHF40+" [ref=e2158]
+                - generic "CHF40+" [ref=e2159]: CHF40+(958)
+        - generic [ref=e2160]:
+          - generic [ref=e2162] [cursor=pointer]:
+            - generic [ref=e2163]: Autoship & Save
+            - button "autoship save tooltip icon" [ref=e2165]:
+              - text: ‍
+              - img [ref=e2166]
+          - list [ref=e2168]:
+            - listitem [ref=e2169]:
+              - generic [ref=e2170] [cursor=pointer]:
+                - checkbox "Eligible items only" [ref=e2171]
+                - generic "Eligible items only" [ref=e2172]: Eligible items only(7171)
+        - generic [ref=e2174]:
+          - generic [ref=e2175] [cursor=pointer]:
+            - generic [ref=e2176]: Special offers
+            - button "Expand filter" [ref=e2177]:
+              - img [ref=e2178]
+          - text: (3) (3) (467)
+        - generic [ref=e2181]:
+          - generic [ref=e2182] [cursor=pointer]:
+            - generic [ref=e2183]: Health Topics
+            - button "Expand filter" [ref=e2184]:
+              - img [ref=e2185]
+          - generic:
+            - textbox "Search health topics"
+            - generic:
+              - img
+          - text: (1418) (1081) (940) (840) (817) (809) (799) (798) (764) (613) (567) (547) (539) (539) (463) (433) (373) (370) (343) (336) (297) (292) (205) (190) (171) (162) (153) (117) (117) (100) (72) (68) (37) (34) (33) (25) (17) (13) (3)
+        - generic [ref=e2188]:
+          - generic [ref=e2189] [cursor=pointer]:
+            - generic [ref=e2190]: Gender
+            - button "Expand filter" [ref=e2191]:
+              - img [ref=e2192]
+          - text: (335) (340) (7359)
+        - generic [ref=e2195]:
+          - generic [ref=e2196] [cursor=pointer]:
+            - generic [ref=e2197]: Age ranges
+            - button "Expand filter" [ref=e2198]:
+              - img [ref=e2199]
+          - text: (96) (293) (130) (7632) (87)
+        - generic [ref=e2202]:
+          - generic [ref=e2203] [cursor=pointer]:
+            - generic [ref=e2204]: Certification and diet
+            - button "Expand filter" [ref=e2205]:
+              - img [ref=e2206]
+          - text: (173) (45) (76) (51) (18) (1) (436) (16) (162) (1) (154) (98) (81) (7252) (31) (9) (92) (1520) (19) (1278) (21) (905) (19) (5293) (2957) (16) (68) (521) (24) (33) (191) (142) (103) (83) (246) (204) (1039) (301) (20) (26) (870) (1657) (1351) (802) (31) (582) (13) (121) (59) (102) (86) (188) (443) (74) (75) (798) (862) (115) (27) (26) (348) (913) (10) (273) (2649) (1369) (32) (58) (876) (64) (2710) (1419) (1720) (6) (234) (10) (1012)
+        - generic [ref=e2209]:
+          - generic [ref=e2210] [cursor=pointer]:
+            - generic [ref=e2211]: Potency
+            - button "Expand filter" [ref=e2212]:
+              - img [ref=e2213]
+          - text: (10) (6) (12) (6) (2) (2) (3) (2) (6) (1) (1) (182) (7) (9) (1) (9) (17) (19) (9) (127) (32) (42) (26) (4) (81) (71) (99) (43) (15) (187) (277) (306) (163) (189) (473) (129) (104) (30) (22) (575) (45)
+        - generic [ref=e2216]:
+          - generic [ref=e2217] [cursor=pointer]:
+            - generic [ref=e2218]: Package quantity
+            - button "Expand filter" [ref=e2219]:
+              - img [ref=e2220]
+          - text: (234) (497) (1689) (1498) (1085) (575) (440) (80) (12) (80) (77) (12) (38) (65) (141) (49) (1) (3) (2) (18) (30) (274) (101) (34) (15) (19) (14) (1) (1) (2) (13) (49) (72) (58) (488) (481) (55)
+        - generic [ref=e2223]:
+          - generic [ref=e2224] [cursor=pointer]:
+            - generic [ref=e2225]: Product form
+            - button "Expand filter" [ref=e2226]:
+              - img [ref=e2227]
+          - text: (1914) (1) (362) (1) (1420) (1405) (20) (103) (1) (2) (5) (42) (227) (37) (4) (8) (8) (23) (2) (217) (482) (3) (12) (44) (3) (1) (196) (3) (17) (3) (5) (1590) (3) (2) (11) (11) (7) (23) (24) (2) (29) (2)
+        - generic [ref=e2230]:
+          - generic [ref=e2231] [cursor=pointer]:
+            - generic [ref=e2232]: Formulation
+            - button "Expand filter" [ref=e2233]:
+              - img [ref=e2234]
+          - text: (5059) (2840) (59) (52) (64)
+        - generic [ref=e2237]:
+          - generic [ref=e2238] [cursor=pointer]:
+            - generic [ref=e2239]: Flavour
+            - button "Expand filter" [ref=e2240]:
+              - img [ref=e2241]
+          - text: (44) (4) (6) (1) (175) (22) (3) (6) (1) (5) (2) (1) (1) (52) (7) (121) (8) (55) (7) (9) (15) (6) (3) (10) (1) (1) (2) (1) (79) (4) (86) (1) (11) (75) (3) (4) (6) (4) (3) (7) (2) (11) (2) (7) (3) (1) (119) (2) (3) (48) (3) (19) (41) (2) (1) (14) (6) (1) (156) (14) (65) (4) (40) (6) (7) (2) (153) (1) (3) (1) (6) (2) (108) (19) (1) (1) (31) (1) (264) (2) (115) (14) (62)
+        - generic [ref=e2244]:
+          - generic [ref=e2245] [cursor=pointer]:
+            - generic [ref=e2246]: Skin concern
+            - button "Expand filter" [ref=e2247]:
+              - img [ref=e2248]
+          - text: (5) (30) (1) (28) (4) (74) (3) (4) (7)
+        - generic [ref=e2251]:
+          - generic [ref=e2252] [cursor=pointer]:
+            - generic [ref=e2253]: Beauty by ingredient
+            - button "Expand filter" [ref=e2254]:
+              - img [ref=e2255]
+          - text: (5) (24) (1) (3) (1) (2) (8) (4) (2) (14) (1) (12) (3) (2) (6) (10) (21) (2) (2) (27) (14) (2) (1) (2) (2) (5) (4) (2) (1) (20) (2) (4) (3) (1) (16) (21) (2)
+        - generic [ref=e2258]:
+          - generic [ref=e2259] [cursor=pointer]:
+            - generic [ref=e2260]: Skin type
+            - button "Expand filter" [ref=e2261]:
+              - img [ref=e2262]
+          - text: (122) (1) (10) (4) (3) (9)
+        - generic [ref=e2265]:
+          - generic [ref=e2266] [cursor=pointer]:
+            - generic [ref=e2267]: Weight
+            - button "Expand filter" [ref=e2268]:
+              - img [ref=e2269]
+          - text: (4657) (2215) (824) (235) (116) (209) (50)
+  - contentinfo [ref=e2272]:
+    - generic [ref=e2278]:
+      - generic [ref=e2279]:
+        - generic [ref=e2281]:
+          - 'link "Probiotics for Travel: How to Avoid Stomach Issues on Vacation Blog Link" [ref=e2282] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/probiotics-for-travel/2393
+          - 'img "Probiotics for Travel: How to Avoid Stomach Issues on Vacation" [ref=e2283]'
+          - generic [ref=e2284]: "Probiotics for Travel: How to Avoid Stomach Issues on Vacation"
+        - generic [ref=e2286]:
+          - 'link "Why Men Need Probiotics: Gut Health, Testosterone, and Fertility Blog Link" [ref=e2287] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/men-probiotic-benefits/2394
+          - 'img "Why Men Need Probiotics: Gut Health, Testosterone, and Fertility" [ref=e2288]'
+          - generic [ref=e2289]: "Why Men Need Probiotics: Gut Health, Testosterone, and Fertility"
+        - generic [ref=e2291]:
+          - 'link "Stem Cell Activators: How to Boost Your Body''s Repair System Blog Link" [ref=e2292] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/stem-cell-activators/2373
+          - 'img "Stem Cell Activators: How to Boost Your Body''s Repair System" [ref=e2293]'
+          - generic [ref=e2294]: "Stem Cell Activators: How to Boost Your Body's Repair System"
+      - link "WELLNESS HUB" [ref=e2295] [cursor=pointer]:
+        - /url: /blog
+        - text: WELLNESS
+        - generic [ref=e2296]: HUB
+      - generic [ref=e2297]:
+        - generic [ref=e2299]:
+          - 'link "Probiotics: Top Benefits Explained Blog Link" [ref=e2300] [cursor=pointer]':
+            - /url: https://ch.iherb.com/blog/probiotics-benefits/158
+          - 'img "Probiotics: Top Benefits Explained" [ref=e2301]'
+          - generic [ref=e2302]: "Probiotics: Top Benefits Explained"
+        - generic [ref=e2304]:
+          - link "10 Ways to Get More Fiber on the Keto Diet Blog Link" [ref=e2305] [cursor=pointer]:
+            - /url: https://ch.iherb.com/blog/keto-diet-tips-how-to-get-more-fiber/2487
+          - img "10 Ways to Get More Fiber on the Keto Diet" [ref=e2306]
+          - generic [ref=e2307]: 10 Ways to Get More Fiber on the Keto Diet
+        - generic [ref=e2309]:
+          - link "Muscle Loss Happens. Here are 5 Things You Can Do to Prevent It. Blog Link" [ref=e2310] [cursor=pointer]:
+            - /url: https://ch.iherb.com/blog/what-is-muscle-atrophy-and-how-can-you-prevent-it/2494
+          - img "Muscle Loss Happens. Here are 5 Things You Can Do to Prevent It." [ref=e2311]
+          - generic [ref=e2312]: Muscle Loss Happens. Here are 5 Things You Can Do to Prevent It.
+    - link "iHerb Rewards Enjoy free products, insider access and exclusive offers" [ref=e2316] [cursor=pointer]:
+      - /url: https://secure.iherb.com/iherb-rewards
+      - generic [ref=e2320]:
+        - img "iHerb Rewards" [ref=e2322]
+        - generic [ref=e2323]: Enjoy free products, insider access and exclusive offers
+    - generic [ref=e2326]:
+      - generic [ref=e2327]:
+        - generic [ref=e2328]:
+          - img [ref=e2329]
+          - generic [ref=e2331]: iHerb Quality Promise
+        - generic [ref=e2332]: Quality you can trust, backed by how we source, verify and store. Find out more
+      - generic [ref=e2333]:
+        - generic [ref=e2334]:
+          - img "Authentic products" [ref=e2335]
+          - generic [ref=e2336]: Authentic products
+        - generic [ref=e2337]:
+          - img "Tested ingredients" [ref=e2338]
+          - generic [ref=e2339]: Tested ingredients
+        - generic [ref=e2340]:
+          - img "Preserved freshness" [ref=e2341]
+          - generic [ref=e2342]: Preserved freshness
+        - generic [ref=e2343]:
+          - img "Easy returns and refunds" [ref=e2344]
+          - generic [ref=e2345]: Easy returns and refunds
+    - generic [ref=e2346]:
+      - generic [ref=e2347] [cursor=pointer]:
+        - img [ref=e2348]
+        - img:
+          - generic:
+            - generic "checkoutarrow"
+        - button "Locale menu in header" [ref=e2350]:
+          - generic [ref=e2352]: CH
+          - generic [ref=e2354]: EN
+          - generic [ref=e2356]: CHF
+      - generic [ref=e2357]:
+        - generic [ref=e2358]:
+          - img [ref=e2360]
+          - generic [ref=e2361]: Since 1996, iHerb has offered Earth’s best-curated selection of authentic health and wellness products at the best possible value.
+        - generic [ref=e2362]:
+          - link "google play Top Quality Store on Google" [ref=e2364] [cursor=pointer]:
+            - /url: https://www.google.com/storepages?q=iherb.com&c=CH&v=19&hl=en_GB
+            - img "google play" [ref=e2365]
+            - generic [ref=e2366]:
+              - generic [ref=e2367]: Top Quality Store
+              - generic [ref=e2368]: on Google
+          - link "iherb logo 4.8 green star green star green star green star green three-quarter star iHerb store reviews" [ref=e2370] [cursor=pointer]:
+            - /url: https://www.iherb.com/ugc/store-reviews
+            - generic [ref=e2371]:
+              - img "iherb logo" [ref=e2373]
+              - generic [ref=e2374]:
+                - generic [ref=e2375]:
+                  - generic [ref=e2376]: "4.8"
+                  - img "green star" [ref=e2378]
+                  - img "green star" [ref=e2380]
+                  - img "green star" [ref=e2382]
+                  - img "green star" [ref=e2384]
+                  - img "green three-quarter star" [ref=e2386]
+                - generic [ref=e2387]: iHerb store reviews
+          - generic [ref=e2388]:
+            - img "ISO" [ref=e2390]
+            - img "GMP certified" [ref=e2392]
+            - img "NSF" [ref=e2394]
+    - text: 
+    - generic [ref=e2396]:
+      - generic [ref=e2397]:
+        - list [ref=e2399]:
+          - listitem [ref=e2400]: ABOUT
+          - listitem [ref=e2401]:
+            - link "About Us" [ref=e2402] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/about
+          - listitem [ref=e2403]:
+            - link "Store Reviews New" [ref=e2404] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/store-reviews
+              - text: Store Reviews
+              - generic [ref=e2405]: New
+          - listitem [ref=e2406]:
+            - link "Rewards Programme" [ref=e2407] [cursor=pointer]:
+              - /url: https://secure.iherb.com/iherb-rewards
+          - listitem [ref=e2408]:
+            - link "Affiliate Programme" [ref=e2409] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/affiliates
+          - listitem [ref=e2410]:
+            - link "Autoship & Save" [ref=e2411] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/autoship-save
+          - listitem [ref=e2412]:
+            - link "iHerb Quality Promise" [ref=e2413] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/quality
+        - list [ref=e2415]:
+          - listitem [ref=e2416]: Company
+          - listitem [ref=e2417]:
+            - link "Corporate" [ref=e2418] [cursor=pointer]:
+              - /url: https://corporate.iherb.com/
+          - listitem [ref=e2419]:
+            - link "Press" [ref=e2420] [cursor=pointer]:
+              - /url: https://ch.iherb.com/pressreleases
+          - listitem [ref=e2421]:
+            - link "Partner with iHerb" [ref=e2422] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/suppliers
+        - list [ref=e2424]:
+          - listitem [ref=e2425]: Resources
+          - listitem [ref=e2426]:
+            - link "Wellness Hub" [ref=e2427] [cursor=pointer]:
+              - /url: https://ch.iherb.com/blog
+          - listitem [ref=e2428]:
+            - link "Accessibility View" [ref=e2429] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e2430]:
+            - link "Sales and Offers" [ref=e2431] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/sales-and-offers
+        - list [ref=e2433]:
+          - listitem [ref=e2434]: customer support
+          - listitem [ref=e2435]:
+            - link "24/7 Support" [ref=e2436] [cursor=pointer]:
+              - /url: https://ch.iherb.com/help/contact?param=%2Fsearch
+          - listitem [ref=e2437]:
+            - link "Suggest a Product" [ref=e2438] [cursor=pointer]:
+              - /url: https://ch.iherb.com/css/request-product
+          - listitem [ref=e2439]:
+            - link "Order Status" [ref=e2440] [cursor=pointer]:
+              - /url: https://secure.iherb.com/orders/gc-tracking
+          - listitem [ref=e2441]:
+            - link "Delivery" [ref=e2442] [cursor=pointer]:
+              - /url: https://ch.iherb.com/shipping
+          - listitem [ref=e2443]:
+            - link "Returns" [ref=e2444] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/returns
+          - listitem [ref=e2445]:
+            - link "Communication Preferences" [ref=e2446] [cursor=pointer]:
+              - /url: https://secure.iherb.com/communications/preferences
+      - generic [ref=e2449]:
+        - generic [ref=e2451]:
+          - generic [ref=e2452]:
+            - img "QR Code App" [ref=e2454]
+            - generic [ref=e2455]:
+              - generic [ref=e2456]: Get the iHerb App Today
+              - generic [ref=e2457]: The smartest way to shop and save.
+              - generic [ref=e2458]:
+                - link "iHerb App on Google Play Store" [ref=e2460] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.iherb
+                  - img "iHerb App on Google Play Store" [ref=e2461]
+                - link "iHerb App on Apple App Store" [ref=e2463] [cursor=pointer]:
+                  - /url: https://itunes.apple.com/us/app/iherb/id636609212?mt=8
+                  - img "iHerb App on Apple App Store" [ref=e2464]
+          - list [ref=e2465]:
+            - listitem [ref=e2466]:
+              - link "Facebook Share Icon" [ref=e2467] [cursor=pointer]:
+                - /url: https://www.facebook.com/iHerb
+                - img "Facebook share icon" [ref=e2468]
+            - listitem [ref=e2469]:
+              - link "Twitter Share Icon" [ref=e2470] [cursor=pointer]:
+                - /url: https://twitter.com/iherb
+                - img "Twitter share icon" [ref=e2471]
+            - listitem [ref=e2472]:
+              - link "YouTube Share Icon" [ref=e2473] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/iherb
+                - img "YouTube share icon" [ref=e2474]
+            - listitem [ref=e2475]:
+              - link "Pinterest Share Icon" [ref=e2476] [cursor=pointer]:
+                - /url: http://www.pinterest.com/iherb/
+                - img "Pinterest share icon" [ref=e2477]
+            - listitem [ref=e2478]:
+              - link "Instagram Share Icon" [ref=e2479] [cursor=pointer]:
+                - /url: http://instagram.com/iherb
+                - img "Instagram share icon" [ref=e2480]
+        - generic [ref=e2483]:
+          - generic [ref=e2484]: Sign up for savings
+          - generic [ref=e2485]: Be the first to get promo offers and reward perks straight to your inbox.
+          - generic [ref=e2487]:
+            - generic [ref=e2488]:
+              - textbox "Email" [ref=e2490]
+              - button [ref=e2491] [cursor=pointer]:
+                - img [ref=e2492]
+            - text: 
+          - generic [ref=e2496]:
+            - text: Your email address will be used to send you Health Newsletters and emails about iHerb’s products, services, sales, and special offers. You can unsubscribe at any time by clicking on the unsubscribe link in each email. For more information on our use of your personal information and your rights, see our
+            - link "Privacy Policy." [ref=e2497] [cursor=pointer]:
+              - /url: https://ch.iherb.com/info/privacy
+          - generic [ref=e2499]:
+            - text: This site is protected by reCAPTCHA and the Google
+            - link "Privacy Policy" [ref=e2500] [cursor=pointer]:
+              - /url: https://policies.google.com/privacy
+            - text: and
+            - link "Terms of Service" [ref=e2501] [cursor=pointer]:
+              - /url: https://policies.google.com/terms
+            - text: apply.
+      - generic [ref=e2502]:
+        - paragraph [ref=e2505]:
+          - link "iHerb.com" [ref=e2506] [cursor=pointer]:
+            - /url: https://ch.iherb.com/
+          - text: "© Copyright 1997–2026 iHerb, Ltd. All rights reserved. iHerb® is a registered trademark of iHerb, Ltd. Disclaimer: Statements made, or products sold through this website, have not been evaluated by the United States Food and Drug Administration. They are not intended to diagnose, treat, cure or prevent any disease. Please note that iHerb, Ltd. is not affiliated with, or in any way related to, websites that are not specifically iHerb.com. iHerb, Ltd. is not responsible or liable for products sold or shipped from unauthorised sources."
+          - link "Read More »" [ref=e2507] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/disclaimer
+        - generic [ref=e2508]:
+          - link "Privacy Policy | iHerb" [ref=e2509] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/privacy
+          - complementary "Open Cookie Preferences Modal" [ref=e2510] [cursor=pointer]:
+            - link "Cookie Preferences, opens a dedicated popup modal window" [ref=e2511]: Cookie Preferences
+          - link "Terms of Use | iHerb" [ref=e2512] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/terms-of-use
+          - link "Accessibility" [ref=e2513] [cursor=pointer]:
+            - /url: https://ch.iherb.com/info/accessibility
+    - text: 
+  - generic [ref=e2515] [cursor=pointer]:
+    - generic [ref=e2516]: Get 15% off your first order!
+    - img [ref=e2519]

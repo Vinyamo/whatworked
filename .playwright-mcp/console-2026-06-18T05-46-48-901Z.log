@@ -1,0 +1,13 @@
+[    1194ms] [WARNING] Mixed Content: The page at 'https://ch.iherb.com/search?kw=magnesium%20l-threonate' was loaded over HTTPS, but requested an insecure element 'http://cloudinary.iherbpreprod.com/image/upload/f_auto,q_auto:low/images/cgn/cgn01325/c/1.jpg'. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:16841
+[    1206ms] [LOG] CSS injected: https://s3.images-iherb.com/static/catalog/desktop/iherb/product-list.min_e77ef5e618b415ad39171139690c8650.css @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1210ms] [LOG] CSS injected: https://s3.images-iherb.com/static/catalog/desktop/iherb/header-footer.min_b3b6b0a7841d11d6459adaf3c0eb3915.css @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1372ms] [ERROR] Access to XMLHttpRequest at 'https://graphql-catalog.app.iherb.com/?country=CH&language=en-GB&currency=CHF' from origin 'https://ch.iherb.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:0
+[    1372ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://graphql-catalog.app.iherb.com/?country=CH&language=en-GB&currency=CHF:0
+[    1376ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://catalog.app.iherb.com/catalog/currentUser:0
+[    1433ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://checkout1.iherb.com/api/Carts/v2/cartcount:0
+[    1482ms] [LOG] DS_Site_Env:  ch.iherb.com @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1482ms] [LOG] DS_Func_Collect:  production @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1482ms] [LOG]  @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1524ms] [LOG]  @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1524ms] [LOG] "api-recproducer-5b74f95755-xmtm5" @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480
+[    1524ms] [LOG] "api-recproducer-5b74f95755-xmtm5" @ https://ch.iherb.com/search?kw=magnesium%20l-threonate:480

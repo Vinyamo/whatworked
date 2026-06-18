@@ -251,6 +251,14 @@ root** — write them under `work/` from the start (or move them there before de
       (contamination)? These become caveats (folded into "About this data") — disclosed, not silently
       fixed. **Derive these from the rate `profiles` + per-sub record counts** — there is **no
       `/diagnostics` endpoint in the rate/tally pipeline** (it was score-mode only; don't wait for it).
+- [ ] **Per-option selection-bias check → the `⚠️ selection-inflated` card flag (REQUIRED, don't skip).**
+      For EACH rated option, compute the share of its attributable stories coming from a single
+      **self-selected sub** — a community of people who already chose it (r/hysterectomy for
+      hysterectomy, r/Nexplanon for the implant, a drug's own sub). From the rate `results` ndjson:
+      per option, the % of its helped/attributable records whose `subreddit` is that one sub. If
+      **≥~50% from one self-selected sub → append `⚠️ selection-inflated`** to that card (its Helped% is
+      an optimistic ceiling). It does NOT change the rank — salience only. (This is the per-card form of
+      the contamination caveat; the `⟲ targeted re-search` tag is the equivalent for rescued options.)
 
 ## PHASE 7 — Write (ONE pass; auto-format; verification guard)
 
@@ -288,7 +296,7 @@ mainstream / most-likely first move here, even if the sort ranks it lower — th
 lead with the **"How to read these cards"** legend as its first `###` subsection, then per-option
 cards sorted by the **ranking formula** (see STUDY_GUIDELINES → "Ordering"; the CANONICAL card:
 5-segment outcome bar [big help · modest help · neutral · worse-acute · worse-lasting] + caption
-`n · Helped%+CI · Evidence · Magnitude · Prevalence`, ⚖ if contested; group members; How line;
+`n · Helped%+CI · Evidence · Magnitude · Prevalence`, ⚖ if contested, ⚠️ if selection-inflated (see PHASE 6); group members; How line;
 Science line; 2 arc-quotes cited `— r/<sub>`) → **Long tail** table (REAL ratings, never a uniform
 "3", never silently dropped; Phase-5-confirmed rare labeled "rare (confirmed)") → **What to stop
 doing** anti-patterns → **Missing information** (3–6 questions + why each shifts the rec) →
@@ -340,6 +348,11 @@ etc.); (d) partition any conclusion that is driven by a contaminated / off-topic
 - [ ] **Folder hygiene check:** the study-folder root must list ONLY `study_<slug>.{md,pdf}` (+ any
       versioned copies). Move every other artifact into `work/` (pipeline JSON/ndjson, job_ids.json,
       helper scripts), `inputs/`, `transcripts/`, or `notes/`. Delete stray `__pycache__`.
+- [ ] **Footer + flags check (re-read the finished report):** (a) "How this study was built" prints
+      **NO job ids and NO subreddit list** (both belong elsewhere — `work/job_ids.json` and "About this
+      data"); (b) every option whose stories are ≥~50% from one self-selected sub carries the
+      **`⚠️ selection-inflated`** flag. These two were silently skipped in past runs — verify them
+      explicitly, don't assume.
 - [ ] Open the finished PDF for the user automatically (`open` on macOS, `xdg-open` on Linux,
       `start` on Windows) — every delivered version, including re-runs.
 - [ ] **Versioning — never overwrite a delivered study.** Each re-run writes a new file
