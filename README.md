@@ -70,7 +70,7 @@ Work in (or tell Claude to use) a folder where you want the results, then say **
 1. **First time only:** it asks for your username + password and stores them locally.
 2. **Your situation:** the issue (where you are now), who it's for (age/sex/context), and the
    goal (where you want to get). The more specific, the better the study.
-3. **Choices along the way:** a report format (it suggests one), three clarifying questions,
+3. **Choices along the way:** the study type (A or B, see below), a report format (it suggests one), a few clarifying questions,
    and a confirmation of the data sources and cost before anything is run. A typical study
    costs cents and takes ~15–40 minutes; "map ALL my options" breadth studies cost more —
    it quotes the estimate first.
@@ -81,6 +81,21 @@ You get a **PDF study** in a dated folder: one recommended next step, ranked alt
 with real quotes and science notes, what to stop doing, open questions, and honest caveats.
 Answering its "missing information" questions afterwards gets you a sharper revision — the
 expensive data work is reused, so iterating is fast and nearly free.
+
+## Two kinds of study
+
+The agent always tells you about both and asks when your request could be either:
+
+| | **A. Single posts: "what worked"** | **B. Series of posts by the same people: "how did lives go after X"** |
+|---|---|---|
+| Question | What helped people with my issue? Which options, and how? | What happened to people's lives in the 1–3 years after X: a loss, a diagnosis, starting a medication, quitting drinking, a move, a first psychedelic trip…? |
+| How | Thousands of posts in which people describe what they tried → options rated by how often people say they helped | People who posted that X happened to them → their *other* posts from before vs after, rated blind, compared with people who got a new dog |
+| You get | A ranked menu of options, how-tos, quotes, science, what to stop doing | How wellbeing, happiness, life satisfaction, meaning, purpose, self-love and love for the world changed, vs the comparison group, with confidence intervals |
+| Time / cost | ~15–40 min, cents | ~1–2 h, ~$5–15 |
+| Read it as | What people *say* worked | How people's lives *went*, by what they wrote about everything else: association, not cause |
+
+Example for B:
+> "Do people's lives actually get better in the years after they quit drinking, compared with people who didn't make a big change?"
 
 ## What can I research?
 
@@ -163,6 +178,11 @@ all invisible). People who succeed write follow-ups; people who quit on day 3 do
 writers, English speakers, and US/UK perspectives are over-represented. Even an option with
 many consistent reports means "lots of people say this," not "this will work for you." Every
 study spells out these caveats — read them.
+
+**Life-course studies (type B) are observational.** They show how people who posted about X
+fared compared with people who got a dog, not what X *does* to anyone. They only see people who
+kept posting for years, and the scores are an AI's reading of what people wrote, not
+questionnaires. Effects are usually small, and many questions end in "no measurable difference".
 
 **Coverage is uneven.** If the communities barely discussed your topic, the study will be thin
 — it says so honestly rather than padding. Niche conditions, very new treatments, and

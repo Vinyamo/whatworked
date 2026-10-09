@@ -7,10 +7,22 @@ action-oriented PDF report.
 
 Read this + `STUDY_GUIDELINES.md` before starting. Final deliverable = PDF.
 Reference docs: `API.md` (every studyd call), `CONFIG_RECOMMENDED.md` (params),
-`SOURCES.md` (scan source schemas), `formats/` (report formats).
+`SOURCES.md` (scan source schemas), `formats/` (report formats), `LIFE_COURSE.md` (study type B).
 
-> **One adaptive pipeline, not a mode menu.** Depth is chosen by *measured supply*, not a
-> user-picked fidelity mode. There is no Cheap/Moderate/High question, no fixed
+> **Two study types. The user must know both exist (PHASE 1 → "Study type").**
+> **A. Single posts: "what worked".** Individual posts and comments in which people describe what
+> they tried for a problem → rated options with Helped%, how-to, quotes and science. This is the
+> pipeline below (Phases 2–7). It takes ~15–40 min and costs cents.
+> **B. Series of posts by the same people: "what happened to their lives after X".** It follows
+> people who posted first-hand that X happened to them (a loss, a diagnosis, starting a
+> medication, quitting drinking, a first psychedelic trip…). It compares their *other* posts from
+> 1.5–3 years before with 1–3 years after, rated blind, against people who got a new dog.
+> Playbook: `LIFE_COURSE.md`, report format `formats/life-course.md`. It takes ~1–2 h and costs
+> ~$5–15.
+
+> **One adaptive pipeline, not a mode menu.** (This is about *depth* within type A. The A/B study
+> *type* above is a different question, about what is measured, and it is always surfaced.)
+> Depth is chosen by *measured supply*, not a user-picked fidelity mode. There is no Cheap/Moderate/High question, no fixed
 > "ask-three-questions" ceremony, no separate upfront-web phase, no target_n / sample-size
 > tiers, and no filter-first/breadth duality — each of those was shown to add cost, length, or
 > error without adding value. The prevalence count is computed exhaustively; the rates are
@@ -115,9 +127,25 @@ Every request needs the user's personal credentials.
       user the path; invite supplemental files. Process every file: `.txt/.md/.csv/.json/.yaml`→Read ·
       images→Read (vision) · PDFs→Read · office docs→`pandoc`→Read · audio→`POST /transcribe`
       (see API.md)→`transcripts/` · zip/tar→extract+recurse. Briefly report what was found.
+- [ ] **Study type (REQUIRED, every study, BEFORE any scan).** Always make the two types visible.
+      In one short message, describe **A. single posts** ("what worked for people with X": options
+      rated from people's own reports; ~15–40 min, cents) and **B. series of posts by the same
+      people** ("how did people's lives go in the 1–3 years after X": blind before/after rating of
+      their other posts vs people who got a dog; ~1–2 h, ~$5–15; small effects, association not
+      cause).
+      - If the prompt clearly fits one type, name it, say in one line why, mention that the other
+        exists, and continue unless the user objects. Examples: "what helps with / which treatment /
+        options for" → A; "what happens to people after / does X change lives / long-term effect of
+        X on wellbeing" → B.
+      - If the prompt is ambiguous, ASK which one (this question doesn't count against the 0–3
+        limit).
+      - Record the choice in "The prompt" box.
+      - **Type B → follow `LIFE_COURSE.md` instead of Phases 2–6**, write with
+        `formats/life-course.md`, then continue with Phase 8 and 9 here.
 - [ ] Scope: issue (current state), audience (who + age/sex/context), goal (desired state). Ask
       0–3 questions ONLY for a missing report-changing fact (constraint, what they tried,
       subgroup); never the fixed-3 ceremony. Vague issue → push back ("improve sleep" → what?).
+      (Type B scopes the event X instead: `LIFE_COURSE.md` B1.)
 
 **Folder layout — the ROOT holds ONLY the deliverable(s); everything else goes in subfolders:**
 ```
@@ -142,6 +170,9 @@ root** — write them under `work/` from the start (or move them there before de
       highest-signal; skip general subs like r/AskReddit; cross-domain subs contaminate — don't add
       them to fatten the corpus). If the topic involves psychoactives, confirm substance keys with
       `GET /erowid/substances?q=` and add an `erowid` source.
+- [ ] **Use the fast archive: add `"storage": "rstore"` to every `/scans` request.** It returns the same
+      rows, de-duplicated, and is 3–16× faster. Subs not yet in it fall back to the original files
+      automatically.
 - [ ] Per-sub scans (cap ~2000–2500 each) + merge/dedup by `uid`. **Always set `per_sub_cap`** on any
       multi-sub / multi-source scan — it is the STANDARD knob for source/sub balance (not just the
       opt-in wide-scout). **`max_candidates` is a single budget SHARED across all sources, filled in
@@ -280,7 +311,8 @@ formats** live in `~/.whatworked/formats/` (created via the feedback flow, Phase
 act-now / safety → **Action sheet** (`formats/action-sheet.md`); understand / compare → **Mechanism
 map** (`formats/mechanism-map.md`); which-case-am-I / broad audience → **Decision cards**
 (`formats/decision-cards.md`); full-landscape survey → **Breadth profile**
-(`formats/breadth-profile.md`). A user format `inherits:` a standard one — load the standard
+(`formats/breadth-profile.md`). Study type B always uses **Life-course report**
+(`formats/life-course.md`). A user format `inherits:` a standard one — load the standard
 skeleton first, then apply the user file's deltas. Skeletons in STUDY_GUIDELINES.md.
 **A format's named lead block IS the Executive summary** — e.g. the Action sheet's `## Action sheet`
 block or the Decision cards' archetype cards play the role of section 2; don't ALSO emit a separate
@@ -348,7 +380,7 @@ etc.); (d) partition any conclusion that is driven by a contaminated / off-topic
 - [ ] **Folder hygiene check:** the study-folder root must list ONLY `study_<slug>.{md,pdf}` (+ any
       versioned copies). Move every other artifact into `work/` (pipeline JSON/ndjson, job_ids.json,
       helper scripts), `inputs/`, `transcripts/`, or `notes/`. Delete stray `__pycache__`.
-- [ ] **Footer + flags check (re-read the finished report):** (a) "How this study was built" prints
+- [ ] **Footer + flags check (re-read the finished report; (b) is type A only):** (a) "How this study was built" prints
       **NO job ids and NO subreddit list** (both belong elsewhere — `work/job_ids.json` and "About this
       data"); (b) every option whose stories are ≥~50% from one self-selected sub carries the
       **`⚠️ selection-inflated`** flag. These two were silently skipped in past runs — verify them

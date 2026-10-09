@@ -50,6 +50,10 @@ curl -sS "https://whatworked.vinyamo.com/jobs" -u "$STUDYD_USER:$STUDYD_PASS"
 | POST   | `/transcribe` | transcribe an audio file via Whisper-1 (auto ffmpeg conversion) |
 | POST   | `/render_pdf` | render study Markdown → PDF server-side (returns `application/pdf`) |
 | GET    | `/usage` | per-key token + $ totals |
+| POST   | `/cohorts` | **study type B:** people whose posts match an event regex (or given anchors) → their posting histories (async job) |
+| POST   | `/cohorts/{id}/select` | re-apply before/after windows and thresholds to a finished cohort (synchronous, no rescan) |
+| GET    | `/jobs/{id}/history?author=` | one cohort person's timeline |
+| POST   | `/cohort_labels` | **study type B:** LLM checks of anchor posts, and blind before/after pair ratings (async, billable) |
 
 ## Logging & data handling
 
@@ -62,6 +66,9 @@ What the WhatWorked API records when you use it — and what it doesn't.
 - **What is sent to third parties, and their policies in a nutshell:**
   - **Google (Gemini API)** — receives the **public Reddit/Erowid post text** to classify, rate, and extract options from, plus your short topic/audience description. Under the Gemini API terms, paid-API content is **not used to train Google's models** and is retained only briefly for abuse monitoring. → https://ai.google.dev/gemini-api/terms
   - **OpenAI (Whisper)** — receives the **audio you choose to transcribe** (under a generic filename). Under the OpenAI API terms, API inputs are **not used to train OpenAI's models** and are retained ~30 days for abuse monitoring, then deleted. → https://openai.com/enterprise-privacy/
+  - **Anthropic (Claude API)**, life-course studies (type B) only: receives **public Reddit post text**
+    (samples of the studied people's posts, without usernames) for the blind before/after rating. Under
+    Anthropic's commercial terms, API inputs are **not used to train models**. → https://www.anthropic.com/legal/commercial-terms
   - **Brave Search** — receives the **search queries** only (not your identity). Brave is privacy-focused and does not build user profiles. → https://brave.com/privacy/
 - **What stays with you.** Transcripts and finished reports are written to your local study folder, not kept on the server.
 - **Minimized before it is sent.** The assistant strips personally-identifying information (your name, exact location, employer, contact details, unique IDs) from what it sends to the API — only the minimal demographic/clinical context the research needs (e.g. "38F, 6-month 3am waking"). Your **supplemental documents and images are read locally and never uploaded**; only audio is sent (to transcribe it), and the assistant tells you before doing so.
@@ -135,6 +142,13 @@ See `SOURCES.md` for full per-source schemas, strategies, and cost characteristi
 }
 // → {"job_id": "scan_…", "status": "queued"}
 ```
+
+**Fast storage: always add `"storage": "rstore"`.** It is a top-level default, overridable per
+reddit source, and the server default stays `"legacy"` for backward compatibility. `rstore` reads a
+de-duplicated, time-sorted, indexed copy of the same archive and is 3–16× faster on real study
+queries. It returns the same rows minus duplicate copies of a post. It also finds matches that the
+legacy byte prefilter missed when the dump escaped non-ASCII (`fianc\u00e9`). Subs not yet in the
+store are read from the legacy files automatically.
 
 Scan summary in `/jobs/{id}` (multi-source):
 ```jsonc
@@ -296,6 +310,58 @@ Every scored post (passed or demoted) is one NDJSON line in `GET /jobs/{id}/resu
 }
 ```
 
+## Study type B: POST /cohorts, /cohorts/{id}/select, /cohort_labels
+
+Life-course studies ("what happened to people's lives after X") follow the same people over years.
+**Use `scripts/life_course.py`**, which drives the whole validated pipeline (`LIFE_COURSE.md`). The
+calls below are for reference and debugging. Don't hand-roll a different design: the method's
+settings are fixed so results stay comparable.
+
+```jsonc
+// POST /cohorts  → {"job_id": "cohort_…"}   (scan scope; free)
+// (a) scan form: find anchor posts
+{"exposure": {"subs": ["*"],                       // "*" = every archived sub
+              "regex": "\\bmy (wife|husband) (just )?passed away\\b",   // RE2, case-insensitive, title+body
+              "kinds": ["submission"], "min_text_len": 200, "min_score": 1,
+              "min_created_utc": 1356998400, "max_created_utc": 1722470400},
+ "history": {"subs": ["*"], "mode": "index", "fetch_per_side": 1},
+ "select": {"min_before": 100000, "min_after": 100000},   // "scan only": skips the history fetch
+ "max_authors": 2000000, "storage": "rstore", "regex_engine": "re2"}
+// (b) anchors form: fetch the chosen people's histories around their event date t0 (unix s)
+{"anchors": [{"author": "…", "t0": 1600000000, "label": "partner_died"}],      // ≤ 100,000
+ "history": {"subs": ["*"], "mode": "index", "fetch_per_side": 100, "min_text_len": 60, "max_body_chars": 2000},
+ "select": {"window_before_days": 1095, "min_gap_before_days": 545, "min_gap_days": 365,
+            "window_after_days": 1095, "min_before": 3, "min_after": 3, "exclude_subs": ["…"]},
+ "max_authors": 100000, "storage": "rstore"}
+```
+`GET /jobs/{id}/results` streams the anchor posts (`uid`, `author`, `subreddit`, `created_utc`, `title`,
+`body`). Regexes with lookarounds or backreferences → 422.
+
+```jsonc
+// POST /cohorts/{id}/select   (synchronous; all optional) → {"summary": {...}, "users": [{author, selected,
+//   n_before, n_after, …}]}
+{"window_before_days": 1095, "min_gap_before_days": 545, "min_gap_days": 365, "window_after_days": 1095,
+ "min_before": 3, "min_after": 3, "exclude_subs": [], "exclude_post_regex": "…",
+ "dedupe_posts": true, "max_posts_per_day": 3, "equalize_sides": true, "selected_only": true}
+```
+
+```jsonc
+// POST /cohort_labels  → {"job_id": "clab_…"}   (score scope; billable; counts toward the daily quota)
+// (a) anchor check: structured fields per anchor post (gemini-2.5-flash-lite, ≈ $0.10 per 1k posts)
+{"cohort_id": "cohort_…", "targets": ["exposures"], "select": {"min_before": 0, "min_after": 0},
+ "extract_fields": {"is_event": "…", "days_since": "…"},  // ≤ 40 fields → one JSON object per post
+ "authors": ["…"], "ignore_candidates": true, "gemini_safety": "block_none", "batch_size": 5}
+// (b) blind pair rating: both periods of one person side by side, shuffled, undated, random order
+{"cohort_id": "cohort_…", "targets": ["pairs"], "authors": ["…"], "select": {…same windows…},
+ "model": "claude-haiku-4-5", "pair_version": 3, "pair_both_orders": true,
+ "pair_system_prompt": "<scripts/life_course_assets/pair_rubric.txt>",
+ "max_posts_per_side": 25, "max_post_chars": 800}          // ≈ $0.014 per person (both orders)
+```
+Pair rows: `author`, `order`, `insufficient`, `n_evidence_before/after`, `score_before/after`, `change`
+(wellbeing), `dims` {wellbeing, happiness, life_satisfaction, meaning, purpose, self_love,
+love_for_world: {before, after, change}}, `events_before/after`, `reason`. Job summary: `cost_usd`.
+There is no cancel endpoint; a job orphaned by a server restart stays `running`, so resubmit it.
+
 ## POST /tally
 
 The breadth-mode popularity+effectiveness primitive (see `AGENTS.md` → "Breadth mode"). Runs the
@@ -401,6 +467,11 @@ Tracked per user. Returned by `/usage`:
 ```
 
 Per-study budget for the recommended config (target_n=60, gpt-4o-mini): roughly $0.05–$0.30 depending on how broad the candidate pool is (broader = more LLM calls before bucket quotas fill).
+
+**Daily spend quota.** Each account has a daily server-side spend cap (UTC day). Billable endpoints
+(`/scans`, `/scores`, `/rate`, `/discover`, `/cohort_labels`) return **429 "daily spend cap
+reached"** once it is reached; it resets at 00:00 UTC. A typical type-A study costs cents; a
+type-B (life-course) study ≈ $5–15.
 
 ## Rate / concurrency
 
